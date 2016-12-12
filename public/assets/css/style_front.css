@@ -1,19 +1,48 @@
-/*******  TITRE  ********/
-.merde{
-	
+/*Affichage titre*/
+
+.headLine{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 400px;
 }
-/*******  FIN TITRE  ********/
 
+.hLine {
+	font-size: 51px;
+}
 
+/*Affichage boutton*/
 
+.startBut {
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+}
 
-/*******  COPRS DE PAGE  ********/
+.start {
+	background-color: #ff5252;
+	color: white;
+	width: 500px;
+	height: 100px;
+	font-size: 45px;
+}
 
-/*******  FIN COPRS DE PAGE  ********/
+/*Fin affichage boutton*/
 
+/*Affichage footer*/
 
+.bottNav {
 
+    bottom: 0;
+    display: block;
+    height: 60px;
+    font-family: "Replica-Regular", Arial, Helvetica, sans-serif;
+    position: fixed;
+    width: 100%;
+    padding-top: 35px;
+    z-index: 10
+}
 
-/*******  ELEMENT DE CONTENU  ********/
-
-/*******  FIN ELEMENT DE CONTENU  ********/
+.navList a {
+	padding: 15px;
+}
