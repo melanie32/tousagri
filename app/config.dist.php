@@ -6,7 +6,7 @@ $w_config = [
     'db_user' => 'root',							//nom d'utilisateur pour la bdd
     'db_pass' => '',								//mot de passe de la bdd
     'db_name' => '',								//nom de la bdd
-    'db_table_prefix' => '',						//préfixe ajouté aux noms de table
+    'db_table_prefix' => 'tousagri',						//préfixe ajouté aux noms de table
 
 	//authentification, autorisation
 	'security_user_table' => 'users',				//nom de la table contenant les infos des utilisateurs
