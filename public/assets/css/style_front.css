@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html {
 	min-height: 100%;
 	position: relative;
@@ -14,10 +15,24 @@ ul{
 /*******  TITRE  ********/
 
 /*******  FIN TITRE  ********/
+=======
+/*Affichage titre*/
+>>>>>>> origin/master
 
+.headLine{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 400px;
+}
 
+.hLine {
+	font-size: 51px;
+}
 
+/*Affichage boutton*/
 
+<<<<<<< HEAD
 /*******  COPRS DE PAGE  ********/
 #wrapper_Questions {
 	width: 100%;
@@ -56,10 +71,38 @@ ul{
 	width: 100%;
 }
 /*******  FIN COPRS DE PAGE  ********/
+=======
+.startBut {
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+}
 
+.start {
+	background-color: #ff5252;
+	color: white;
+	width: 500px;
+	height: 100px;
+	font-size: 45px;
+}
+>>>>>>> origin/master
 
+/*Fin affichage boutton*/
 
+/*Affichage footer*/
 
-/*******  ELEMENT DE CONTENU  ********/
+.bottNav {
 
-/*******  FIN ELEMENT DE CONTENU  ********/
+    bottom: 0;
+    display: block;
+    height: 60px;
+    font-family: "Replica-Regular", Arial, Helvetica, sans-serif;
+    position: fixed;
+    width: 100%;
+    padding-top: 35px;
+    z-index: 10
+}
+
+.navList a {
+	padding: 15px;
+}

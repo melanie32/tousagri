@@ -6,8 +6,12 @@
 
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style_front.css') ?>">
+<<<<<<< HEAD
 
 <?=$this->section('css');?>	
+=======
+	<script type="text/javascript" href="<?= $this->assetUrl('js/script.js') ?>"></script>
+>>>>>>> origin/master
 </head>
 <body>
 	<div id="wrapper_Questions" class="container" >
