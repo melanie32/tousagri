@@ -9,6 +9,7 @@ class DefaultController extends Controller
 
 	/**
 	 * Page d'accueil par défaut
+	 * test commit
 	 */
 	public function home()
 	{
