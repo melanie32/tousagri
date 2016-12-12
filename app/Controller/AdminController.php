@@ -25,4 +25,9 @@ class AdminController extends Controller
 		$this->show('admin/admin_accueil');
 	}
 
+	public function categories()
+	{
+		$this->show('admin/admin_categories');
+	}
+
 }
