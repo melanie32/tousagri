@@ -45,3 +45,40 @@
 .navList a {
 	padding: 15px;
 }
+
+/*Catégories*/
+
+  img{
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
+        border-radius: 5%;
+    }
+
+    h1 {
+
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+    }
+
+        .contai {
+            width: 320px;
+            height: 220px;
+            padding-left: 710px;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .contain {
+            width: 320px;
+            height: 220px;
+            padding-left: 710px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            
+        }

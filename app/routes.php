@@ -4,6 +4,7 @@
 		['GET', '/', 'Default#home', 'default_home'],
 
 		['GET', '/questions', 'Questions#home', 'questions_home'],
+		['GET', '/categories', 'Categories#category', 'categories_category'],
 
 
 
