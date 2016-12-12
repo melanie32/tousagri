@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
-	<title><?= $this->e($title) ?></title>
+	<title><?= $this->e($title) ?>home</title>
 
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 </head>
