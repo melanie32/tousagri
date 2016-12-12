@@ -1,5 +1,5 @@
 
-<?php $this->layout('layout_front', ['title' => '']) ?>
+<?php $this->layout('layout', ['title' => '']) ?>
 
 
 <?php $this->start('main_content') ?>
