@@ -4,6 +4,7 @@
 
 <?php $this->start('main_content') ?>
 
+<div id="reset">
 <!-- Titre -->
 	<div class="col-md-12 headLine">
 		<h1 id="text"  class="hLine">Vous les agriculteurs, vous êtes tous les mêmes!</h1>
@@ -13,27 +14,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 startBut">
-						<button id="reset"  type="button" class="btn  start">Commencer</button>
+						<a href="<?= $this->url('categories_category') ?>">
+							<input id="tata" type="button" class="btn style-reset start" value="Commencer">	
+						</a>			
 					</div>
 				</div>
 			</div>
 
-<!-- Footer -->
-	<footer class="bottNav">
-
-	
-			<div>
-				<div class="col-md-12 col-md-offset-6">
-					<ul class="navList">
-						<a href="#">A propos</a>
-						<a href="#">Partenaires</a>
-						<a href="#">Partager</a>
-						<a href="#">Crédits</a>
-						<a href="#">Mentions Légales</a>
-					</ul>
-				</div>
-			</div>
-	
-
-	</footer>
+</div>
 <?php $this->stop('main_content') ?>

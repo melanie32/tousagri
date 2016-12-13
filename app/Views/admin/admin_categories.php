@@ -15,9 +15,9 @@
 
 			<div class="cub-category col-md-4">
 				<p class="text-center" id="name-category">Nom de filière en dynamique</p>
-				<img src="">
+				<img class="picto_category center-block" src="<?= $this->assetUrl('img/picto/poisson.png')?>">
 				<div id="link-category">
-					<a class="text-center" href="#">Modifier</a>&nbsp;
+					<a class="text-center" href="#">Modifier</a>
 					<a class="text-center" href="#">Supprimer</a>
 				</div>
 			</div>
@@ -26,7 +26,7 @@
 				<p class="text-center" id="name-category">Nom de filière en dynamique</p>
 				<img src="">
 				<div id="link-category">
-					<a class="text-center" href="#">Modifier</a>&nbsp;
+					<a class="text-center" href="#">Modifier</a>
 					<a class="text-center" href="#">Supprimer</a>
 				</div>
 			</div>		
@@ -37,7 +37,7 @@
 				<p class="text-center" id="name-category">Nom de filière en dynamique</p>
 				<img src="">
 				<div id="link-category">
-					<a class="text-center" href="#">Modifier</a>&nbsp;
+					<a class="text-center" href="#">Modifier</a>
 					<a class="text-center" href="#">Supprimer</a>
 				</div>
 			</div>

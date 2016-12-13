@@ -1,7 +1,7 @@
 
 /*TITRE*/
 
-.headLine{
+.headLine {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,13 +20,19 @@
 	align-items: center;
 }
 
-#reset {
+.style-reset {
 	background-color: #ff5252;
 	color: white;
 	width: 500px;
 	height: 100px;
 	font-size: 45px;
 }
+
+#button-link {
+    display: none;
+}
+
+
 
 /*FOOTER*/
 
@@ -48,35 +54,46 @@
 
 /*Catégories*/
 
-    .contai {
-        margin: 0 auto;
-        width: 75em;
-        max-width: 100%;
+.contai {
+    margin: 0 auto;
+    width: 75em;
+    max-width: 100%;
 
-    }
+}
 
-    #secPic {
-            width: 20.125em;
-            height: 20.125em;
-            border-radius: 3%;
-            margin: 1.25em;
-        }
+#secPic {
+    width: 18.125em;
+    height: 18.125em;
+}
 
-        .siteNam{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 20.5em;
-        }
+.siteNam {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20.5em;
+}
 
-        .namSite {
-            font-size: 4.125em;
-        }
+.namSite {
+    font-size: 4.125em;
+}
 
 
-        .dad {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-        }
+.dad {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.imBox {
+    width: 20em;
+    height: 20em;
+    border: 1px solid black;
+    border-radius: 3%;
+    margin: 1.25em;
+    
+}
+
+.secNam {
+    font-size: 2.125em;
+}
