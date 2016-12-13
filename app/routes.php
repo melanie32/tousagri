@@ -1,5 +1,5 @@
 <?php 
-	// et là ca prend encompte
+	
 	$w_routes = array(
 		['GET', '/', 'Default#home', 'default_home'],
 		['GET', '/questions', 'Questions#home', 'questions_home'],
@@ -15,6 +15,6 @@
 		['GET|POST', '/admin/addCategories', 'Admin#addCategories', 'admin_add_categories'],
 		['GET|POST', '/admin/editCategories', 'Admin#editCategories', 'admin_edit_categories'],
 		['GET|POST', '/admin/editComments', 'Admin#editComments', 'admin_edit_comments'],
-
+		['GET|POST', '/users/add', 'Users#addUsers', 'users_add'],
 
 	);

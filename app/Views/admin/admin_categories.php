@@ -46,7 +46,7 @@
 				<p class="text-center" id="name-category">Nom de filière en dynamique</p>
 				<img src="">
 				<div id="link-category">
-					<a class="text-center" href="#">Modifier</a>&nbsp;
+					<a class="text-center" href="#">Modifier</a>
 					<a class="text-center" href="#">Supprimer</a>
 				</div>
 			</div>
@@ -55,7 +55,7 @@
 				<p class="text-center" id="name-category">Nom de filière en dynamique</p>
 				<img src="">
 				<div id="link-category">
-					<a class="text-center" href="#">Modifier</a>&nbsp;
+					<a class="text-center" href="#">Modifier</a>
 					<a class="text-center" href="#">Supprimer</a>
 				</div>
 			</div>		
@@ -66,7 +66,7 @@
 				<p class="text-center" id="name-category">Nom de filière en dynamique</p>
 				<img src="">
 				<div id="link-category">
-					<a class="text-center" href="#">Modifier</a>&nbsp;
+					<a class="text-center" href="#">Modifier</a>
 					<a class="text-center" href="#">Supprimer</a>
 				</div>
 			</div>
@@ -75,7 +75,7 @@
 				<p class="text-center" id="name-category">Nom de filière en dynamique</p>
 				<img src="">
 				<div id="link-category">
-					<a class="text-center" href="#">Modifier</a>&nbsp;
+					<a class="text-center" href="#">Modifier</a>
 					<a class="text-center" href="#">Supprimer</a>
 				</div>
 			</div>
@@ -84,7 +84,7 @@
 				<p class="text-center" id="name-category">Nom de filière en dynamique</p>
 				<img src="">
 				<div id="link-category">
-					<a class="text-center" href="#">Modifier</a>&nbsp;
+					<a class="text-center" href="#">Modifier</a>
 					<a class="text-center" href="#">Supprimer</a>
 				</div>
 			</div>		

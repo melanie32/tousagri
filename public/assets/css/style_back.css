@@ -6,7 +6,7 @@ body {
 
 a, a:hover {
 	text-decoration: none;
-}
+} 
 
 li {
 	list-style: none;
@@ -19,6 +19,8 @@ li {
 	padding-top: 2.125em;
 }
 
+/***************STYLE de la SIDEBAR du BACK***********************/
+
 .sidenav {
     height: 100%;
     width: 15.625em;
@@ -28,16 +30,47 @@ li {
     left: 0;
     background-color: #404054;
     overflow-x: hidden;
-    padding-top: 5%;
 }
 
-.sidenav li {
-	height: 9.254em;
-	line-height: 9.254em;
+.sidenav-ul {
+	padding: 1em 0;
+}
+
+
+.sidenav-li {
+	height: 6.254em;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidenav-li2 {
+	height: 3.254em;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+	background-color: chartreuse;
 }
 
 .sidenav a {
 	color: white;
+}
+
+.sidenav a:hover {
+	color: aqua;
+}
+
+.sidenav a:focus {
+	text-decoration: none;
+}
+
+#disconnect2{
+	display: none;
 }
 
 /******************style page connexion back******************/
@@ -106,7 +139,44 @@ li {
 	justify-content: space-around;
 }
 
+/***********STYLE DES PAGES ADD AND EDIT CATEGORY****************/
+
 .add-question {
 	cursor:pointer;
 }
 
+
+
+/***********STYLE PAGE COMMENT****************/
+
+
+.td-action-comment {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.click-action {
+	cursor:pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1em 0;
+}
+
+#input-reply {
+	display: none;
+}
+
+#select-delete {
+	display: none;
+}
+
+.input-margin {
+	margin: 0.5em auto;
+}
+
+#button-delete {
+	margin-top: 3.4em;
+}

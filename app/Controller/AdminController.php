@@ -1,5 +1,5 @@
 <?php
-
+ 
 namespace Controller;
 
 use \W\Controller\Controller;
@@ -25,20 +25,40 @@ class AdminController extends Controller
 		$this->show('admin/admin_accueil');
 	}
 
+	/**
+	 * Page de liste des catégories du back office
+	 * 
+	 */
+
 	public function categories()
 	{
 		$this->show('admin/admin_categories');
 	}
+
+	/**
+	 * Page d'ajout catégories du back office
+	 * 
+	 */
 
 	public function addCategories()
 	{
 		$this->show('admin/admin_add_categories');
 	}
 
+	/**
+	 * Page  modifier catégories du back office
+	 * 
+	 */
+
 	public function editCategories()
 	{
 		$this->show('admin/admin_edit_categories');
 	}
+
+	/**
+	 * Page  gestion des commentaires  du back office
+	 * 
+	 */
 
 	public function editComments()
 	{
