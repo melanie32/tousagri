@@ -22,11 +22,6 @@
 		</section>
 
 
-		<footer>
-		</footer>
-
-
-
 		<!-- Footer -->
 	<footer class="bottNav">
 
