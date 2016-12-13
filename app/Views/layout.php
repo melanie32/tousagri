@@ -21,10 +21,10 @@
 			<?= $this->section('main_content') ?>
 		</section>
 
-<<<<<<< HEAD
+
 		<footer>
 		</footer>
-=======
+
 
 
 		<!-- Footer -->
@@ -45,18 +45,11 @@
 	
 
 	</footer>
->>>>>>> origin/master
+
 	</div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="<?= $this->assetUrl('js/scriptQuestion.js') ?>"></script>
+<script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
 
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="<?= $this->assetUrl('js/scriptQuestion.js') ?>"></script>
-	<script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
-<<<<<<< HEAD
-	
-=======
->>>>>>> origin/master
 </body>
 </html>
