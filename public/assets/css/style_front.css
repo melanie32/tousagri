@@ -1,23 +1,5 @@
-<<<<<<< HEAD
-html {
-	min-height: 100%;
-	position: relative;
-}
-
-body {
-	margin: 0;
-}
-
-ul{
-	padding: 0;	
-}
-
-/*******  TITRE  ********/
 
 /*******  FIN TITRE  ********/
-=======
-/*Affichage titre*/
->>>>>>> origin/master
 
 .headLine{
 	display: flex;
@@ -30,48 +12,11 @@ ul{
 	font-size: 51px;
 }
 
-/*Affichage boutton*/
 
-<<<<<<< HEAD
 /*******  COPRS DE PAGE  ********/
-#wrapper_Questions {
-	width: 100%;
-	padding: 0;
-}
 
-.conteneur_L{
-	height: 100%;
-	width: 37%;	
-	position: absolute;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-#illustration_Questions {
-	background-size: cover;
-	width: auto;
-}
-
-#nav_Category {
-	margin-top: 15%;
-	justify-content: center;
-	z-index: 1;
-	position: relative;
-	width: 15%;
-	float: left;
-}
-
-#nav_Category ul li{
-	margin-bottom: 10px;
-	list-style: none;
-	float: left;
-	background-color: red;
-	height: 120px;
-	width: 100%;
-}
 /*******  FIN COPRS DE PAGE  ********/
-=======
+
 .startBut {
 	display: flex; 
 	justify-content: center;
@@ -85,11 +30,6 @@ ul{
 	height: 100px;
 	font-size: 45px;
 }
->>>>>>> origin/master
-
-/*Fin affichage boutton*/
-
-/*Affichage footer*/
 
 .bottNav {
 
