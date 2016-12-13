@@ -48,37 +48,35 @@
 
 /*Catégories*/
 
-  img{
-        width: 200px;
-        height: 200px;
-        margin-right: 20px;
-        border-radius: 5%;
+    .contai {
+        margin: 0 auto;
+        width: 75em;
+        max-width: 100%;
+
     }
 
-    h1 {
-
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        justify-content: center;
-    }
-
-        .contai {
-            width: 320px;
-            height: 220px;
-            padding-left: 710px;
-            padding-top: 20px;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
+    #secPic {
+            width: 20.125em;
+            height: 20.125em;
+            border-radius: 3%;
+            margin: 1.25em;
         }
 
-        .contain {
-            width: 320px;
-            height: 220px;
-            padding-left: 710px;
+        .siteNam{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20.5em;
+        }
+
+        .namSite {
+            font-size: 4.125em;
+        }
+
+
+        .dad {
             display: flex;
             flex-direction: row;
-            justify-content: flex-start;
-            
+            align-items: center;
+            justify-content: space-around;
         }
