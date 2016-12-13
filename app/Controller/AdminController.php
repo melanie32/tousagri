@@ -30,4 +30,15 @@ class AdminController extends Controller
 		$this->show('admin/admin_categories');
 	}
 
+	public function addCategories()
+	{
+		$this->show('admin/admin_add_categories');
+	}
+
+	public function editCategories()
+	{
+		$this->show('admin/admin_edit_categories');
+	}
+
+
 }

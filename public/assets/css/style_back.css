@@ -1,4 +1,4 @@
-/******************style général******************/
+/*******************style général******************/
 body {
 	font-size: 16px; 
 	color: black;
@@ -70,7 +70,41 @@ li {
 
 /******************style page list categories back******************/
 
+.contain-cub-category {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
 .cub-category {
 	height: 12em;
 	width: 12em;
+	border: 1px solid black;
+	margin: 1em 0;
+	display: flex;
+	flex-direction: column;
+	align-self: stretch;
+	justify-content: space-between;
+}
+
+#cub-add-category {
+	display: flex;
+	flex-direction: row; 
+	align-items: center;
+	justify-content: center;
+}
+
+#add-category {
+	
+}
+
+#name-category {
+	
+}
+
+#link-category {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }

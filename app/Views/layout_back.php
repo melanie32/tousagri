@@ -10,10 +10,8 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style_back.css') ?>">
 </head>
 <body>
-	<div id="wrapper" class="container">
-		<header>
-			<p class="text-left text-hello">Bonjour, nom utilisateur en dynamique</p>
-			<header>
+	
+	<header>			
 		<nav class="sidenav">
 			<ul>
 				<li><a href="#">Retour liste des catégories</a></li>
@@ -23,7 +21,9 @@
 		</nav>
 	</header>
 
-		</header>
+	<div id="wrapper" class="container">
+
+		<p class="text-left text-hello">Bonjour, nom utilisateur en dynamique</p>
 
 		<section>
 			<?= $this->section('main_content') ?>
@@ -31,8 +31,7 @@
 
 		<footer>
 		</footer>
-	</div>
-	
+	</div>	
 
 </body>
 </html>
