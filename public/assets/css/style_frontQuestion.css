@@ -5,6 +5,7 @@ position: relative;
 
 body {
 margin: 0;
+overflow: hidden;
 }
 
 ul{
@@ -20,38 +21,163 @@ padding: 0;
 
 /*******  COPRS DE PAGE  ********/
 #wrapper_Questions {
-width: 100%;
-padding: 0;
+	max-width: 100%;
+	padding: 0;
 }
 
 .conteneur_L{
-height: 100%;
-width: 37%;	
-position: absolute;
-background-position: center center;
-background-repeat: no-repeat;
-background-size: cover;
+	height: 100%;
+	width: 40%;	
+	position: absolute;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #illustration_Questions {
-background-size: cover;
-width: auto;
+	background-size: cover;
+	width: auto;
 }
 
 #nav_Category {
-margin-top: 15%;
-justify-content: center;
-z-index: 1;
-position: relative;
-width: 15%;
-float: left;
+	margin-top: 15%;
+	justify-content: center;
+	z-index: 1;
+	position: relative;
+	width: 15%;
+	float: left;
 }
 
+
 #nav_Category ul li{
-margin-bottom: 10px;
-list-style: none;
-float: left;
-background-color: red;
-height: 120px;
-width: 100%;
+	display: block;
+	cursor : pointer;
+	margin: 15px 0;
+	list-style: none;
+	float: left;
+	background-color: #3b85ab ;
+	height: 120px;
+	width: 100%;
 }
+
+#nav_Category ul li:hover{
+	margin-left: 10%;
+	transform: scale(1.20);
+	-ms-transform: scale(1.20);
+	-webkit-transform: scale(1.20);
+	-o-transform: scale(1.20);
+	-moz-transform: scale(1.20);
+}
+
+#nav_Category ul li:first-child {
+	position: absolute;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+#bloc_Questions {
+	overflow-y: scroll;
+	position: absolute;
+	margin-left: 40%;
+	width: 60%;
+	height: 100%;
+}
+
+#question_1 {
+	cursor : pointer;
+	width: 100%;
+	height: 25%;
+	background-color: #ffcccc;
+}
+
+#question_1 p {
+	padding: 1em 3em 1em 3em;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#question_2 {
+	cursor : pointer;
+	width: 100%;
+	height: 25%;
+	background-color: #ffb3b3;
+}
+
+#question_2 p {
+	padding: 1em 3em 1em 3em;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#question_3 {
+	cursor : pointer;
+	width: 100%;
+	height: 25%;
+	background-color: #ff9999;
+}
+
+#question_3 p {
+	padding: 1em 3em 1em 3em;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#question_4 {
+	cursor : pointer;
+	width: 100%;
+	height: 25%;
+	background-color: #ff8080;
+}
+
+#question_4 p {
+	padding: 1em 3em 1em 3em;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.clear {
+	clear:both;
+}
+
+#reponse_1 {
+	display: none;
+}
+#reponse_2 {
+	display: none;
+}
+#reponse_3 {
+	display: none;
+}
+#reponse_4 {
+	display: none;
+}
+/*******  FIN COPRS DE PAGE  ********/
+
+
+
+/*******  BLOC COMMENTAIRE  ********/
+.comment_S {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	background-color: green;
+	width: 60%;
+	margin-left: 40%;
+}
+
+.button_Comment {
+	cursor : pointer;
+	height: 55px;
+}
+
+.list_Comments {
+	height: auto;
+}
+/*******  FIN BLOC COMMENTAIRE  ********/
+
