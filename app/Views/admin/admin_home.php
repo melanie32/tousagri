@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 
-	<p class="text-left text-hello">Bonjour, nom utilisateur en dynamique</p>
+	
 
 	<div class="text-center">
 		<i class="fa fa-2x fa-sign-in" aria-hidden="true"></i>&nbsp;

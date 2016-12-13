@@ -2,7 +2,23 @@
 
 <?php $this->start('main_content') ?>
 
-	<p class="text-left text-hello">Bonjour, nom utilisateur en dynamique</p>
+	
+
+	<div class="container-edit-admin">
+
+		<a href="#">
+			<div class="edit-admin text-center">
+				Editer les catégories
+			</div>
+		</a>
+
+		<a href="#">
+			<div class="edit-admin text-center">
+				Editer les commentaires
+			</div>
+		</a>
+
+	</div>
 
 	
 

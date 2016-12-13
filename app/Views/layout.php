@@ -18,8 +18,17 @@
 			<?= $this->section('main_content') ?>
 		</section>
 
+<<<<<<< HEAD:app/Views/layout_front.php
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="<?= $this->assetUrl('js/scriptQuestion.js') ?>"></script>
 
+=======
+		<footer>
+		</footer>
+	</div>
+
+
+	<script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
+>>>>>>> origin/master:app/Views/layout.php
 </body>
 </html>

@@ -12,7 +12,16 @@
 <body>
 	<div id="wrapper" class="container">
 		<header>
-			
+			<p class="text-left text-hello">Bonjour, nom utilisateur en dynamique</p>
+			<header>
+		<nav class="sidenav">
+			<ul>
+				<li><a href="#">Retour liste des catégories</a></li>
+				<li><a href="#">Editer les catégories active</a></li>
+				<li><a href="#">Editer les commentaires</a></li>
+			</ul>
+		</nav>
+	</header>
 
 		</header>
 

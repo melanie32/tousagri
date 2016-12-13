@@ -1,10 +1,15 @@
+/******************style général******************/
 body {
 	font-size: 16px; 
 	color: black;
 }
 
-a {
+a, a:hover {
 	text-decoration: none;
+}
+
+li {
+	list-style: none;
 }
 
 #wrapper {
@@ -14,6 +19,28 @@ a {
 	padding-top: 2.125em;
 }
 
+.sidenav {
+    height: 100%;
+    width: 15.625em;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #404054;
+    overflow-x: hidden;
+    padding-top: 5%;
+}
+
+.sidenav li {
+	height: 9.254em;
+	line-height: 9.254em;
+}
+
+.sidenav a {
+	color: white;
+}
+
+/******************style page connexion back******************/
 .text-hello {
 	font-size: 0.875em;
 }
@@ -22,3 +49,28 @@ a {
 	font-size: 2em;	
 }
 
+/******************style page accueil back******************/
+
+.container-edit-admin {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	height: 30em;
+}
+
+.edit-admin {
+	margin: 1em 0;
+	width: 15.125em;
+	height: 15.125em;
+	line-height: 15.125em;
+	border-radius: 8em;
+	border: black solid 0.06125em;
+}
+
+/******************style page list categories back******************/
+
+.cub-category {
+	height: 12em;
+	width: 12em;
+}
