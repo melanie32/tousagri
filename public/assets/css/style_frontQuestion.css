@@ -17,8 +17,6 @@ padding: 0;
 /*******  FIN TITRE  ********/
 
 
-
-
 /*******  COPRS DE PAGE  ********/
 #wrapper_Questions {
 	max-width: 100%;
@@ -40,28 +38,30 @@ padding: 0;
 }
 
 #nav_Category {
-	margin-top: 15%;
-	justify-content: center;
-	z-index: 1;
-	position: relative;
-	width: 15%;
+	max-height: 100%;
+	position: absolute;
+	width: 20%;
 	float: left;
+	overflow: scroll;
+
 }
+
+*::-webkit-scrollbar { display: none; }
 
 
 #nav_Category ul li{
 	display: block;
 	cursor : pointer;
-	margin: 15px 0;
+	margin: 12px 0;
 	list-style: none;
 	float: left;
 	background-color: #3b85ab ;
 	height: 120px;
-	width: 100%;
+	width: 120px;
 }
 
 #nav_Category ul li:hover{
-	margin-left: 10%;
+	margin-left: 7%;
 	transform: scale(1.20);
 	-ms-transform: scale(1.20);
 	-webkit-transform: scale(1.20);
@@ -82,20 +82,28 @@ padding: 0;
 	position: absolute;
 	margin-left: 40%;
 	width: 60%;
-	height: 100%;
+	height: 97%;
 }
 
 .bloc_Question {
+	border-top: 0.7em solid #ff751a;
 	display: block;
 	cursor : pointer;
 	width: 100%;
 	height: 25%;
-	background-color: #ffcccc;
+	background-color: #cce0ff;
 }
 
-.button_Com {
+.button_ComA{
 	width: 100%;
 	text-align: center;
+	margin: 0 auto;
+}
+
+.button_Com2 {
+	display: inline-flex;
+	text-align: center;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -174,8 +182,8 @@ padding: 0;
 .comment_S {
 	display: none;
 	position: fixed;
-	bottom: 0;
-	background-color: #ff1a1a;
+	bottom: 3%;
+	background-color: #99c2ff;
 	width: 50%;
 	margin-left: 45%;
 	border: 0.3em solid black;
@@ -195,22 +203,6 @@ padding: 0;
 	text-align: center;
 	font-size: 1.5em;
 }
-
-.masquer_Comments  {
-	margin-top: 0.5em;
-	margin-bottom: 1em;
-	padding-left: 3em;
-	padding-right: 3em;
-	font-size: 2em;
-	font-weight: bold;
-	color: white;
-	background-color: black;
-	border-radius: 10px 10px 10px 10px;
-	border: none;
-}
-	.masquer_Comments:hover  {
-		background-color: green;
-	}
 
 .ajout_Comments  {
 	margin-top: 0.5em;
@@ -238,14 +230,12 @@ padding: 0;
 .depot_Comment {
 	display: none;
 	padding-top: 3em;
-	background-color: red;
+	background-color: #99c2ff;
 	position: absolute;
 	margin-left: 40%;
 	width: 60%;
 	height: 100%;
 }
-
-
 /*******  FIN BLOC DEPOT COMMENTAIRE  ********/
 
 
