@@ -4,7 +4,7 @@
 <?php $this->start('main_content') ?>
 
 
-<body>
+<body class="categories">
     <div class="container contai">
 
     <div class="siteNam">
@@ -12,17 +12,17 @@
     </div>
 
         <div class="row dad">
-          <div class="col-xs-6 col-md-4"><img id="secPic" src="<?= $this->assetUrl('picto/poisson.png') ?>"></div>
-          <div class="col-xs-6 col-md-4"><img id="secPic" src="<?= $this->assetUrl('picto/poisson.png') ?>"></div>
-          <div class="col-xs-6 col-md-4"><img id="secPic" src="<?= $this->assetUrl('picto/poisson.png') ?>"></div>
+          <div class="col-xs-6 col-md-4 imBox"><img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>"></div>
+          <div class="col-xs-6 col-md-4 imBox"><img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>"></div>
+          <div class="col-xs-6 col-md-4 imBox"><img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>"></div>
         </div>
 
           <!-- Add the extra clearfix for only the required viewport -->
 
         <div class="row dad">
-          <div class="col-xs-6 col-md-4"><img id="secPic" src="<?= $this->assetUrl('picto/poisson.png') ?>"></div>
-          <div class="col-xs-6 col-md-4"><img id="secPic" src="<?= $this->assetUrl('picto/poisson.png') ?>"></div>
-          <div class="col-xs-6 col-md-4"><img id="secPic" src="<?= $this->assetUrl('picto/poisson.png') ?>"></div>
+          <div class="col-xs-6 col-md-4 imBox"><img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>"></div>
+          <div class="col-xs-6 col-md-4 imBox"><img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>"></div>
+          <div class="col-xs-6 col-md-4 imBox"><img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>"></div>
         </div>
     </div>
 

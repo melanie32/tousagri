@@ -48,35 +48,45 @@
 
 /*Catégories*/
 
-    .contai {
-        margin: 0 auto;
-        width: 75em;
-        max-width: 100%;
+.categories {
+    background-image: url(img/illustration);
+}
 
-    }
+.contai {
+    margin: 0 auto;
+    width: 75em;
+    max-width: 100%;
 
-    #secPic {
-            width: 20.125em;
-            height: 20.125em;
-            border-radius: 3%;
-            margin: 1.25em;
-        }
+}
 
-        .siteNam{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 20.5em;
-        }
+#secPic {
+    width: 20.125em;
+    height: 20.125em;
+    border: 1px solid black;
+    border-radius: 3%;
+    margin: 1.25em;
+}
 
-        .namSite {
-            font-size: 4.125em;
-        }
+/*.imBox {
+    border: 3px;
+    border-color: black;
+}*/
+
+.siteNam{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20.5em;
+}
+
+.namSite {
+    font-size: 4.125em;
+}
 
 
-        .dad {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-        }
+.dad {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
