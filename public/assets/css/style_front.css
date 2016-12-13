@@ -1,7 +1,7 @@
 
 /*TITRE*/
 
-.headLine{
+.headLine {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,13 +20,19 @@
 	align-items: center;
 }
 
-#reset {
+.style-reset {
 	background-color: #ff5252;
 	color: white;
 	width: 500px;
 	height: 100px;
 	font-size: 45px;
 }
+
+#button-link {
+    display: none;
+}
+
+
 
 /*FOOTER*/
 
@@ -48,10 +54,6 @@
 
 /*Catégories*/
 
-.categories {
-    background-image: url(img/illustration);
-}
-
 .contai {
     margin: 0 auto;
     width: 75em;
@@ -60,19 +62,11 @@
 }
 
 #secPic {
-    width: 20.125em;
-    height: 20.125em;
-    border: 1px solid black;
-    border-radius: 3%;
-    margin: 1.25em;
+    width: 18.125em;
+    height: 18.125em;
 }
 
-/*.imBox {
-    border: 3px;
-    border-color: black;
-}*/
-
-.siteNam{
+.siteNam {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,4 +83,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+}
+
+.imBox {
+    width: 20em;
+    height: 20em;
+    border: 1px solid black;
+    border-radius: 3%;
+    margin: 1.25em;
+    
+}
+
+.secNam {
+    font-size: 2.125em;
 }

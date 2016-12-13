@@ -184,16 +184,20 @@ function Gravity(id){
 var paragraph = new Gravity('text');
 var gravity = new Gravity('reset');
 
+
 var button = document.getElementById('reset');
+
 button.addEventListener('click',function(){
+
   if(gravity.animate){
     gravity.reset();
     paragraph.reset();
-  }else{
-    gravity.restart();
-    paragraph.restart();
-  }
+  }  
+  
 });
+
+
+
 
 var render = function (time) { 
   requestAnimationFrame( render );

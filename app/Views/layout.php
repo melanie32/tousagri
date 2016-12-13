@@ -18,13 +18,29 @@
 			<?= $this->section('main_content') ?>
 		</section>
 
+
+
+		<!-- Footer -->
+	<footer class="bottNav">
+
+	
+			<div>
+				<div class="col-md-12 col-md-offset-6">
+					<ul class="navList">
+						<a href="#">A propos</a>
+						<a href="#">Partenaires</a>
+						<a href="#">Partager</a>
+						<a href="#">Crédits</a>
+						<a href="#">Mentions Légales</a>
+					</ul>
+				</div>
+			</div>
+	
+
+	</footer>
+	</div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="<?= $this->assetUrl('js/scriptQuestion.js') ?>"></script>
-
-
-		<footer>
-		</footer>
-	</div>
 
 
 	<script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
