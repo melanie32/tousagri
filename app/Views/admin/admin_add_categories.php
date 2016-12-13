@@ -1,7 +1,7 @@
 <?php $this->layout('layout_back', ['title' => 'Ajouter une catégorie']) ?>
 
 <?php $this->start('main_content') ?>
-
+ 
 	<div class="text-center">
 		<p class="text-connect">Ajouter une catégorie</p>
 	</div>
@@ -46,6 +46,14 @@
 			<label class="col-md-4 control-label" for="explanation">Réponse $i</label>
 			<div class="col-md-4">                     
 				<textarea class="form-control" id="explanation" name="explanation"></textarea>
+			</div>
+		</div>
+
+		<!-- pour ajouter une question et réponse -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="add-question">Ajouter une question</label>
+			<div class="col-md-4 add-question">                 
+				<i class="fa fa-2x fa-plus" aria-hidden="true"></i>
 			</div>
 		</div>
 

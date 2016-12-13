@@ -40,5 +40,10 @@ class AdminController extends Controller
 		$this->show('admin/admin_edit_categories');
 	}
 
+	public function editComments()
+	{
+		$this->show('admin/admin_edit_comments');
+	}
+
 
 }

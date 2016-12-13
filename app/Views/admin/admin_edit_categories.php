@@ -49,11 +49,19 @@
 			</div>
 		</div>
 
+		<!-- pour ajouter une question et réponse -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="add-question">Ajouter une question</label>
+			<div class="col-md-4 add-question">                 
+				<i class="fa fa-2x fa-plus" aria-hidden="true"></i>
+			</div>
+		</div>
+
 		<!-- Button -->
 		<div class="form-group">
 			<label class="col-md-4 control-label" for=""></label>
 			<div class="col-md-4">
-			<button id="" name="" class="btn btn-info center-block">Modifier la catégorie</button>
+				<button id="" name="" class="btn btn-info center-block">Modifier la catégorie</button>
 			</div>
 		</div>
 
