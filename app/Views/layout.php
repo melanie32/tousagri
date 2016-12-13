@@ -10,7 +10,6 @@
 
 
 <?=$this->section('css');?>	
-	<script type="text/javascript" href="<?= $this->assetUrl('js/script.js') ?>"></script>
 
 </head>
 <body>
@@ -27,6 +26,6 @@
 	</div>
 
 
-
+	<script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
 </body>
 </html>

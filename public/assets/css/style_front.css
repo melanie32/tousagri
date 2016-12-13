@@ -1,5 +1,5 @@
 
-/*******  FIN TITRE  ********/
+/*TITRE*/
 
 .headLine{
 	display: flex;
@@ -12,10 +12,7 @@
 	font-size: 51px;
 }
 
-
-/*******  COPRS DE PAGE  ********/
-
-/*******  FIN COPRS DE PAGE  ********/
+/*BOUTTON*/
 
 .startBut {
 	display: flex; 
@@ -23,13 +20,15 @@
 	align-items: center;
 }
 
-.start {
+#reset {
 	background-color: #ff5252;
 	color: white;
 	width: 500px;
 	height: 100px;
 	font-size: 45px;
 }
+
+/*FOOTER*/
 
 .bottNav {
 

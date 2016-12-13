@@ -1,7 +1,8 @@
+/*Script home*/
 var time = 0;
 function Gravity(id){
   var that = this;
-  var element = document.getElementById(id);
+  var element = document.getElementById('text');
   var text = element.textContent;
   var arr = text.split('');
 
@@ -22,13 +23,7 @@ function Gravity(id){
 
   this.useBound = this.checkBound();
   this.colors = [
-      '#f44336','#e91e63','#9c27b0',
-      '#673ab7','#3f51b5','#2196f3',
-      '#03a9f4','#00bcd4','#009688',
-      '#4caf50','#8bc34a','#cddc39',
-      '#ffeb3b','#ffc107','#ff9800',
-      '#ff5722','#795548','#9e9e9e',
-      '#607d8b'
+      '#31708f', '#1a3b4c', '#3b85ab', '#67aacb', '#275972', '#b3d4e5'
   ];
 
   this.randomColor = function(){
@@ -216,3 +211,4 @@ function animation(time){
 //__________
 
 render(time);
+/*Fin script home*/
