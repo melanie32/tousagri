@@ -1,4 +1,13 @@
 
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-size: 16px;
+}
+
 /*TITRE*/
 
 .headLine {
@@ -49,7 +58,7 @@
 }
 
 .navList a {
-	padding: 15px;
+    padding: 15px;
 }
 
 /*Catégories*/
@@ -58,7 +67,7 @@
     margin: 0 auto;
     width: 75em;
     max-width: 100%;
-
+    min-height: 100%;
 }
 
 #secPic {
@@ -96,4 +105,10 @@
 
 .secNam {
     font-size: 2.125em;
+}
+
+/*Scroll Bar*/
+
+.wrappy {
+    
 }
