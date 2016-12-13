@@ -1,4 +1,4 @@
-<?php $this->layout('layout_front', ['title' => 'Listes des Questions']) ?>
+<?php $this->layout('layout', ['title' => 'Listes des Questions']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -15,20 +15,19 @@
 			</ul>
 		</div>
 	</div>
-	<div id="bloc_Questions">
+</div>
+
+<div id="bloc_Questions">
+	<div class="bloc_Question">
 		<div id="question_1">
 			<p>
 			Quelles sont les limites de l’environnement de l’homme ?
 			</p>
-		<form class="form-horizontal">
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="affiche_Comments"></label>
-				<div class="col-md-4">
-					<button id="affiche_Comments" name="affiche_Comments" class="btn btn-primary">Voir commentaires</button>
-				</div>
-			</div>
-		</form>
 		</div>
+		<div class="button_Com">
+			<button class="affiche_Comments" name="affiche_Comments" class="btn btn-primary">Voir commentaires</button>
+		</div>
+	</div>
 
 		<div id="reponse_1">
 			<p>Il faut distinguer :
@@ -55,18 +54,15 @@
 
 		<div class="clear"></div>
 
-		<div id="question_2">
-			<p>
-			Existe-t-il un "capital planète" à gérer pour l'avenir ?
-			</p>
-		<form class="form-horizontal">
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="affiche_Comments"></label>
-				<div class="col-md-4">
-					<button id="affiche_Comments" name="affiche_Comments" class="btn btn-primary">Voir commentaires</button>
-				</div>
+		<div class="bloc_Question">
+			<div id="question_2">
+				<p>
+				Existe-t-il un "capital planète" à gérer pour l'avenir ?
+				</p>
 			</div>
-		</form>
+			<div class="button_Com">
+				<button class="affiche_Comments" name="affiche_Comments" class="btn btn-primary">Voir commentaires</button>
+			</div>
 		</div>
 
 
@@ -87,20 +83,18 @@
 				(2) Une ressource est considérée comme recyclable quand les produits de son utilisation permettent de reconstituer une partie de la ressource initiale.
 			</p>
 		</div>
+
 		<div class="clear"></div>
 
-		<div id="question_3">
-			<p>
-			Quelles sont les "catastrophes écologiques" provoquées par l'homme ?
-			</p>
-		<form class="form-horizontal">
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="affiche_Comments"></label>
-				<div class="col-md-4">
-					<button id="affiche_Comments" name="affiche_Comments" class="btn btn-primary">Voir commentaires</button>
-				</div>
+		<div class="bloc_Question">
+			<div id="question_3">
+				<p>
+				Quelles sont les "catastrophes écologiques" provoquées par l'homme ?
+				</p>
 			</div>
-		</form>
+			<div class="button_Com">
+				<button class="affiche_Comments" name="affiche_Comments" class="btn btn-primary">Voir commentaires</button>
+			</div>
 		</div>
 
 
@@ -133,53 +127,100 @@
 				Introduction d’espèces nouvelles (le doryphore en Europe, le lapin en Australie, etc.). Le génie génétique, s’il peut être envisagé comme un parade future, ne pourra être appliqué qu’à quelques espèces bien connues et ne saurait être envisagé pour la totalité des êtres vivants. 
 			</p>
 		</div>
+
 		<div class="clear"></div>
 
-		<div id="question_4">
-			<p>
-			Quelles sont les nuisances liées aux conditions de vie en milieu urbain ?
-			</p>
-		<form class="form-horizontal">
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="affiche_Comments"></label>
-				<div class="col-md-4">
-					<button id="affiche_Comments" name="affiche_Comments" class="btn btn-primary">Voir commentaires</button>
-				</div>
+		<div class="bloc_Question">
+			<div id="question_4">
+				<p>
+				Quelles sont les nuisances liées aux conditions de vie en milieu urbain ?
+				</p>
 			</div>
-		</form>
+			<div class="button_Com">
+				<button class="affiche_Comments" name="affiche_Comments" class="btn btn-primary">Voir commentaires</button>
+			</div>
 		</div>
 
-
-		<div id="reponse_4">
-			<p>oniqseubngv lijqsbvlkj qdsbvlkqdjv bljeqgfrqj m sdvbmrjfffzeombf oqIEUFH XPQZOEUCFRH PRUFHC EGOPICH ¨PIH ià hoîhdf poscdhidgo pfihg dvoifhg xcdiopfhc gdpfogich dfopichg egfioph djoh do^gkhse cr^gioph egpbdegtiu bfgviuc eiugcb ibfr ericbh fsjisjisjisjiqhoer îcgh jogch erophj cpiuerh xcpoerch eropch peroiht cqskomh mocghilg pcruiohe cpoisdufh vpcoeruifh tpoergh veocfhdrhiog cqsjodf mgh opserihjvte shpoon iqseubngvli jqsbvlkjqdsbvlk qdjvbljeqgfrqjmsd vbmrjfffzeombf oqIEUFH XPQZOEUCFRH PRUFHC EGOPICH ¨PIH ià hoîhdf poscdhidgo pfihg dvoifhg xcdiopfhc gdpfogich dfopichg egfioph djoh do^gkhse cr^gioph egpbdegtiu bfgviuc eiugcb ibfr ericbh fsjisjisjisjiqhoer îcgh jogch erophj cpiuerh xcpoerch eropch peroiht cqskomh mocghilg pcruiohe cpoisdufh vpcoeruifh tpoergh veocfhdrhiog cqsjodf mgh opserihjvte shpooniqseubng vlijqs bvlkjqdsbvlkqdjvbljeq gfrqjmsdvbmrj ffzeombf oqIEUFH XPQZOEUCFRH PRUFHC EGOPICH ¨PIH ià hoîhdf poscdhidgo pfihg dvoifhg </p>
-		</div>
-
-	</div>
-	<div class="clear"></div>
-
-	<div class="comment_S">
-		<div class="button_Comment">
-		<p>Commentaires</p>
-		</div>
-		<div class="list_Comments">
+		<div id="reponse_4" reponse_2>
 			<p>
-				Les désagréments physiques sont multiples et variés :</p>
+				Les désagréments physiques sont multiples et variés :</br>
 
 				bruit de fond permanent produit par le trafic de la rue, les moteurs des usines, ou simplement l’activité humaine dans un immeuble mal insonorisé ;
 				bullet	
-				odeurs désagréables des rejets gazeux (voitures, usines) ;</p>
+				odeurs désagréables des rejets gazeux (voitures, usines) ;</br>
 
 				cadre visuel inesthétique lié à la laideur des bâtiments, à l’absence de soleil et d’arbres.
-				L’ensemble de ces désagréments entraîne une fatigue nerveuse chronique, un manque de gaîté et de joie de vivre et parfois de véritables maladies d’ordre psychique.</p>
+				L’ensemble de ces désagréments entraîne une fatigue nerveuse chronique, un manque de gaîté et de joie de vivre et parfois de véritables maladies d’ordre psychique.</br>
 
-				Les rejets toxiques issus des moteurs des voitures et des chaufferies ont des conséquences plus graves : bronchites chroniques, asthme, allergies de toutes sortes, anémies, intoxications par le plomb (saturnisme)...</p>
+				Les rejets toxiques issus des moteurs des voitures et des chaufferies ont des conséquences plus graves : bronchites chroniques, asthme, allergies de toutes sortes, anémies, intoxications par le plomb (saturnisme)...</br>
 
-				La forte densité de population peut provoquer chez certains individus des troubles psychiques dus à l’impossibilité de s’isoler.</p>
+				La forte densité de population peut provoquer chez certains individus des troubles psychiques dus à l’impossibilité de s’isoler.</br>
 
 				Un stress est lié au rythme de vie urbain et à ses désagréments.
 			</p>
 		</div>
 	</div>
+
+	<div class="clear"></div>
+
+	<div class="comment_S">
+		<div class="button_Com">
+			<button class="masquer_Comments" name="masquer_Comments" class="btn btn-primary">Masquer</button>
+		</div>
+		<div class="list_Comments">
+			<p>
+				!! oniqseubngv lijqsbvlkj qdsbvlkqdjv bljeqgfrqj m sdvbmrjfffzeombf oqIEUFH XPQZOEUCFRH PRUFHC EGOPICH ¨PIH ià hoîhdf poscdhidgo pfihg dvoifhg xcdiopfhc gdpfogich dfopichg egfioph djoh do^gkhse cr^gioph egpbdegtiu bfgviuc eiugcb ibfr ericbh fsjisjisjisjiqhoer îcgh jogch erophj cpiuerh xcpoerch eropch peroiht cqskomh mocghilg pcruiohe cpoisdufh vpcoeruifh tpoergh veocfhdrhiog cqsjodf mgh opserihjvte oniqseubngv lijqsbvlkj qdsbvlkqdjv bljeqgfrqj m sdvbmrjfffzeombf oqIEUFH XPQZOEUCFRH PRUFHC EGOPICH ¨PIH ià hoîhdf poscdhidgo pfihg dvoifhg xcdiopfhc gdpfogich dfopichg egfioph djoh do^gkhse cr^gioph egpbdegtiu bfgviuc eiugcb ibfr ericbh fsjisjisjisjiqhoer îcgh jogch erophj cpiuerh xcpoerch eropch peroiht cqskomh mocghilg pcruiohe cpoisdufh vpcoeruifh tpoergh veocfhdrhiog cqsjodf mgh opserihjvte !!
+			</p>
+		</div>
+		<div class="button_Com">
+			<button class="ajout_Comments" name="ajout_Comments" class="btn btn-primary">Ajouter un commentaire</button>
+
+		</div>
+	</div>
+
+
+
+
+
+	<div class="depot_Comment">
+		<form class="form-horizontal">
+
+			<!-- Form Name -->
+			<legend>Commentez</legend>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="pseudo">Pseudo</label>  
+			  <div class="col-md-4">
+			  <input id="pseudo" name="pseudo" type="text" placeholder="" class="form-control input-md">
+			    
+			  </div>
+			</div>
+
+			<!-- Textarea -->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="message">Message</label>
+			  <div class="col-md-4">                     
+			    <textarea class="form-control" id="message" name="message"></textarea>
+			  </div>
+			</div>
+
+			<!-- Button -->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="envoyer"></label>
+			  <div class="col-md-4">
+			    <button id="envoyer" name="envoyer" class="btn btn-primary">Envoyer</button>
+			  </div>
+			</div>
+
+
+		</form>
+
+		
+	</div>
+
+
+
 
 </div>
 	
@@ -199,9 +240,7 @@
 </style>
 <?php $this->stop('css') ?>
 
-
-
-
+		
 
 
 

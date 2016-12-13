@@ -85,11 +85,18 @@ padding: 0;
 	height: 100%;
 }
 
-#question_1 {
+.bloc_Question {
+	display: block;
 	cursor : pointer;
 	width: 100%;
 	height: 25%;
 	background-color: #ffcccc;
+}
+
+.button_Com {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
 }
 
 #question_1 p {
@@ -99,13 +106,6 @@ padding: 0;
 	font-weight: bold;
 }
 
-#question_2 {
-	cursor : pointer;
-	width: 100%;
-	height: 25%;
-	background-color: #ffb3b3;
-}
-
 #question_2 p {
 	padding: 1em 3em 1em 3em;
 	text-align: center;
@@ -113,25 +113,11 @@ padding: 0;
 	font-weight: bold;
 }
 
-#question_3 {
-	cursor : pointer;
-	width: 100%;
-	height: 25%;
-	background-color: #ff9999;
-}
-
 #question_3 p {
 	padding: 1em 3em 1em 3em;
 	text-align: center;
 	font-size: 1.5em;
 	font-weight: bold;
-}
-
-#question_4 {
-	cursor : pointer;
-	width: 100%;
-	height: 25%;
-	background-color: #ff8080;
 }
 
 #question_4 p {
@@ -148,14 +134,37 @@ padding: 0;
 #reponse_1 {
 	display: none;
 }
+
+#reponse_1 p {
+	padding: 1em 3em 1em 3em;
+	text-align: center;
+}
+
 #reponse_2 {
 	display: none;
 }
+
+#reponse_2 p {
+	padding: 1em 3em 1em 3em;
+	text-align: center;
+}
+
 #reponse_3 {
 	display: none;
 }
+
+#reponse_3 p {
+	padding: 1em 3em 1em 3em;
+	text-align: center;
+}
+
 #reponse_4 {
 	display: none;
+}
+
+#reponse_4 p {
+	padding: 1em 3em 1em 3em;
+	text-align: center;
 }
 /*******  FIN COPRS DE PAGE  ********/
 
@@ -166,18 +175,78 @@ padding: 0;
 	display: none;
 	position: fixed;
 	bottom: 0;
-	background-color: green;
-	width: 60%;
-	margin-left: 40%;
+	background-color: #ff1a1a;
+	width: 50%;
+	margin-left: 45%;
+	border: 0.3em solid black;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	box-shadow: 0px 0px 10px 7px rgba(119, 119, 119, 0.5);
+-moz-box-shadow: 0px 0px 10px 7px rgba(119, 119, 119, 0.5);
+-webkit-box-shadow: 0px 0px 10px 7px rgba(119, 119, 119, 0.5);
+
 }
 
-.button_Comment {
-	cursor : pointer;
-	height: 55px;
+.comment_S p {
+	text-align: center;
+	font-size: 1.5em;
 }
+
+.masquer_Comments  {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	padding-left: 3em;
+	padding-right: 3em;
+	font-size: 2em;
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	border-radius: 10px 10px 10px 10px;
+	border: none;
+}
+	.masquer_Comments:hover  {
+		background-color: green;
+	}
+
+.ajout_Comments  {
+	margin-top: 0.5em;
+	margin-bottom: 0.05em;
+	padding-left: 3em;
+	padding-right: 3em;
+	font-size: 2em;
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	border-radius: 10px 10px 10px 10px;
+	border: none;
+}
+	.ajouter_Comments:hover  {
+		background-color: green;
+	}
 
 .list_Comments {
 	height: auto;
 }
 /*******  FIN BLOC COMMENTAIRE  ********/
+
+
+/*******  BLOC DEPOT COMMENTAIRE  ********/
+.depot_Comment {
+	display: none;
+	padding-top: 3em;
+	background-color: red;
+	position: absolute;
+	margin-left: 40%;
+	width: 60%;
+	height: 100%;
+}
+
+
+/*******  FIN BLOC DEPOT COMMENTAIRE  ********/
+
+
 
