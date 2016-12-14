@@ -50,6 +50,9 @@ padding: 0;
 
 
 #nav_Category ul li{
+	text-align: center;
+	color: white;
+	font-weight: bold;
 	display: block;
 	cursor : pointer;
 	margin: 12px 0;

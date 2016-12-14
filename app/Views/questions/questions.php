@@ -6,18 +6,9 @@
 	<div class="conteneur_L">
 		<div id="nav_Category">
 			<ul>
-				<li>Viande</li>
-				<li>Poisson</li>
-				<li>Légumes</li>
-				<li>Fruits</li>
-				<li>Crustacées</li>
-				<li>Molusces</li>
-				<li>Molusces</li>
-				<li>Molusces</li>
-				<li>Molusces</li>
-				<li>Molusces</li>
-				<li>Molusces</li>
-
+	<?php foreach($selectC as $select): ?>
+				<li><?= $select['title']?></li>
+	<?php endforeach ?>
 			</ul>
 		</div>
 	</div>
