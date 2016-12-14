@@ -38,7 +38,14 @@ class AdminController extends Controller
 
 	public function categories()
 	{
-		$this->show('admin/admin_categories');
+
+		$selectCategories = new CategoriesModel();
+
+		$selectC = $selectCategories->findAll();
+
+		$dataC = ['selectC' => $selectC];
+
+		$this->show('admin/admin_categories', $dataC);
 	}
 
 	/**

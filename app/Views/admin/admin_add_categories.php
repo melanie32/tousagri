@@ -1,8 +1,8 @@
 <?php $this->layout('layout_back', ['title' => 'Ajouter une catégorie']) ?>
 
-<?php $this->start('main_content') ?> 
+<?php $this->start('main_content') ?>  
 
-<?php if(isset($errors) && !empty($errors)):?>
+<?php if(isset($errors) && !empty($errors)):?> 
 	<div class="alert alert-danger">
 		<?=implode('<br>', $errors); ?>
 	</div>

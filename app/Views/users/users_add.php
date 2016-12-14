@@ -2,7 +2,17 @@
 
 <?php $this->start('main_content') ?>
 
-	
+<?php if(isset($errors) && !empty($errors)):?> 
+	<div class="alert alert-danger">
+		<?=implode('<br>', $errors); ?>
+	</div>
+<?php endif; ?>
+
+<?php if(isset($success) && $success == true):?>
+	<div class="alert alert-success">
+		Votre ajout d'utilisateur a bien été enregistré !
+	</div>
+<?php endif; ?>
 
 	<div class="text-center">
 		<i class="fa fa-2x fa-user-plus" aria-hidden="true"></i>&nbsp;
