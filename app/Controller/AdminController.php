@@ -3,6 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use \Model\CategoriesModel;
 
 class AdminController extends Controller
 {
