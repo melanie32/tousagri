@@ -18,7 +18,7 @@ $(document).ready(function() {
 	$('.affiche_Comments').click(function(){
 		$('.comment_S').slideToggle('slow');
 	});
-	$('.masquer_Comments').click(function(){
+	$('#masquer_Comments').click(function(){
 		$('.comment_S').hide();
 	});
 });
