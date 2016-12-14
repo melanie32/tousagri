@@ -5,12 +5,13 @@
 
 
 <body>
-  <div class="container contai">
+<div class="container contai">
 
     <div class="siteNam">
       <h1  class="text-center namSite">Vous les agriculteurs, vous êtes tous les mêmes!</h1>
     </div>
 
+  <div class="wrappy">
     <div class="row dad">
       <div class="col-xs-6 col-md-4 imBox">
         <p class="text-center secNam">Nom section</p>
@@ -63,6 +64,33 @@
        
       </div>
     </div>
+
+     <div class="row dad">
+      <div class="col-xs-6 col-md-4 imBox">
+        <p class="text-center secNam">Nom section</p>
+        <a href="<?= $this->url('questions_home') ?>">
+          <img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>" >
+        </a>
+        
+      </div>
+
+      <div class="col-xs-6 col-md-4 imBox">
+        <p class="text-center secNam">Nom section</p>
+        <a href="<?= $this->url('questions_home') ?>">
+          <img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>" >
+        </a>
+        
+      </div>
+
+      <div class="col-xs-6 col-md-4 imBox">
+        <p class="text-center secNam">Nom section</p>
+        <a href="<?= $this->url('questions_home') ?>">
+          <img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>" >
+        </a>
+       
+      </div>
+  </div>
+</div>
 
     <!-- CSS background -->
     <?php $this->start('css') ?>
