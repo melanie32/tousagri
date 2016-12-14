@@ -109,8 +109,8 @@ body {
 
 /*Scroll Bar*/
 
-.wrappy {
+/*.wrappy {
     display: flex;
     flex-direction: row;
     overflow-x: auto;
-}
+}*/
