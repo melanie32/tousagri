@@ -203,9 +203,9 @@
 
 						<!-- Text input-->
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="pseudo">Pseudo</label>  
+							<label class="col-md-4 control-label" for="username">Pseudo</label>  
 							<div class="col-md-4">
-								<input id="pseudo" name="pseudo" type="text" placeholder="" class="form-control input-md">
+								<input id="username" name="username" type="text" placeholder="" class="form-control input-md">
 							</div>
 						</div>
 
