@@ -1,7 +1,7 @@
 <?php $this->layout('layout_back', ['title' => 'Connexion']) ?>
 
 <?php $this->start('main_content') ?>
-
+ 
 	
 
 	<div class="text-center">

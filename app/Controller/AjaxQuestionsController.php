@@ -1,10 +1,16 @@
 <?php
-
+ 
 namespace Controller;
 
 use \W\Controller\Controller;
+
+// pour insérer les commentaires
 use \Model\CommentsModel;
-use \W\Model\UsersModel;
+
+// sert à reprendre la jointure de table questions avec category
+use \Model\QuestionssModel;
+
+// utile pour lire les categories
 use \Model\CategoriesModel;
 
 // Si on utilise "respect/validation". Ne pas oublier de l'ajouter via composer
@@ -19,6 +25,16 @@ class AjaxQuestionsController extends Controller
 	 */
 	public function home()
 	{	
+
+		
+
+
+
+
+		// pour insérer les commentaires on le fera avec showJson
+
+
+		// affiche toutes les catégories
 		$selectCategories = new CategoriesModel();
 
 		$selectC = $selectCategories->findAll();

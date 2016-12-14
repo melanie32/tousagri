@@ -1,4 +1,4 @@
-<?php
+<?php 
  
 namespace Controller;
 
@@ -66,6 +66,13 @@ class UsersController extends Controller
 			'success' => $success,
 		];
 
-		$this->show('users/users_add', $params);
+		$this->show('admin/admin_users_add', $params);
+	}
+
+	// function pour vérifier la connexion
+	public function login {
+
+
+		$this->show('admin/admin_login');
 	}
 }
