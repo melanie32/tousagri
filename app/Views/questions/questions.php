@@ -1,7 +1,7 @@
 <?php $this->layout('layout', ['title' => 'Listes des Questions']) ?>
 
 <?php $this->start('main_content') ?>
-
+ 
 <div id="wrapper_Questions">
 	<div class="conteneur_L">
 		<div id="nav_Category">
@@ -17,9 +17,10 @@
 <div id="bloc_Questions">
 	<div class="bloc_Question">
 		<div id="question_1">
-			<p>
-				Quelles sont les limites de l’environnement de l’homme ?
+		<?php foreach ($selectQ as $select) : ?>
+			<p><?= $select['question'];?>
 			</p>
+		<?php endforeach?>
 		</div>
 		<div class="button_ComA">
 			<button class="affiche_Comments" name="affiche_Comments" class="btn btn-info btn-lg">Voir commentaires</button>
