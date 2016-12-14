@@ -1,6 +1,18 @@
 <?php $this->layout('layout_back', ['title' => 'Ajouter une catégorie']) ?>
 
 <?php $this->start('main_content') ?> 
+
+<?php if(isset($errors) && !empty($errors)):?>
+	<div class="alert alert-danger">
+		<?=implode('<br>', $errors); ?>
+	</div>
+<?php endif; ?>
+
+<?php if(isset($success) && $success == true):?>
+	<div class="alert alert-success">
+		Votre catégorie a bien été ajoutée !
+	</div>
+<?php endif; ?>
  
 	<div class="text-center">
 		<p class="text-connect">Ajouter une catégorie</p>

@@ -4,6 +4,7 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \Model\CategoriesModel;
+use \Model\QuestionsModel;
 
 use \Respect\Validation\Validator as v; 
 
@@ -49,7 +50,7 @@ class AdminController extends Controller
 	{
 		$post = [];
 		$errors = [];
-		$sucess = false;
+		$success = false;
 
 		// préparation des dossiers pour l'upload de picto
 		$folderUploadPicto = getApp()->getConfig('upload_dir_picto'); //permet d'indiquer via le fichier config le dossier destinataire de l'upload de picto
@@ -136,7 +137,7 @@ class AdminController extends Controller
 				$errors[] = 'Une erreur est survenue lors de l\'upload de l\'image illustant la question';
 			}
 
-			if(!v::url()->validate($post['video']) {
+			if(!v::url()->validate($post['video'])) {
 				$errors[] = 'l\'URL de la vidéo Youtube n\'est pas valide';
 			}
 
@@ -243,7 +244,7 @@ class AdminController extends Controller
 				// le modèle categories pour faire le lien avec la table categories
 				// insertion du titre, du picto et de l'illus
 				$categoriesModel = new CategoriesModel();
-
+				
 				$insertCategories = $categoriesModel->insert([
 					'title' => $post['title'],
 					'pictogram' => $pictoName,
@@ -261,7 +262,7 @@ class AdminController extends Controller
 					$questionsModel = new QuestionsModel();
 
 					$insertQuestions = $questionsModel->insert([
-						'id_category' => $insertCategories,
+						'id_category' => $insertCategories['id'],
 						'question' => $post['question'],
 						'explanation' => $post['explanation'],
 						'picture' => $pictureName,
@@ -269,7 +270,7 @@ class AdminController extends Controller
 					]);
 
 					if($insertQuestions) {
-						$sucess = true;						
+						$success = true;						
 					}
 					else {
 						$errors[] = 'Erreur lors de l\'ajout de la question en base de données';
@@ -285,7 +286,7 @@ class AdminController extends Controller
 
 		$params = [
 			'errors' => $errors,
-			'sucess' => $sucess,
+			'success' => $success,
 		];
 
 		$this->show('admin/admin_add_categories', $params);
