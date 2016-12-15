@@ -5,7 +5,7 @@
 	<title><?= $this->e($title) ?></title>
 
 
-	<!-- appel à la bibliothèque / librairy css de boostrap (différente du script biootsrap) -->
+	<!-- appel à la bibliothèque / librairy css de boostrap (différente du script bootsrap) -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- appel à nos feuilles de styles css pour le front -->
