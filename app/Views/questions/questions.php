@@ -11,7 +11,7 @@
 <div id="bloc_Questions">
 	<div class="bloc_Question">
 		<div id="question_1">
-		<?php foreach ($selectQ as $select) : ?>
+		<?php foreach($selectQ as $select) : ?>
 			<p><?= $select['question'];?>
 			</p>
 		<?php endforeach?>
