@@ -102,10 +102,10 @@ class UsersController extends Controller
 		}
 		else {
 			$param = ['error' => $error];
-			$this->show('admin_login' $param);
+		
 		}
 
 
-		$this->show('admin/admin_login');
+		 $this->show('admin/admin_login', $param);
 	}
 }
