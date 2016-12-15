@@ -16,6 +16,7 @@
 		['GET|POST', '/admin/editCategories/[i:id]', 'Admin#editCategories', 'admin_edit_categories'],
 		['GET|POST', '/admin/editComments', 'Admin#editComments', 'admin_edit_comments'],
 		['GET|POST', '/admin/', 'Users#login', 'admin_login'],
+		['GET|POST', '/admin/logout', 'Users#logOut', 'admin_logout'],
 		['GET|POST', '/admin/addUsers', 'Users#addUsers', 'admin_users_add'],
 
 	);

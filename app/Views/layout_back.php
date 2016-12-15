@@ -29,18 +29,8 @@
 					<a href="<?= $this->url('admin_users_add')?>">Ajouter un administrateur</a>
 				</li>
 				<li class="sidenav-li">
-					<a id="disconnect1" href="#">
-						Déconnexion
-					</a>
-					<div class="form-group text-center input-margin" id="disconnect2">
-						<!-- Button (Double) -->
-						<form method="post">
-							<div class="col-md-12">
-								<button type="submit" name="disconnect" value="yes" class="btn btn-success">Oui</button>
-								<button type="submit" name="disconnect" value="no" class="btn btn-danger">Non</button>
-							</div>
-						</form>	
-					</div>
+					<a href="<?= $this->url('admin_logout')?>">
+					Deconnexion</a>
 				</li>
 			</ul>
 		</nav>

@@ -5,7 +5,4 @@ $(document).ready(function(){
 	$( "#delete" ).click(function() {
   		$( "#select-delete" ).slideToggle ("slow");
 	});
-	$( "#disconnect1" ).click(function() {
-  		$( "#disconnect2" ).slideToggle ("slow");
-	});
 });

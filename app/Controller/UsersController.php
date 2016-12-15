@@ -108,4 +108,20 @@ class UsersController extends Controller
 
 		 $this->show('admin/admin_login', $param);
 	}
+
+	public function logOut() {
+
+		$authModel = new AuthentificationModel();
+
+		if(!empty($this->getUser()) && isset($_POST['disconnect']) && $_POST['disconnect'] === 'yes'){
+			$authModel->logUserOut();
+			$this->redirectToRoute('admin_login');
+		}
+
+		if(!empty ($this->getUser()) && isset($_POST['disconnect']) && $_POST['disconnect'] === 'no'){
+			$this->redirectToRoute('admin_accueil');
+		}
+
+		$this->show('admin/admin_logout');
+	}
 }
