@@ -53,7 +53,7 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="question">Question $i</label>
 			<div class="col-md-4">
-				<input id="question" name="question" placeholder="" class="form-control input-md" type="text">   
+				<input id="question" name="question[]" placeholder="" class="form-control input-md" type="text">   
 			</div>
 		</div>
 
@@ -61,7 +61,7 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="explanation">Réponse $i</label>
 			<div class="col-md-4">                     
-				<textarea class="form-control" id="explanation" name="explanation"></textarea>
+				<textarea class="form-control" id="explanation" name="explanation[]"></textarea>
 			</div>
 		</div>
 
@@ -69,7 +69,7 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="picture">Photo illustrant la réponse</label>
 			<div class="col-md-4">
-				<input id="picture" name="picture" class="input-file" type="file">
+				<input id="picture" name="picture[]" class="input-file" type="file">
 			</div>
 		</div>
 
@@ -77,7 +77,7 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="video">Lien vers une vidéo (youtube uniquement)</label>
 			<div class="col-md-4">
-				<input id="video" name="video" placeholder="" class="form-control input-md" type="text">   
+				<input id="video" name="video[]" placeholder="" class="form-control input-md" type="text">   
 			</div>
 		</div>
 

@@ -23,7 +23,7 @@ class QuestionsModel extends \W\Model\Model
 
         if($sth->execute()) {
 
-            $selectQuestions = $sth->fetchAll();
+            $selectQuestions = $sth->fetch();
 
             if(!empty($selectQuestions)){
                

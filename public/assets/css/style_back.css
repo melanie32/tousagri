@@ -142,7 +142,7 @@ li {
 
 /***********STYLE DES PAGES ADD AND EDIT CATEGORY****************/
 
-.add-question {
+#addinput {
 	cursor:pointer;
 }
 
@@ -194,4 +194,9 @@ li {
 #display-illus-back {
 	height: 6em;
 	width: 9em;
+}
+
+#display-picture-answer-back {
+	height: 6em;
+	width: 6em;
 }
