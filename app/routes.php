@@ -3,6 +3,7 @@
 	$w_routes = array(
 		['GET', '/', 'Default#home', 'default_home'],
 		['GET|POST', '/questions', 'AjaxQuestions#home', 'questions_home'],
+		['GET|POST', '/commentaires', 'Commentaires#home', 'commentaires_home'],
 		['GET', '/categories', 'Categories#category', 'categories_category'],
 
 

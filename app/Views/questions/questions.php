@@ -4,13 +4,7 @@
  
 <div id="wrapper_Questions">
 	<div class="conteneur_L">
-		<div id="nav_Category">
-			<ul>
-	<?php foreach($selectC as $select): ?>
-				<li><?= $select['title']?></li>
-	<?php endforeach ?>
-			</ul>
-		</div>
+		<h1><?php $selectC['title'] ?></h1>
 	</div>
 </div>
 
@@ -248,10 +242,6 @@
 <style>
 .conteneur_L{
 	background-image: url("<?=$this->assetUrl('img/vache.jpg')?>");
-}
-
-#nav_Category ul li:first-child {
-	background-image: url("<?=$this->assetUrl('img/picto/poisson.png')?>");
 }
 
 </style>

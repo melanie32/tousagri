@@ -10,6 +10,7 @@ overflow: hidden;
 
 ul{
 padding: 0;	
+list-style: none;
 }
 
 /*******  TITRE  ********/
@@ -18,6 +19,7 @@ padding: 0;
 
 
 /*******  COPRS DE PAGE  ********/
+
 #wrapper_Questions {
 	max-width: 100%;
 	padding: 0;
@@ -37,47 +39,6 @@ padding: 0;
 	width: auto;
 }
 
-#nav_Category {
-	max-height: 100%;
-	position: absolute;
-	width: 20%;
-	float: left;
-	overflow: scroll;
-
-}
-
-*::-webkit-scrollbar { display: none; }
-
-
-#nav_Category ul li{
-	text-align: center;
-	color: white;
-	font-weight: bold;
-	display: block;
-	cursor : pointer;
-	margin: 12px 0;
-	list-style: none;
-	float: left;
-	background-color: #3b85ab ;
-	height: 120px;
-	width: 120px;
-}
-
-#nav_Category ul li:hover{
-	margin-left: 7%;
-	transform: scale(1.20);
-	-ms-transform: scale(1.20);
-	-webkit-transform: scale(1.20);
-	-o-transform: scale(1.20);
-	-moz-transform: scale(1.20);
-}
-
-#nav_Category ul li:first-child {
-	position: absolute;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
 
 
 #bloc_Questions {
@@ -243,9 +204,71 @@ padding: 0;
 
 
 
-/*******  FENETRE MODAL  ********/
+/*******  PAGE COMMENTAIRE  ********/
+
+.commentaire {
+	max-width: 100%;
+	height: 100%;
+	padding: 0;
+	background-color: #F3F3F3;
+}
+
+.wrapper_com {
+	display: block;
+	width: 100%;
+	height: 350px;
+	position: relative;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.wrapper_com:hover {
+-webkit-transition: .2s ease-in-out;
+	opacity: .9;
+	
+}
+
+.voir_commentaires {
+	text-align: center;
+	display: inline-flex;
+	width: 65%;
+	height: 80px;
+	background-color: #8BC34A;
+}
+
+.voir_commentaires:hover {
+	-webkit-transition: .2s ease-in-out;
+	background-color: #6F9C3B;
+}
+
+.voir_commentaires img {
+	display: block;
+}
 
 
-/*******  FIN FENETRE MODAL  ********/
+.picto_icon {
+	padding-left: 150px;
+	padding-right: 50px;
+}
+
+.title_commentaires {
+	font-size: 2em;
+	font-weight: bold;
+	color: white;
+}
+
+.title_nbr_commentaires {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.contenu_commentaires {
+	width: 60%;
+	margin: 0 auto;
+
+	height: 800px;
+}
+/*******  FIN PAGE COMMENTAIRE  ********/
 
 
