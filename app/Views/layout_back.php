@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr"> 
 <head> 
 	<meta charset="UTF-8">
@@ -26,7 +26,7 @@
 					<a href="<?= $this->url('admin_edit_comments')?>">Listes des commentaires</a>
 				</li>
 				<li class="sidenav-li <?= ($w_current_route == 'users_add')? 'active' :''; ?>">
-					<a href="<?= $this->url('users_add')?>">Ajouter un administrateur</a>
+					<a href="<?= $this->url('admin_users_add')?>">Ajouter un administrateur</a>
 				</li>
 				<li class="sidenav-li">
 					<a id="disconnect1" href="#">

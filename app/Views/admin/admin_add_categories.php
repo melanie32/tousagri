@@ -2,21 +2,21 @@
 
 <?php $this->start('main_content') ?>  
 
-<?php if(isset($errors) && !empty($errors)):?> 
-	<div class="alert alert-danger">
-		<?=implode('<br>', $errors); ?>
-	</div>
-<?php endif; ?>
+	<?php if(isset($errors) && !empty($errors)):?> 
+		<div class="alert alert-danger">
+			<?=implode('<br>', $errors); ?>
+		</div>
+	<?php endif; ?>
 
-<?php if(isset($success) && $success == true):?>
-	<div class="alert alert-success">
-		Votre catégorie a bien été ajoutée !
-	</div>
-<?php endif; ?>
+	<?php if(isset($success) && $success == true):?>
+		<div class="alert alert-success">
+			Votre catégorie a bien été ajoutée !
+		</div>
+	<?php endif; ?>
  
-	<div class="text-center">
-		<p class="text-connect">Ajouter une catégorie</p>
-	</div>
+	<a href="<?= $this->url('admin_add_categories')?>">
+		<p class="text-connect text-center">Ajouter une catégorie</p>
+	</a>
 	<br>
 
 	<form class="form-horizontal" method="post" enctype="multipart/form-data">
