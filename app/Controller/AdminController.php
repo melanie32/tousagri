@@ -13,15 +13,12 @@ use \Intervention\Image\ImageManagerStatic as Image;
 class AdminController extends Controller
 {
 
+
 	/**
-	 * Page de connexion du back office
+	 * Le chemin pour la page de connexion du back office est dans le User controller
 	 * 
 	 */
-	public function home()
-	{
-		$this->show('admin/admin_home');
-	}
-
+	
 	/**
 	 * Page d'accueil du back office
 	 * 
