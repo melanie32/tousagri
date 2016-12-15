@@ -14,9 +14,9 @@
 		</div>
 	<?php endif; ?>
  
-	<a href="<?= $this->url('admin_add_categories')?>">
+	<div class="text-center">
 		<p class="text-connect text-center">Ajouter une catégorie</p>
-	</a>
+	</div>
 	<br>
 
 	<form class="form-horizontal" method="post" enctype="multipart/form-data">

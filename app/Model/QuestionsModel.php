@@ -1,4 +1,4 @@
-<?php 
+<?php  
 
 namespace Model; 
 
@@ -9,31 +9,34 @@ use \W\Model\ConnectionModel;
 */
 class QuestionsModel extends \W\Model\Model
 {
-	 public function findQuestions() 
+	 public function findQuestions($id) 
     {
-        $app = getApp();
+        if (!is_numeric($id)){
+            return false;
+        }
+      
+        $sql = 'SELECT * FROM questions WHERE id_category = :id';
+       
 
-        $dbh = ConnectionModel::getDbh();
-
-
-        $sql = 'SELECT q.*, c.id FROM questions AS q LEFT JOIN categories AS c ON c.id = q.id_category';
-
-        //$dbh = ConnectionModel::getDbh();
-
-        $sth = $dbh->prepare($sql);
+        $sth = $this->dbh->prepare($sql);
+        $sth->bindValue(':id', $id);
 
         if($sth->execute()) {
 
             $selectQuestions = $sth->fetchAll();
 
-            if($selectQuestions){
+            if(!empty($selectQuestions)){
+               
                 return $selectQuestions;
             }
 
         }
-    return false;
+
+        return false;
 
     }
+
+   
 
 }
 

@@ -6,13 +6,13 @@
 
 	<div class="container-edit-admin">
 
-		<a href="#">
+		<a href="<?= $this->url('admin_categories')?>">
 			<div class="edit-admin text-center">
 				Editer les catégories
 			</div>
 		</a>
 
-		<a href="#">
+		<a href="<?= $this->url('admin_edit_comments')?>">
 			<div class="edit-admin text-center">
 				Editer les commentaires
 			</div>

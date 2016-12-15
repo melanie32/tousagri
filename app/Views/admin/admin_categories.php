@@ -6,7 +6,12 @@
 		<p class="text-connect">Liste des catégories</p>
 	</div>
 	<br>
-	<a href="#" id="add-category">Ajouter une categorie</a>
+
+	<a class="text-connect text-center" id="add-category" href="<?= $this->url('admin_add_categories')?>">
+	Ajouter une catégorie
+	</a>
+	<br>
+	
 
 	<div class="container">
 
@@ -18,7 +23,7 @@
 				<p class="text-center" id="name-category"><?=$select['title']?></p>
 				<img class="picto_category center-block" src="<?= $this->assetUrl('img/picto/poisson.png')?>">
 				<div id="link-category">
-					<a class="text-center" href="#">Modifier</a>
+					<a class="text-center" href="<?=$this->url('admin_edit_categories', ['id' => $select['id']]);?>">Modifier</a>
 					<a class="text-center" href="#">Supprimer</a>
 				</div>
 			</div>

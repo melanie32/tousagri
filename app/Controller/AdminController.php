@@ -302,9 +302,26 @@ class AdminController extends Controller
 	 * 
 	 */
 
-	public function editCategories()
+	public function editCategories($id)
 	{
-		$this->show('admin/admin_edit_categories');
+		// appel des fonctions natives pour lire une seule categorie dans la page modifier les categories
+		$selectCategory = new CategoriesModel();
+
+		$selectOneC = $selectCategory->find($id);
+
+
+		// appel des fonctions natives et class pour lire les questions qui sont liés à la table catégorie pour la page modifier les catégories
+
+		$selectQuestion = new QuestionsModel();
+
+		$selectOneQ = $selectQuestion->findQuestions($id);
+
+		$dataOne = [
+			'selectOneC' => $selectOneC,
+			'selectOneQ' => $selectOneQ,
+		];
+
+		$this->show('admin/admin_edit_categories', $dataOne);
 	}
 
 	/**

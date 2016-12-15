@@ -30,6 +30,7 @@ li {
     left: 0;
     background-color: #404054;
     overflow-x: hidden;
+    display: none;
 }
 
 .sidenav-ul {
@@ -179,4 +180,18 @@ li {
 
 #button-delete {
 	margin-top: 3.4em;
+}
+
+/***********FIN STYLE PAGE COMMENT****************/
+
+/***********STYLE PAGE MODIFIER CATEGORIE****************/
+
+#display-picto-back {
+	height: 6em;
+	width: 6em;
+}
+
+#display-illus-back {
+	height: 6em;
+	width: 9em;
 }
