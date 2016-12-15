@@ -190,8 +190,21 @@
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					<h4 class="modal-title">Déposer un commentaire</h4>
 				</div>
+
+				<?php if(isset($errors) && !empty($errors)):?> 
+					<div class="alert alert-danger">
+						<?=implode('<br>', $errors); ?>
+					</div>
+				<?php endif; ?>
+
+				<?php if(isset($success) && $success == true):?>
+					<div class="alert alert-success">
+						Votre message a bien été enregistré !
+					</div>
+				<?php endif; ?>
+
 				<div class="modal-body">
-					<form class="form-horizontal">
+					<form class="form-horizontal" method="POST">
 
 						<!-- Text input-->
 						<div class="form-group">
