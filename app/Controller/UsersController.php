@@ -70,9 +70,9 @@ class UsersController extends Controller
 	}
 
 	// function pour vérifier la connexion
-	public function login {
+	public function login() {
 
-
+		
 		$this->show('admin/admin_login');
 	}
 }
