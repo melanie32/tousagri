@@ -2,7 +2,9 @@
 
 <?php $this->start('main_content') ?>
  
-	
+	<?php if(isset($error) && !empty($error)): ?>
+		<div class="alert alert-danger"><?=$error;?></div>
+	<?php endif; ?>
 
 	<div class="text-center">
 		<i class="fa fa-2x fa-sign-in" aria-hidden="true"></i>&nbsp;

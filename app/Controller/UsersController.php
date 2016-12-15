@@ -72,7 +72,40 @@ class UsersController extends Controller
 	// function pour vérifier la connexion
 	public function login() {
 
-		
+		$error = null;
+		if(!empty($_POST)){
+			$post = array_map('trim', array_map('strip_tags', $_POST));
+
+			if(empty($post['username']) && empty($post['password'])){
+				$error = 'Vous devez compléter votre Pseudo et Mot de passe pour vous connecter';
+			}
+			else {
+				$authModel = new AuthentificationModel;
+				$idUser = $authModel->isValidLoginInfo($post['username'], $post['password']);
+
+				if($idUser){
+					$usersModel = new UsersModel;
+					$user = $usersModel->find($idUser);
+
+					$authModel->logUserIn($user);
+				}
+				else {
+					$error = 'Erreur de pseudo ou de mot de passe';
+				}
+
+			}
+		}
+
+		if(!empty($this->getUser())){
+
+			$this->redirectToRoute('admin_accueil');
+		}
+		else {
+			$param = ['error' => $error];
+			$this->show('admin_login' $param);
+		}
+
+
 		$this->show('admin/admin_login');
 	}
 }
