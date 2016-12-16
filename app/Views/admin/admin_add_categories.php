@@ -64,7 +64,7 @@
 				
 				<tr>							
 					<td id="input-question">
-						<!-- <input type="hidden" name="id-question" value="<?=$selectOneQ?>"> id-->
+						
 						<input id="question" name="question[]" class="form-control input-md" type="text">		
 					</td>
 					<td>

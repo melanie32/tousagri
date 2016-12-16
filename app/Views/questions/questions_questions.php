@@ -20,15 +20,10 @@
 		// on fait une boucle for pour gérer l'affichage 
 		// pas de boucle foreach, simplement une boucle for
 
-		for ($i=0; $i < count($selectOneQ['question']) ; $i++) : 
+		for ($i=0; $i < count($selectOneQ['question']) ; $i++) : ?>
 
-			?>
-		<div class="bloc_Question">
-			<div class="questions">
-				<!-- affichage en dynamique de la question -->			
-				<p><?= $selectOneQ['question'][$i];?></p>
+		
 
-		?>
 			<div class="bloc_Question">
 
 				<div class="questions">
@@ -51,21 +46,11 @@
 				<!-- affichage en dynamique de la vidéo illustrant la réponse -->
 				<a href="<?= $selectOneQ['video'][$i]?>" target="_blank">Cliquez ici pour voir la réponse en vidéo</a>
 
-
 			</div>
-		</div>
 
-		<div class="reponses">
-			<!-- affichage en dynamique de la réponse -->
-			<p><?= $selectOneQ['explanation'][$i];?></p>
-			<!-- affichage en dynamique de l'image illustrant la réponse -->
-			<img src="<?= $this->assetUrl('img/imgreply/'.$selectOneQ['picture'][$i])?>">
-			<!-- affichage en dynamique de la vidéo illustrant la réponse -->
-			<a href="<?= $selectOneQ['video'][$i]?>" target="_blank">Cliquez ici pour voir la réponse en vidéo</a>
-
-		</div>
-
+		
 		<?php endfor; ?>
+</div>
 
 	<div class="clear"></div>
 

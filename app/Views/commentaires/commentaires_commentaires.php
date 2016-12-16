@@ -17,6 +17,18 @@
 
 <?php $this->start('main_content') ?>
 
+	<?php if(isset($errors) && !empty($errors)):?> 
+		<div class="alert alert-danger">
+			<?=implode('<br>', $errors); ?>
+		</div>
+	<?php endif; ?>
+
+	<?php if(isset($success) && $success == true):?>
+		<div class="alert alert-success">
+			Votre catégorie a bien été ajoutée !
+		</div>
+	<?php endif; ?>
+
 <div class="commentaire">
 
 	<!-- <div class="voir_commentaires">
@@ -29,6 +41,7 @@
 		
 
 		<form class="form-horizontal" method="post">
+			<input type="hidden" name="id-category" value="<?=$selectOneC['id']?>">
 
 			<div class="form-group">
 			  <label class="col-md-4 control-label" for="username">Pseudo</label>  
@@ -38,9 +51,9 @@
 			</div>
 
 			<div class="form-group">
-			  <label class="col-md-4 control-label" for="comment">Commentaire</label>
+			  <label class="col-md-4 control-label" for="content">Commentaire</label>
 			  <div class="col-md-4">                     
-			    <textarea class="form-control" id="textarea" name="comment">Votre commentaire...</textarea>
+			    <textarea class="form-control" id="textarea" name="content">Votre commentaire...</textarea>
 			  </div>
 			</div>
 
@@ -53,9 +66,15 @@
 		</form>
 </div>
 
-<div><p></p></div>
 
  <!---//////////////////// ATTENTION AFFICHAGE COMENTS TEST /////////////////////-->
+
+<div>
+	<?php foreach ($selectOneCom as $selectOneCo): ?>
+		<?=var_dump($selectOneCom);?>
+		<p><?=$selectOneCo['content']?></p>
+	<?php endforeach;?>
+</div>
 
 <?php $this->stop('main_content') ?>
 
