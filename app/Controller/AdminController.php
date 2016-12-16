@@ -144,7 +144,7 @@ class AdminController extends Controller
 				}
 
 				
-				if (!empty($_FILES['picture']['tmp_name'][$i])) {
+				if (!empty($_FILES['picture']['name'][$i])) {
 				
 					// validation de l'image contenue dans le texte de réponse
 					if(!v::image()->validate($_FILES['picture']['tmp_name'][$i])){
@@ -251,7 +251,7 @@ class AdminController extends Controller
 				}
 				for ($i=0; $i < count($_FILES['picture']['tmp_name']) ; $i++) { 
 					
-					if(!empty($_FILES['picture']['tmp_name'][$i])) {
+					if(!empty($_FILES['picture']['name'][$i])) {
 
 						$picture = Image::make($_FILES['picture']['tmp_name'][$i]);
 
@@ -412,7 +412,7 @@ class AdminController extends Controller
 			// validation du mime type des images
 
 			// validation du pictogramme
-			if(!empty($_FILES['pictogram']['tmp_name'])) {
+			if(!empty($_FILES['pictogram']['name'])) {
 
 				if(!v::image()->validate($_FILES['pictogram']['tmp_name'])){
 						$errors[] = 'Le fichier envoyé pour le pictogramme n\'est pas une image valide';
@@ -457,7 +457,7 @@ class AdminController extends Controller
 				}
 
 				
-				if (!empty($_FILES['picture']['tmp_name'][$i])) {
+				if (!empty($_FILES['picture']['name'][$i])) {
 				
 					// validation de l'image contenue dans le texte de réponse
 					if(!v::image()->validate($_FILES['picture']['tmp_name'][$i])){
@@ -492,7 +492,7 @@ class AdminController extends Controller
 				if(!is_dir($fullFolderUploadPicto)){
 					mkdir($fullFolderUploadPicto, 0755);
 				}
-				if (!empty($_FILES['pictogram']['tmp_name'])) {
+				if (!empty($_FILES['pictogram']['name'])) {
 					
 					$picto = Image::make($_FILES['pictogram']['tmp_name']);
 
@@ -529,7 +529,7 @@ class AdminController extends Controller
 				if(!is_dir($fullFolderUploadIllus)){
 					mkdir($fullFolderUploadIllus, 0755);
 				}
-				if(!empty($_FILES['illustration']['tmp_name'])) {
+				if(!empty($_FILES['illustration']['name'])) {
 
 					$illus = Image::make($_FILES['illustration']['tmp_name']);
 
@@ -566,9 +566,9 @@ class AdminController extends Controller
 				if(!is_dir($fullFolderUploadPicture)){
 					mkdir($fullFolderUploadPicture, 0755);
 				}
-				for ($i=0; $i < count($_FILES['picture']['tmp_name']) ; $i++) { 
+				for ($i=0; $i < count($_FILES['picture']['name']) ; $i++) { 
 					
-					if(!empty($_FILES['picture']['tmp_name'][$i])) {
+					if(!empty($_FILES['picture']['name'][$i])) {
 
 						$picture = Image::make($_FILES['picture']['tmp_name'][$i]);
 
