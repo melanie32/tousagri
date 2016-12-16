@@ -1,10 +1,20 @@
 <?php $this->layout('layout', ['title' => '']) ?>
 
- 
+<?php $this->start('css') ?><!-- abcd -->
+<style>
+body{
+    background: url("<?=$this->assetUrl('img/illus/fdCate3.jpg')?>");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+</style>
+<?php $this->stop('css') ?>
 <?php $this->start('main_content') ?>
 
 
-<body>
+
 <div class="container contai">
 
     <div class="siteNam">
@@ -17,7 +27,7 @@
     <?php foreach ($selectC as $select) : ?>
       <div class="col-xs-6 col-md-4 imBox">
         <a href="<?= $this->url('questions_questions', ['id' => $select['id']]); ?>">
-        <p class="text-center secNam"><?=$select['title']?></p>
+         <p class="text-center secNam"><?=$select['title']?></p>
           <img id="secPic" src="<?= $this->assetUrl('img/pictos/'.$select['pictogram'])?>" >
         </a>
       </div>
@@ -26,38 +36,11 @@
       </div>
   </div>
 
-    <!-- CSS background -->
-    <?php $this->start('css') ?>
-    <style>
 
-      .contai {
-        background-image: url("<?=$this->assetUrl('img/illus/cereals1.jpg')?>");
-      }
-
-    </style>
-    <?php $this->stop('css') ?>
 
   </div>
 
-  <!-- Footer -->
-  <footer class="bottNav">
 
 
-    <div>
-      <div class="col-md-12 col-md-offset-6">
-        <ul class="navList">
-          <a href="#">A propos</a>
-          <a href="#">Partenaires</a>
-          <a href="#">Partager</a>
-          <a href="#">Crédits</a>
-          <a href="#">Mentions Légales</a>
-        </ul>
-      </div>
-    </div>
-    
-
-  </footer>
-
-</body>
 
 <?php $this->stop('main_content') ?>

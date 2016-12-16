@@ -22,6 +22,7 @@ body {
 .hLine {
 	font-size: 4em;
     text-indent: 0.135em;
+    text-shadow: 2px 2px 4px #000000 ;
 }
 
 /*BOUTTON*/
@@ -59,11 +60,11 @@ body {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    height: 60px;
+    height: 27px;
     font-family: "Replica-Regular", Arial, Helvetica, sans-serif;
     position: fixed;
     width: 100%;
-    padding-top: 35px;
+    
     z-index: 10
 }
 
@@ -86,8 +87,12 @@ body {
 }
 
 #secPic {
-    width: 18.125em;
-    height: 18.125em;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 3%;
+    width: 12.80em;
+    height: 12.80em;
 }
 
 .siteNam {
@@ -98,7 +103,10 @@ body {
 }
 
 .namSite {
-    font-size: 4.125em;
+    font-size: 4em;
+    text-indent: 0.135em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000 ;
 }
 
 
@@ -110,16 +118,22 @@ body {
 }
 
 .imBox {
-    width: 20em;
-    height: 20em;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 13em;
+    height: 13em;
+    border: 3px solid #ffffff;
     border-radius: 3%;
     margin: 1.25em;
     
 }
 
 .secNam {
-    font-size: 2.125em;
+    font-size: 1.125em;
+    color: #ffffff;
+    z-index: 10000;
 }
 
 /*Scroll Bar*/
