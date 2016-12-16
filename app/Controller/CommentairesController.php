@@ -6,6 +6,8 @@ use \W\Controller\Controller;
 use \Model\CommentsModel;
 use \Model\CategoriesModel;
 
+use \Respect\Validation\Validator as v; 
+
 class CommentairesController extends Controller
 {
 
@@ -28,13 +30,13 @@ class CommentairesController extends Controller
 
 		if(!empty($_POST)) {
 
-			$post[$key] = array_map('trim', array_map('strip_tags', $value));
+			$post = array_map('trim', array_map('strip_tags', $_POST));
 
 			if(!v::notEmpty()->length(2, 50)->validate($post['username'])){
 				$errors[] = 'Votre pseudo doit comporter entre 2 et 50 caractères';
 			}
 
-			if(!v::notEmpty()->length(2, 500)->validate($post['comment'])){
+			if(!v::notEmpty()->length(2, 500)->validate($post['content'])){
 				$errors[] = 'Votre commentaire doit comporter entre 2 et 500 caractères';
 			}
 
@@ -44,8 +46,8 @@ class CommentairesController extends Controller
 
 				$dataInsertCo = [
 					'id_category' => $post['id-category'],
-					'content' => $post['username'],
-					'username_com' => $post['content'],
+					'content' => $post['content'],
+					'username' => $post['username'],
 
 				];
 
@@ -64,16 +66,16 @@ class CommentairesController extends Controller
 
 
 		//sélection des commentaires enregistrés dans la bdd pour affichage
-		$selectComments = new CommentsModel();
+		$selectComment = new CommentsModel();
 
-		$selectOneCom = $selectComments->findAll();
-
+		$selectOneComment = $selectComment->findComments($id);
 
 
 		$dataInsertComments = [
 			'errors' => $errors,
 			'success' => $success,
-			'$selectOneCom' => $selectOneCom,
+			'selectOneComment' => $selectOneComment,
+			'selectOneC' => $selectOneC,
 		];		
 
 

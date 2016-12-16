@@ -25,7 +25,7 @@
 
 	<?php if(isset($success) && $success == true):?>
 		<div class="alert alert-success">
-			Votre catégorie a bien été ajoutée !
+			Votre commentaire a bien été enregistré et sera publié dès modération !
 		</div>
 	<?php endif; ?>
 
@@ -53,7 +53,7 @@
 			<div class="form-group">
 			  <label class="col-md-4 control-label" for="content">Commentaire</label>
 			  <div class="col-md-4">                     
-			    <textarea class="form-control" id="textarea" name="content">Votre commentaire...</textarea>
+			    <textarea class="form-control" id="textarea" name="content" placeholder="Votre commentaire"></textarea>
 			  </div>
 			</div>
 
@@ -70,10 +70,17 @@
  <!---//////////////////// ATTENTION AFFICHAGE COMENTS TEST /////////////////////-->
 
 <div>
-	<?php foreach ($selectOneCom as $selectOneCo): ?>
-		<?=var_dump($selectOneCom);?>
-		<p><?=$selectOneCo['content']?></p>
-	<?php endforeach;?>
+		<p class="text-center">Liste des commentaires pour la catégorie&nbsp;:&nbsp;<?=$selectOneC['title']?></p>
+
+		<?php foreach ($selectOneComment as $selectOneCom) : ?>
+
+			<p><?=$selectOneCom['username']?>&nbsp;:&nbsp;a écrit : </p>	
+		
+			<p><?=$selectOneCom['content']?></p>
+		
+		<?php endforeach;?>
+
+	
 </div>
 
 <?php $this->stop('main_content') ?>

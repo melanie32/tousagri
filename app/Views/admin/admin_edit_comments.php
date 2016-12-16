@@ -7,23 +7,25 @@
 	</div>
 	<br>
 
-	<p class="text-info">Vous avez $i de commentaires à modérer</p>
+	<p class="text-info">Vous avez <?= count($selectComments)?> commentaires à modérer</p>
 
 	<table class="table table-hover">
 		<thead>
 			<tr>
-				<th class="text-center">#</th>
+				<th class="text-center">Pseudo</th>
 				<th class="text-center">Commentaires</th>
 				<th class="text-center" colspan="3">Action</th>
 			</tr>
 		</thead>
 		<tbody>
+					<?php foreach ($selectComments as $selectComment) :?>
 			<tr>
 				<td>
-					<p class="td-fusion click-action">$id</p>
+					<p class="td-fusion click-action"><?=$selectComment['username']?></p>
 				</td>
 				<td>
-					<p class="td-fusion click-action">Vous êtes génaiaux c'est génial</p>
+						<p class="td-fusion click-action"><?=$selectComment['content']?></p>
+
 				</td>
 				
 				<td> 
@@ -59,17 +61,8 @@
 					
 				</td>						
 			</tr>			
-			<tr>
-				<td>$id </td>
-				<td>Vous êtes génaiaux c'est génial</td>
-				<td>				
-					<i class="fa fa-check" aria-hidden="true"></i>&nbsp;Valider</td>
-					<td>
-					<i class="fa fa-reply" aria-hidden="true"></i>&nbsp;Répondre</td>
-					<td>
-					<i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;Supprimer</td>
-				</td>
-			</tr>
+					<?php endforeach; ?>
+			
 		</tbody>
 	</table>
 

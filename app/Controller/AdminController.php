@@ -5,6 +5,7 @@ namespace Controller;
 use \W\Controller\Controller;
 use \Model\CategoriesModel;
 use \Model\QuestionsModel;
+use \Model\CommentsModel;
 
 use \Respect\Validation\Validator as v; 
 
@@ -658,7 +659,18 @@ class AdminController extends Controller
 
 	public function editComments()
 	{
-		$this->show('admin/admin_edit_comments');
+		//sélection des commentaires enregistrés dans la bdd pour affichage
+		$selectComment = new CommentsModel();
+
+		$selectComments = $selectComment->findAll();
+
+
+
+		$dataComments = [
+			'selectComments' => $selectComments,
+		];
+
+		$this->show('admin/admin_edit_comments', $dataComments);
 	}
 
 
