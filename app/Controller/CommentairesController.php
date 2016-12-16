@@ -11,7 +11,7 @@ class CommentairesController extends Controller
 	 * Page d'accueil par défaut
 	 * test commit
 	 */
-	public function home()
+	public function commentaires()
 	{
 		$this->show('commentaires/commentaires_home');
 	}

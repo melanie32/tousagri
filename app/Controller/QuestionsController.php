@@ -23,7 +23,7 @@ class AjaxQuestionsController extends Controller
 	 * Page d'accueil par défaut
 	 * test commit
 	 */
-	public function readQuestions()
+	public function questions()
 	{	
 
 
