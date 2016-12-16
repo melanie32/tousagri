@@ -70,73 +70,26 @@ list-style: none;
 	margin: 0 auto;
 }
 
-#question_1 p {
+.questions p {
 	padding: 1em 3em 1em 3em;
 	text-align: center;
 	font-size: 1.5em;
 	font-weight: bold;
 }
 
-#question_2 p {
-	padding: 1em 3em 1em 3em;
-	text-align: center;
-	font-size: 1.5em;
-	font-weight: bold;
+.reponses {
+	display: none;
 }
 
-#question_3 p {
+.reponses p {
 	padding: 1em 3em 1em 3em;
 	text-align: center;
-	font-size: 1.5em;
-	font-weight: bold;
-}
-
-#question_4 p {
-	padding: 1em 3em 1em 3em;
-	text-align: center;
-	font-size: 1.5em;
-	font-weight: bold;
 }
 
 .clear {
 	clear:both;
 }
 
-#reponse_1 {
-	display: none;
-}
-
-#reponse_1 p {
-	padding: 1em 3em 1em 3em;
-	text-align: center;
-}
-
-#reponse_2 {
-	display: none;
-}
-
-#reponse_2 p {
-	padding: 1em 3em 1em 3em;
-	text-align: center;
-}
-
-#reponse_3 {
-	display: none;
-}
-
-#reponse_3 p {
-	padding: 1em 3em 1em 3em;
-	text-align: center;
-}
-
-#reponse_4 {
-	display: none;
-}
-
-#reponse_4 p {
-	padding: 1em 3em 1em 3em;
-	text-align: center;
-}
 /*******  FIN COPRS DE PAGE  ********/
 
 

@@ -25,7 +25,7 @@
 		?>
 			<div class="bloc_Question">
 
-				<div id="question_1">
+				<div class="questions">
 					<!-- affichage en dynamique de la question -->			
 					<p><?= $selectOneQ['question'][$i];?></p>
 					
@@ -35,7 +35,7 @@
 				</div>
 			</div>
 
-			<div id="reponse_1">
+			<div class="reponses">
 				<!-- affichage en dynamique de la réponse -->
 				<p><?= $selectOneQ['explanation'][$i];?></p>
 				<!-- affichage en dynamique de l'image illustrant la réponse -->
