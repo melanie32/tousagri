@@ -12,10 +12,6 @@ padding: 0;
 list-style: none;
 }
 
-/*******  TITRE  ********/
-
-/*******  FIN TITRE  ********/
-
 
 /*******  COPRS DE PAGE  ********/
 
@@ -38,8 +34,6 @@ list-style: none;
 	width: auto;
 }
 
-
-
 #bloc_Questions {
 	overflow-y: scroll;
 	position: absolute;
@@ -55,19 +49,6 @@ list-style: none;
 	width: 100%;
 	height: 25%;
 	background-color: #cce0ff;
-}
-
-.button_ComA{
-	width: 100%;
-	text-align: center;
-	margin: 0 auto;
-}
-
-.button_Com2 {
-	display: inline-flex;
-	text-align: center;
-	width: 100%;
-	margin: 0 auto;
 }
 
 .questions p {
@@ -91,55 +72,6 @@ list-style: none;
 }
 
 /*******  FIN COPRS DE PAGE  ********/
-
-
-
-/*******  BLOC COMMENTAIRE  ********/
-.comment_S {
-	display: none;
-	position: fixed;
-	bottom: 3%;
-	background-color: #99c2ff;
-	width: 50%;
-	margin-left: 45%;
-	border: 0.3em solid black;
-	-webkit-border-top-left-radius: 10px;
-	-webkit-border-top-right-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	-moz-border-radius-topright: 10px;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	box-shadow: 0px 0px 10px 7px rgba(119, 119, 119, 0.5);
--moz-box-shadow: 0px 0px 10px 7px rgba(119, 119, 119, 0.5);
--webkit-box-shadow: 0px 0px 10px 7px rgba(119, 119, 119, 0.5);
-
-}
-
-.comment_S p {
-	text-align: center;
-	font-size: 1.5em;
-}
-
-.ajout_Comments  {
-	margin-top: 0.5em;
-	margin-bottom: 0.05em;
-	padding-left: 3em;
-	padding-right: 3em;
-	font-size: 2em;
-	font-weight: bold;
-	color: white;
-	background-color: black;
-	border-radius: 10px 10px 10px 10px;
-	border: none;
-}
-	.ajouter_Comments:hover  {
-		background-color: green;
-	}
-
-.list_Comments {
-	height: auto;
-}
-/*******  FIN BLOC COMMENTAIRE  ********/
 
 
 /*******  BLOC DEPOT COMMENTAIRE  ********/
