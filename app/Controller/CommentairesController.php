@@ -13,7 +13,7 @@ class CommentairesController extends Controller
 	 */
 	public function commentaires()
 	{
-		$this->show('commentaires/commentaires_home');
+		$this->show('commentaires/commentaires_commentaires');
 	}
 
 }

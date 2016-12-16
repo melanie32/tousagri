@@ -28,7 +28,7 @@
 
 		
 
-		<form class="form-horizontal" method="POST">
+		<form class="form-horizontal" method="post">
 
 			<div class="form-group">
 			  <label class="col-md-4 control-label" for="username">Pseudo</label>  
