@@ -6,7 +6,7 @@
 	<div class="conteneur_L">
 		<h1>- <?=$selectOneC['title']?> -</h1>
 	</div>
-		<div class="bloc_nav_opacity"></div> 
+	<div class="bloc_nav_opacity"></div> 
 </div>
 
 <div id="bloc_Questions">
@@ -38,7 +38,7 @@
 				<!-- affichage en dynamique de la réponse -->
 				<p><?= $selectOneQ['explanation'][$i];?></p>
 				<!-- affichage en dynamique de l'image illustrant la réponse -->
-				<img src="<?= $this->assetUrl('img/imgreply/'.$selectOneQ['picture'][$i])?>">
+				<img class="img_reponses" src="<?= $this->assetUrl('img/imgreply/'.$selectOneQ['picture'][$i])?>">
 				<!-- affichage en dynamique de la vidéo illustrant la réponse -->
 				<div class="bloc_lien-reponse">
 					<div class="lien-reponse">

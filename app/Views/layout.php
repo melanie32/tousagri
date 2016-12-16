@@ -32,7 +32,7 @@
 						<a href="#">Partenaires</a>
 						<a href="#">Partager</a>
 						<a href="#">Crédits</a>
-						<a href="#">Mentions Légales</a>
+						<a href="<?=$this->url('mentions_mentions')?>">Mentions Légales</a>
 					</ul>
 				</div>
 			</div>
