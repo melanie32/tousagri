@@ -22,7 +22,11 @@ class CommentairesController extends Controller
 			$post[$key] = array_map('trim', array_map('strip_tags', $value));
 
 			if(!v::notEmpty()->length(2, 50)->validate($post['username'])){
-				$errors[] = 'Le titre de la catégorie doit comporter entre 2 et 50 caractères';
+				$errors[] = 'Votre pseudo doit comporter entre 2 et 50 caractères';
+			}
+
+			if(!v::notEmpty()->length(2, 500)->validate($post['username'])){
+				$errors[] = 'Votre commentaire doit comporter entre 2 et 500 caractères';
 			}
 
 

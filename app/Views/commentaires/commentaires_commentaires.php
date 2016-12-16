@@ -38,9 +38,9 @@
 			</div>
 
 			<div class="form-group">
-			  <label class="col-md-4 control-label" for="coment">Commentaire</label>
+			  <label class="col-md-4 control-label" for="comment">Commentaire</label>
 			  <div class="col-md-4">                     
-			    <textarea class="form-control" id="textarea" name="coment">Votre commentaire...</textarea>
+			    <textarea class="form-control" id="textarea" name="comment">Votre commentaire...</textarea>
 			  </div>
 			</div>
 
