@@ -1,6 +1,6 @@
 <?php $this->layout('layout_back', ['title' => 'Liste des catégories']) ?>
 
-<?php $this->start('main_content') ?>
+<?php $this->start('main_content') ?>  
 
 	<div class="text-center">
 		<p class="text-connect">Liste des catégories</p>

@@ -1,6 +1,6 @@
 <?php $this->layout('layout', ['title' => '']) ?>
 
-
+ 
 <?php $this->start('main_content') ?>
 
 
@@ -13,84 +13,18 @@
 
   <div class="wrappy">
     <div class="row dad">
+
+    <?php foreach ($selectC as $select) : ?>
       <div class="col-xs-6 col-md-4 imBox">
-        <p class="text-center secNam">Nom section</p>
-        <a href="<?= $this->url('questions_home') ?>">
-          <img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>" >
+        <p class="text-center secNam"><?=$select['title']?></p>
+        <a href="<?= $this->url('questions_home', ['id' => $select['id']]); ?>">
+          <img id="secPic" src="<?= $this->assetUrl('img/pictos/'.$select['pictogram'])?>" >
         </a>
       </div>
+      <?php endforeach; ?>
 
-      <div class="col-xs-6 col-md-4 imBox">
-        <p class="text-center secNam">Nom section</p>
-        <a href="<?= $this->url('questions_home') ?>">
-          <img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>" >
-        </a>
-      </div>
-
-      <div class="col-xs-6 col-md-4 imBox">
-        <p class="text-center secNam">Nom section</p>
-        <a href="<?= $this->url('questions_home') ?>">
-          <img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>" >
-        </a>
-        
-      </div>
-
-    </div>
-
-    <!-- Add the extra clearfix for only the required viewport -->
-
-    <div class="row dad">
-      <div class="col-xs-6 col-md-4 imBox">
-        <p class="text-center secNam">Nom section</p>
-        <a href="<?= $this->url('questions_home') ?>">
-          <img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>" >
-        </a>
-        
-      </div>
-
-      <div class="col-xs-6 col-md-4 imBox">
-        <p class="text-center secNam">Nom section</p>
-        <a href="<?= $this->url('questions_home') ?>">
-          <img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>" >
-        </a>
-        
-      </div>
-
-      <div class="col-xs-6 col-md-4 imBox">
-        <p class="text-center secNam">Nom section</p>
-        <a href="<?= $this->url('questions_home') ?>">
-          <img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>" >
-        </a>
-       
-      </div>
-    </div>
-
-     <div class="row dad">
-      <div class="col-xs-6 col-md-4 imBox">
-        <p class="text-center secNam">Nom section</p>
-        <a href="<?= $this->url('questions_home') ?>">
-          <img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>" >
-        </a>
-        
-      </div>
-
-      <div class="col-xs-6 col-md-4 imBox">
-        <p class="text-center secNam">Nom section</p>
-        <a href="<?= $this->url('questions_home') ?>">
-          <img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>" >
-        </a>
-        
-      </div>
-
-      <div class="col-xs-6 col-md-4 imBox">
-        <p class="text-center secNam">Nom section</p>
-        <a href="<?= $this->url('questions_home') ?>">
-          <img id="secPic" src="<?= $this->assetUrl('img/picto/poisson.png') ?>" >
-        </a>
-       
       </div>
   </div>
-</div>
 
     <!-- CSS background -->
     <?php $this->start('css') ?>

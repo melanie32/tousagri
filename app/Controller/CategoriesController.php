@@ -3,6 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use \Model\CategoriesModel;
 
 
 class CategoriesController extends Controller
@@ -14,7 +15,14 @@ class CategoriesController extends Controller
 	 */
 	public function category()
 	{
-		$this->show('categories/categories_category');
+		$selectCategories = new CategoriesModel();
+
+		$selectC = $selectCategories->findAll();
+
+		$dataC = ['selectC' => $selectC];
+
+		
+		$this->show('categories/categories_category', $dataC);
 	}
 
 }
