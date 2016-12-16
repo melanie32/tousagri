@@ -21,30 +21,13 @@
 
 			<div class="cub-category col-md-4">
 				<p class="text-center" id="name-category"><?=$select['title']?></p>
-				<img class="picto_category center-block" src="<?= $this->assetUrl('img/picto/poisson.png')?>">
+				<img class="picto_category center-block" src="<?= $this->assetUrl('img/pictos/'.$select['pictogram'])?>">
 				<div id="link-category">
 					<a class="text-center" href="<?=$this->url('admin_edit_categories', ['id' => $select['id']]);?>">Modifier</a>
 					<a class="text-center" href="#">Supprimer</a>
 				</div>
 			</div>
 			
-			<div class="cub-category col-md-4">
-				<p class="text-center" id="name-category">Nom de filière en dynamique</p>
-				<img src="">
-				<div id="link-category">
-					<a class="text-center" href="#">Modifier</a>
-					<a class="text-center" href="#">Supprimer</a>
-				</div>
-			</div>		
-
-			<div class="cub-category col-md-4">
-				<p class="text-center" id="name-category">Nom de filière en dynamique</p>
-				<img src="">
-				<div id="link-category">
-					<a class="text-center" href="#">Modifier</a>
-					<a class="text-center" href="#">Supprimer</a>
-				</div>
-			</div>
 		</div>
 		<?php endforeach; ?>	
 		

@@ -200,3 +200,14 @@ li {
 	height: 6em;
 	width: 6em;
 }
+
+/*********** FIN STYLE PAGE MODIFIER CATEGORIE****************/
+
+/***********STYLE PAGE AJOUTER  CATEGORIE****************/
+
+#addQuestionCateg {
+	cursor: pointer;
+}
+
+
+/***********FIN STYLE PAGE AJOUTER  CATEGORIE****************/

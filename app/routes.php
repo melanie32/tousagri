@@ -2,7 +2,7 @@
 	
 	$w_routes = array(
 		['GET', '/', 'Default#home', 'default_home'],
-		['GET|POST', '/questions', 'Questions#questions', 'questions_questions'],
+		['GET|POST', '/questions/[i:id]', 'Questions#questions', 'questions_questions'],
 		['GET|POST', '/commentaires', 'Commentaires#commentaires', 'commentaires_commentaires'],
 		['GET', '/categories', 'Categories#category', 'categories_category'],
 

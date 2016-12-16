@@ -1,6 +1,6 @@
 <?php $this->layout('layout_back', ['title' => 'Ajouter une catégorie']) ?>
 
-<?php $this->start('main_content') ?>  
+<?php $this->start('main_content') ?>   
 
 	<?php if(isset($errors) && !empty($errors)):?> 
 		<div class="alert alert-danger">
@@ -25,7 +25,7 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="title">Nom de la catégorie</label>  
 			<div class="col-md-4">
-				<input id="title" name="title" placeholder="" class="form-control input-md" type="text">    
+				<input id="title" name="title" placeholder="" class="form-control input-md" type="text" required>    
 			</div>
 		</div>
 
@@ -49,43 +49,49 @@
 		
 		<br>
 
-		<!-- Text input-->
-		<div class="form-group">
-			<label class="col-md-4 control-label" for="question">Question $i</label>
-			<div class="col-md-4">
-				<input id="question" name="question[]" placeholder="" class="form-control input-md" type="text">   
-			</div>
-		</div>
 
-		<!-- Textarea -->
-		<div class="form-group">
-			<label class="col-md-4 control-label" for="explanation">Réponse $i</label>
-			<div class="col-md-4">                     
-				<textarea class="form-control" id="explanation" name="explanation[]"></textarea>
-			</div>
-		</div>
-
-		<!-- File Button --> 
-		<div class="form-group">
-			<label class="col-md-4 control-label" for="picture">Photo illustrant la réponse</label>
-			<div class="col-md-4">
-				<input id="picture" name="picture[]" class="input-file" type="file">
-			</div>
-		</div>
-
-		<!-- Text input-->
-		<div class="form-group">
-			<label class="col-md-4 control-label" for="video">Lien vers une vidéo (youtube uniquement)</label>
-			<div class="col-md-4">
-				<input id="video" name="video[]" placeholder="" class="form-control input-md" type="text">   
-			</div>
-		</div>
-
+		<table class="table">
+			<thead>
+				<tr>
+					
+					<th>Question</th>
+					<th>Réponse</th>
+					<th>Illustration de la réponse</th>
+					
+				</tr>
+			</thead>
+			<tbody id="group-input-add-c">			
+				
+				<tr>							
+					<td id="input-question">
+						<!-- <input type="hidden" name="id-question" value="<?=$selectOneQ?>"> id-->
+						<input id="question" name="question[]" class="form-control input-md" type="text">		
+					</td>
+					<td>
+						<textarea rows="7" cols="50" class="form-control" id="explanation" name="explanation[]"></textarea>
+					</td>
+					<td>
+						<div>			
+							<label>Ajouter une illustration:</label>
+							<br>
+							<input type="file" name="picture[]">
+							<br>
+							<label>Ajouter une URL vidéo (youtube):</label>
+							<br>
+							<input type="text" name="video[]">			
+						</div> 
+					</td>							
+				</tr>
+					
+					
+			</tbody>
+		</table>
+		
 
 		<!-- pour ajouter une question et réponse -->
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="add-question">Ajouter une question</label>
-			<div class="col-md-4 add-question">                 
+			<div class="col-md-4 add-question" id="addQuestionCateg">      
 				<i class="fa fa-2x fa-plus" aria-hidden="true"></i>
 			</div>
 		</div>

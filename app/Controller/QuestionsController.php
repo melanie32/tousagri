@@ -16,29 +16,29 @@ use \Model\CategoriesModel;
 // Si on utilise "respect/validation". Ne pas oublier de l'ajouter via composer
 use \Respect\Validation\Validator as v; 
 
-class AjaxQuestionsController extends Controller
+class QuestionsController extends Controller
 {
 
 	/**
 	 * Page d'accueil par défaut
 	 * test commit
 	 */
-	public function questions()
+	public function questions($id)
 	{	
 
 
 		// instancier une classe pour lire toutes les catégories
-		// affiche toutes les catégories
-		$selectCategories = new CategoriesModel();
+		// affiche une catégorie
+		$selectCategory = new CategoriesModel();
 
-		$selectC = $selectCategories->findAll();
-
-
+		$selectOneC = $selectCategory->find($id);
 
 
-		$selectQuestions = new QuestionsModel();
 
-		$selectQ = $selectQuestions->findQuestions();
+		// sélection des questions
+		$selectQuestion = new QuestionsModel();
+
+		$selectOneQ = $selectQuestion->findQuestions($id);
 
 
 
@@ -87,12 +87,12 @@ class AjaxQuestionsController extends Controller
 
 		// on peut mettre tous les résultats des functions dans ce data de mes couilles
 		$data = [
-			'selectC' => $selectC,
-			'selectQ' => $selectQ,
+			'selectOneC' => $selectOneC,
+			'selectOneQ' => $selectOneQ,
 			'params'  => $params,
 		];
 
-		$this->show('questions/questions', $data);
+		$this->show('questions/questions_questions', $data);
 	}
 
 }

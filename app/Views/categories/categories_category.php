@@ -16,8 +16,8 @@
 
     <?php foreach ($selectC as $select) : ?>
       <div class="col-xs-6 col-md-4 imBox">
+        <a href="<?= $this->url('questions_questions', ['id' => $select['id']]); ?>">
         <p class="text-center secNam"><?=$select['title']?></p>
-        <a href="<?= $this->url('questions_home', ['id' => $select['id']]); ?>">
           <img id="secPic" src="<?= $this->assetUrl('img/pictos/'.$select['pictogram'])?>" >
         </a>
       </div>

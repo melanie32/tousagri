@@ -1,7 +1,7 @@
 <?php $this->layout('layout_back', ['title' => 'Modifier une catégorie']) ?>
 
 <?php $this->start('main_content') ?>
-
+ 
 	<?php if(isset($errors) && !empty($errors)):?> 
 		<div class="alert alert-danger">
 			<?=implode('<br>', $errors); ?>
@@ -65,47 +65,50 @@
 					
 					<th>Question</th>
 					<th>Réponse</th>
-					<th>Illustation de la réponse</th>
+					<th>Illustration de la réponse</th>
 					
 				</tr>
 			</thead>
 			<tbody id="new-input">
 			
-			<?php 
-				$selectOneQ['explanation'] = unserialize($selectOneQ['explanation']);
-				$selectOneQ['question'] = unserialize($selectOneQ['question']) ;
-				$selectOneQ['picture'] = unserialize($selectOneQ['picture']) ;
-				$selectOneQ['video'] = unserialize($selectOneQ['video']);
+				<?php 
+					$selectOneQ['explanation'] = unserialize($selectOneQ['explanation']);
+					$selectOneQ['question'] = unserialize($selectOneQ['question']) ;
+					$selectOneQ['picture'] = unserialize($selectOneQ['picture']) ;
+					$selectOneQ['video'] = unserialize($selectOneQ['video']);
 
 
-				for ($i=0; $i < count($selectOneQ['explanation']) ; $i++) : 
-				$selectOneQ['picture'][$i] = (empty($selectOneQ['picture'][$i]))? 'picture_5852ea2e9ff7f.jpg' : $selectOneQ['picture'][$i];
-			?>
-				<tr>
+					for ($i=0; $i < count($selectOneQ['explanation']) ; $i++) : 
+
+					$selectOneQ['picture'][$i] = (empty($selectOneQ['picture'][$i]))? 'no_image.svg.png' : $selectOneQ['picture'][$i];
+				?>
+						<tr>							
+							<td id="input-question">
+								<input type="hidden" name="id-question" value="<?=$selectOneQ['id']?>">
+								<input id="question" name="question[]" class="form-control input-md" type="text" value="<?=$selectOneQ['question'][$i]?>">		
+							</td>
+							<td>
+								<textarea rows="7" cols="50" class="form-control" id="explanation" name="explanation[]"><?=$selectOneQ['explanation'][$i]?></textarea>
+							</td>
+							<td>
+								<div>					
+									<p><b>Illustration actuelle de la réponse (image et/ ou vidéo)</b></p>
+									<img id="display-picture-answer-back" src="<?= $this->assetUrl('img/imgreply/'.$selectOneQ['picture'][$i])?>">	
+									<br>
+									<label>Changer l'illustration:</label>
+									<br>
+									<input type="file" name="picture[]">
+									<br>
+									<a href="<?= $selectOneQ['video'][$i]?>" target="_blank">Cliquez ici pour voir la vidéo actuelle</a>	
+									<br>
+									<label>Ajouter une nouvelle URL vidéo:</label>
+									<br>
+									<input type="text" name="video[]">			
+								</div> 
+							</td>							
+						</tr>
+					<?php endfor; ?>
 					
-					<td id="input-question">
-						<input type="hidden" name="id-question" value="<?=$selectOneQ['id']?>">
-						<input id="question" name="question[]" class="form-control input-md" type="text" value="<?=$selectOneQ['question'][$i]?>">		
-					</td>
-					<td>
-						<textarea rows="7" cols="50" class="form-control" id="explanation" name="explanation[]"><?=$selectOneQ['explanation'][$i]?></textarea>
-					</td>
-					<td>
-						<div>					
-							<p><b>Illustration actuelle de la réponse (image et/ ou vidéo)</b></p>
-							<img id="display-picture-answer-back" src="<?= $this->assetUrl('img/imgreply/'.$selectOneQ['picture'][$i])?>">	
-							<br>
-							<label>Changer l'illustration:</label><br><input type="file" name="picture[]">
-							<br>
-							<a href="<?= $selectOneQ['video'][$i]?>" target="_blank">Cliquez ici pour voir la vidéo actuelle</a>	
-							<br>
-							<label>Ajouter une nouvelle URL vidéo:</label><br><input type="text" name="video[]">			
-						</div> 
-					</td>
-					
-				</tr>
-			<?php endfor; ?>
-				
 			</tbody>
 		</table>
 
