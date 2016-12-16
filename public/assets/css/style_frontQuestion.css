@@ -29,6 +29,14 @@ list-style: none;
 	background-size: cover;
 }
 
+.conteneur_L h1 {
+	font-size: 5em;
+	font-weight: bold;
+	text-align: center;
+	color: #ffffff;
+
+}
+
 #illustration_Questions {
 	background-size: cover;
 	width: auto;
