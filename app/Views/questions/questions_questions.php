@@ -28,6 +28,30 @@
 				<!-- affichage en dynamique de la question -->			
 				<p><?= $selectOneQ['question'][$i];?></p>
 
+		?>
+			<div class="bloc_Question">
+
+				<div class="questions">
+					<!-- affichage en dynamique de la question -->			
+					<p><?= $selectOneQ['question'][$i];?></p>
+					
+				</div>
+				<div class="button_ComA">
+					<a href="<?=$this->url('commentaires_commentaires', ['id' => $selectOneC['id']]);?>">
+						<button class="affiche_Comments" name="affiche_Comments" class="btn btn-info btn-lg">Voir commentaires</button>
+					</a>
+				</div>
+			</div>
+
+			<div class="reponses">
+				<!-- affichage en dynamique de la réponse -->
+				<p><?= $selectOneQ['explanation'][$i];?></p>
+				<!-- affichage en dynamique de l'image illustrant la réponse -->
+				<img src="<?= $this->assetUrl('img/imgreply/'.$selectOneQ['picture'][$i])?>">
+				<!-- affichage en dynamique de la vidéo illustrant la réponse -->
+				<a href="<?= $selectOneQ['video'][$i]?>" target="_blank">Cliquez ici pour voir la réponse en vidéo</a>
+
+
 			</div>
 		</div>
 
