@@ -206,68 +206,25 @@ list-style: none;
 /*******  PAGE COMMENTAIRE  ********/
 
 .commentaire {
-	max-width: 100%;
 	height: 100%;
-	padding: 0;
-	background-color: #F3F3F3;
-}
-
-.wrapper_com {
-	display: block;
 	width: 100%;
-	height: 350px;
-	position: relative;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.wrapper_com:hover {
--webkit-transition: .2s ease-in-out;
-	opacity: .9;
 	
 }
 
-.voir_commentaires {
-	text-align: center;
-	display: inline-flex;
-	width: 65%;
-	height: 80px;
-	background-color: #8BC34A;
-}
-
-.voir_commentaires:hover {
-	-webkit-transition: .2s ease-in-out;
-	background-color: #6F9C3B;
-}
-
-.voir_commentaires img {
-	display: block;
-}
-
-
-.picto_icon {
-	padding-left: 150px;
-	padding-right: 50px;
-}
-
-.title_commentaires {
-	font-size: 2em;
-	font-weight: bold;
-	color: white;
-}
-
-.title_nbr_commentaires {
-	font-size: 1.5em;
-	font-weight: bold;
-}
-
-.contenu_commentaires {
+.contenu_commentaire {
+	background-color: unset;
 	width: 60%;
 	margin: 0 auto;
+	height: auto;
+	overflow: auto;
 
-	height: 800px;
+
 }
+	
+
+
+
+
 /*******  FIN PAGE COMMENTAIRE  ********/
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html class="full" lang="fr">
 <head>
 	<meta charset="UTF-8">
 	<title><?= $this->e($title) ?></title>
