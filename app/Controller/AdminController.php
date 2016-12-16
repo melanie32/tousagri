@@ -354,12 +354,6 @@ class AdminController extends Controller
 		$selectOneQ = $selectQuestion->findQuestions($id);
 
 		
-		
-
-
-
-
-
 
 		//update des données dans la bdd questions
 
@@ -369,6 +363,8 @@ class AdminController extends Controller
 		$post = [];
 		$errors = [];
 		$success = false;
+		$pictoUpdate = false;
+		$illuUpdate = false ;
 
 		// préparation des dossiers pour l'upload de picto
 		$folderUploadPicto = getApp()->getConfig('upload_dir_picto'); //permet d'indiquer via le fichier config le dossier destinataire de l'upload de picto
@@ -414,6 +410,8 @@ class AdminController extends Controller
 			// validation du pictogramme
 			if(!empty($_FILES['pictogram']['name'])) {
 
+				$pictoUpdate = true ;
+
 				if(!v::image()->validate($_FILES['pictogram']['tmp_name'])){
 						$errors[] = 'Le fichier envoyé pour le pictogramme n\'est pas une image valide';
 				}
@@ -431,6 +429,8 @@ class AdminController extends Controller
 
 			// validation de l'illustration
 			if(!empty($_FILES['illustration']['tmp_name'])) {
+
+				$illuUpdate = true ;
 
 				if(!v::image()->validate($_FILES['illustration']['tmp_name'])){
 						$errors[] = 'Le fichier envoyé pour l\'illustration n\'est pas une image valide';
@@ -492,6 +492,7 @@ class AdminController extends Controller
 				if(!is_dir($fullFolderUploadPicto)){
 					mkdir($fullFolderUploadPicto, 0755);
 				}
+
 				if (!empty($_FILES['pictogram']['name'])) {
 					
 					$picto = Image::make($_FILES['pictogram']['tmp_name']);
@@ -559,7 +560,6 @@ class AdminController extends Controller
 				}
 
 
-
 				// dossier des image contenue dans la réponse => /public/assets/img/imgreply
 				// créer le dossier imgreply si inexistant
 
@@ -603,10 +603,16 @@ class AdminController extends Controller
 
 				$dataUpdate =[
 					'title' => $post['title'],
-					'pictogram' => $pictoName,
-					'illustration' => $illusName,
 				];
 
+				if ($pictoUpdate) {
+					$dataUpdate['pictogram'] = $pictoName ;
+				}
+
+				if ($illuUpdate) {
+					$dataUpdate['illustration'] = $illusName ;
+				}
+				
 				$updateC = $updateCategories->update($dataUpdate, $post['id-category']);
 
 				if($updateC) {
