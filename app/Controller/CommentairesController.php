@@ -19,7 +19,7 @@ class CommentairesController extends Controller
 
 		if(!empty($_POST)) {
 
-			$post[$key] = array_map('trim', array_map('strip_tags', $value);
+			$post[$key] = array_map('trim', array_map('strip_tags', $value));
 
 			if(!v::notEmpty()->length(2, 50)->validate($post['username'])){
 				$errors[] = 'Le titre de la catégorie doit comporter entre 2 et 50 caractères';

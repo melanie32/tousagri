@@ -31,7 +31,9 @@
 					
 				</div>
 				<div class="button_ComA">
-					<button class="affiche_Comments" name="affiche_Comments" class="btn btn-info btn-lg">Voir commentaires</button>
+					<a href="<?=$this->url('commentaires_commentaires', ['id' => $selectOneC['id']]);?>">
+						<button class="affiche_Comments" name="affiche_Comments" class="btn btn-info btn-lg">Voir commentaires</button>
+					</a>
 				</div>
 			</div>
 
