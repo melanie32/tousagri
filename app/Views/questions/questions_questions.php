@@ -4,8 +4,9 @@
 
 <div id="wrapper_Questions">
 	<div class="conteneur_L">
-		<h1><?=$selectOneC['title']?></h1> 
+		<h1>- <?=$selectOneC['title']?> -</h1>
 	</div>
+		<div class="bloc_nav_opacity"></div> 
 </div>
 
 <div id="bloc_Questions">
@@ -31,11 +32,6 @@
 					<p><?= $selectOneQ['question'][$i];?></p>
 					
 				</div>
-				<div class="button_ComA">
-					<a href="<?=$this->url('commentaires_commentaires', ['id' => $selectOneC['id']]);?>">
-						<button class="affiche_Comments" name="affiche_Comments" class="btn btn-info btn-lg">Voir commentaires</button>
-					</a>
-				</div>
 			</div>
 
 			<div class="reponses">
@@ -44,17 +40,20 @@
 				<!-- affichage en dynamique de l'image illustrant la réponse -->
 				<img src="<?= $this->assetUrl('img/imgreply/'.$selectOneQ['picture'][$i])?>">
 				<!-- affichage en dynamique de la vidéo illustrant la réponse -->
-				<a href="<?= $selectOneQ['video'][$i]?>" target="_blank">Cliquez ici pour voir la réponse en vidéo</a>
+				<div class="bloc_lien-reponse">
+					<div class="lien-reponse">
+						<a href="<?= $selectOneQ['video'][$i]?>" target="_blank">Voir la réponse en vidéo</a>
 
+						<div class="lien-reponse">
+							<a class="affiche_Comments" href="<?=$this->url('commentaires_commentaires', ['id' => $selectOneC['id']]);?>">Voir commentaires</a>
+						</div>
+					</div>
+				</div>
 			</div>
 
-		
 		<?php endfor; ?>
 </div>
 
-	<div class="clear"></div>
-
-</div>
 
 
 <?php $this->stop('main_content') ?>
