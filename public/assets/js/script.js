@@ -23,7 +23,7 @@ function Gravity(id){
 
   this.useBound = this.checkBound();
   this.colors = [
-      '#31708f', '#1a3b4c', '#3b85ab', '#67aacb', '#275972', '#b3d4e5'
+      '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff'
   ];
 
   this.randomColor = function(){

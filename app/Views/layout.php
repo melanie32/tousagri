@@ -26,7 +26,7 @@
 		<!-- Footer -->
 		<footer class="bottNav">
 			<div>
-				<div class="col-md-12 col-md-offset-6">
+				<div class="col-md-12 col-md-offset-6 fNav">
 					<ul class="navList">
 						<a href="#">A propos</a>
 						<a href="#">Partenaires</a>
