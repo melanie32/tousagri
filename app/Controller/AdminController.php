@@ -713,31 +713,117 @@ class AdminController extends Controller
 
 	/**
 	 * Page  gestion des commentaires  du back office
-	 * 
+	 * uniquement pour le 1er affichage lorsqu'on arrive sur la page 
 	 */
 
-	public function editComments($id)
+	public function editComments()
 	{
-		// selection des catégories
-		$selectCategory = new CategoriesModel();
-
-		$selectOneC = $selectCategory->find($id);
-
-
-		//sélection des commentaires enregistrés dans la bdd pour affichage
 		
+		//sélection des commentaires enregistrés dans la bdd pour affichage seulement ceux qui sont à valider		
 		$selectComment = new CommentsModel();
-
-		$selectOneComment = $selectComment->findComments($id,'non');
+		$selectCommentV = $selectComment->findCategoryForComments('non');
 	
 
+		// sélection des commentaires qui sont déjà validés
+		$selectCommentOk = $selectComment->findCategoryForComments('oui');
+
+
 		$dataComments = [
-			'selectOneComment' => $selectOneComment,
-			'selectOneC' => $selectOneC,
+			'selectCommentV' => $selectCommentV,
+			'selectCommentOk' => $selectCommentOk,	
+				
 		];
 
 		$this->show('admin/admin_edit_comments', $dataComments);
 	}
 
+	public function editNewComments() 
+	{
+		if (!empty($_POST)) {
+			$post['id'] = trim(strip_tags($_POST['id']));
+		}
+
+		$updateComments = new CommentsModel();
+
+		$selectCommentV = $updateComments->findCategoryForComments('non');	
+
+
+		// sélection des commentaires qui sont déjà validés
+		$selectCommentOk = $updateComments->findCategoryForComments('oui');
+
+
+		if($updateComments->update(['validate' => 'oui'], $post['id']))
+			{
+				$this->showJson(
+					[
+					'selectCommentOk' => $selectCommentOk,
+					'selectCommentV' => $selectCommentV,
+					'code'=>'ok',
+					 'msg'=>'Commentaire validé'
+					 ]);
+			}
+		
+			else {
+				
+				$this->showJson(['code'=>'error', 'msg'=>'Erreur lors de la validation du commentaire']);
+			}		
+
+	}
+
+	public function deleteComments() 
+	{
+		if (!empty($_POST)) {
+			$post['id'] = trim(strip_tags($_POST['id']));
+		}
+
+		$deleteComments = new CommentsModel();
+
+		if($deleteComments->delete($post['id'])){
+
+			$this->showJson([
+				'code'=>'ok',
+				'msg'=>'Commentaire supprimé'
+			]);
+		}
+		else {
+			$this->showJson(['code'=>'error', 'msg'=>'Erreur lors de la suppression du commentaire']);
+		}
+	}
+
+	public function replyComments() 
+	{
+		$errors = [];
+		$post = [];
+
+		if(!empty($_POST)) {
+
+			$post['id'] = trim(strip_tags($_POST['id']));
+			$post['reply'] = trim(strip_tags($_POST['reply']));
+
+			if(!v::notEmpty()->length(2, 500)->validate($post['reply'])) {
+				$errors[] = 'La réponse doit comporter entre 2 et 500 caractères';
+			}
+		}
+
+		if(count($errors) === 0) {
+
+			$replyComments = new CommentsModel();
+
+			$datareply = [
+				'reply' => $post['reply'],
+			];
+
+			if($replyComments->update($datareply, $post['id'])){
+
+				$this->showJson([
+					'code'=>'ok',
+					'msg'=>'Commentaire supprimé'
+				]);
+			}
+		}
+		else {
+			$this->showJson(['code'=>'error', 'msg'=>implode('<br>', $errors)]);
+		}
+	}
 
 }

@@ -3,70 +3,83 @@
 <?php $this->start('main_content') ?>
 
 	<div class="text-center">
-		<p class="text-connect">Gestion des commentaires</p>
+		<p class="text-connect">Commentaires à modérer</p>
 	</div>
 	<br>
 
-	<p class="text-info">Vous avez <?= count($selectComments)?> commentaires à modérer</p>
+	<div id="resultAjax"></div>
+
+	
 
 	<table class="table table-hover">
 		<thead>
 			<tr>
 				<th class="text-center">Pseudo</th>
+				<th class="text-center">Catégorie</th>
 				<th class="text-center">Commentaires</th>
 				<th class="text-center" colspan="3">Action</th>
 			</tr>
 		</thead>
 		<tbody>
-					<?php foreach ($selectComments as $selectComment) :?>
-			<tr>
-				<td>
-					<p class="td-fusion click-action"><?=$selectComment['username']?></p>
-				</td>
-				<td>
-						<p class="td-fusion click-action"><?=$selectComment['content']?></p>
-
-				</td>
+			<?php if(empty($selectCommentV)) :?>
 				
-				<td> 
-					<div class="click-action text-success">				
-						<i class="fa fa-check" aria-hidden="true"></i>
-						&nbsp;Valider
-					</div>
-				</td>
-				<td>
-					<div class="center-block click-action text-primary" id="reply">
-						<i class="fa fa-reply" aria-hidden="true"></i>
-						&nbsp;Répondre
-					</div>
-					<form id="input-reply">
-						<textarea class="form-control input-margin" type="text" name="reply"></textarea>
-						<button class="btn btn-primary btn-sm input-margin center-block" type="submit">Envoyer</button>
-					</form>
-					
-				</td>
-				<td>
-					<div class="center-block click-action text-danger" id="delete">
-						<i class="fa fa-trash-o" aria-hidden="true"></i>
-						&nbsp;Supprimer
-					</div>
-					<form id="select-delete">
-						<select class="form-control input-margin">
-							<option value="0" disabled selected>Préciser la raison</option>
-							<option>Propos injurieux</option>
-							<option>Propos hors sujet</option>
-						</select>
-						<button class="btn btn-danger btn-sm center-block input-margin" id="button-delete" type="submit">Supprimer</button>
-					</form>
-					
-				</td>						
-			</tr>			
-					<?php endforeach; ?>
-			
+					<td colspan="4" class="text-center">
+						<p>Vous n'avez pas de commentaires à modérer</p>
+					</td>
+				
+			<?php else: ?>
+			<?php foreach ($selectCommentV as $selectComment) :?>
+				<tr>
+					<td>
+						<p class="td-fusion click-action"><?=$selectComment['username']?></p>
+					</td>
+					<td>
+							<p class="td-fusion click-action"><?=$selectComment['title']?></p>
+					</td>
+					<td class="contentACollect">
+							<p class="td-fusion click-action"><?=$selectComment['content']?></p>
+					</td>
+
+				<form method="post">
+					<td> 
+						<div class="click-action text-success">
+							<input class="input-id-hidden" type="hidden" name="id-comment" value="<?=$selectComment['id']?>">				
+							<button class="btn btn-success" type="submit" id="valid">
+							<i class="fa fa-check" aria-hidden="true"></i>
+							Valider</button>
+						</div>
+					</td>
+
+					<td>
+						<div class="center-block click-action text-primary" id="reply">
+							<a class="btn btn-primary">
+							<i class="fa fa-reply" aria-hidden="true"></i>
+							Répondre</a>
+						</div>
+						<div id="input-reply">
+							<textarea class="form-control input-margin" type="text" name="reply"></textarea>
+							<input class="input-id-hidden" type="hidden" name="id-comment" value="<?=$selectComment['id']?>">
+							<button class="btn btn-primary btn-sm input-margin center-block" type="submit" id="send">Envoyer</button>
+						</div>
+					</td>
+
+					<td>
+						<div class="center-block click-action text-danger">
+							<input class="input-id-hidden" type="hidden" name="id-comment" value="<?=$selectComment['id']?>">
+							<button class="btn btn-danger" type="submit" id="delete">
+							<i class="fa fa-trash-o" aria-hidden="true"></i>
+							Supprimer</button>
+						</div>
+					</td>
+
+				</form>						
+				</tr>			
+			<?php endforeach; ?>	
+			<?php endif; ?>		
 		</tbody>
 	</table>
 
-	<br>
+	
 	<hr>
 	<br>
 
@@ -79,24 +92,140 @@
 		<thead>
 			<tr>
 				<th class="text-center">
-					<form>
+					
 						<select class="form-control">
 							<option value="0" disabled selected>Catégories</option>
 							<option>les noms des categ dyn</option>
 						</select>
-					</form>
+					
 				</th>
 				<th class="text-center">Commentaires</th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody id="commValidOk">
+		<?php if(empty($selectCommentOk)) :?>
+			<td colspan="4" class="text-center">
+				<p>Vous n'avez pas encore de commentaires</p>
+			</td>
+		<?php else:  ?>
+		<?php foreach ($selectCommentOk as $selectComment) :?>
 			<tr>
-				<td>Si pas de séleciton categ on affiche tous selectall</td>
-				<td>Je ne voudrais pas rentrer dans des choses trop dimensionnelles, mais, premièrement, il faut toute la splendeur du aware car l'aboutissement de l'instinct, c'est l'amour ! Et j'ai toujours grandi parmi les chiens. </td>
+				<td><?=$selectComment['title']?></td>
+				<td><?=$selectComment['content']?></td>
 			</tr>
+		<?php endforeach; ?>
+		<?php endif; ?>
 		</tbody>
 	</table>
 
 
+
 	
 <?php $this->stop('main_content') ?>
+
+
+<?php $this->start('script') ?>
+
+<script>
+$(document).ready(function(){
+
+	$('#valid').click(function(e){
+		var ajaxCom = $(this).parent('.click-action').children('.input-id-hidden').val();
+		var tr = $(this).parent().parent().parent();
+		var content = $(tr).children('.contentACollect').innerHTML;
+		
+		e.preventDefault();
+		$.ajax({
+			url: '<?=$this->url('admin_edit_new_comments');?>',
+			// ici on utilise la methode $this pour donner l'url et on y met la route (4ème paramètre de la route du fichier)
+			type:'post',
+			cache:false,
+			data: {id:ajaxCom},
+			dataType: 'json',
+			success: function(result){
+				if(result.code == 'ok'){
+					//ici result correpond à mon tableau json de la ma page AjaxController
+					//showjson(['code=>'ok', 'msg'=>'blabla']);
+					$('#resultAjax').html('<div class="alert alert-success">' + result.msg +'</div>')
+					$(tr).remove();
+					
+				}
+				else if(result.code =='error'){
+					$('#resultAjax').html('<div class="alert alert-danger">' + result.msg +'</div>');
+				}
+
+			}//fermeture succees
+
+		});//fermeture $.ajax
+
+	});// fermeture buttton clic
+
+	$('#delete').click(function(e){
+		var ajaxCom = $(this).parent('.click-action').children('.input-id-hidden').val();
+		var tr = $(this).parent().parent().parent();
+		
+		
+		e.preventDefault();
+		$.ajax({
+			url: '<?=$this->url('admin_edit_del_comments');?>',
+			// ici on utilise la methode $this pour donner l'url et on y met la route (4ème paramètre de la route du fichier)
+			type:'post',
+			cache:false,
+			data: {id:ajaxCom},
+			dataType: 'json',
+			success: function(result){
+				if(result.code == 'ok'){
+					//ici result correpond à mon tableau json de la ma page AjaxController
+					//showjson(['code=>'ok', 'msg'=>'blabla']);
+					$('#resultAjax').html('<div class="alert alert-success">' + result.msg +'</div>')
+					$(tr).remove();
+					
+				}
+				else if(result.code =='error'){
+					$('#resultAjax').html('<div class="alert alert-danger">' + result.msg +'</div>');
+				}
+
+			}//fermeture succees
+
+		});//fermeture $.ajax
+
+	});// fermeture buttton clic
+
+
+	$('#send').click(function(e){
+		var ajaxCom = $(this).parent('.click-action').children('.input-id-hidden').val();
+		var tr = $(this).parent().parent().parent();
+		
+		
+		e.preventDefault();
+		$.ajax({
+			url: '<?=$this->url('admin_edit_rep_comments');?>',
+			// ici on utilise la methode $this pour donner l'url et on y met la route (4ème paramètre de la route du fichier)
+			type:'post',
+			cache:false,
+			data: {id:ajaxCom},
+			dataType: 'json',
+			success: function(result){
+				if(result.code == 'ok'){
+					//ici result correpond à mon tableau json de la ma page AjaxController
+					//showjson(['code=>'ok', 'msg'=>'blabla']);
+					$('#resultAjax').html('<div class="alert alert-success">' + result.msg +'</div>')
+					
+					
+				}
+				else if(result.code =='error'){
+					$('#resultAjax').html('<div class="alert alert-danger">' + result.msg +'</div>');
+				}
+
+			}//fermeture succees
+
+		});//fermeture $.ajax
+
+	});// fermeture buttton clic
+
+});
+
+
+</script>
+
+<?php $this->stop('script') ?>

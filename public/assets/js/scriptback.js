@@ -1,10 +1,13 @@
 $(document).ready(function(){
+
 	$( "#reply" ).click(function() {
   		$( "#input-reply" ).slideDown("slow");
 	});
+
 	$( "#delete" ).click(function() {
   		$( "#select-delete" ).slideToggle ("slow");
-	});    
+	}); 
+
 	$('#addinput').click(function() {
 		var newinput = '<td><input class="form-control input-md" type="text" name="question[]"></td>';
 		newinput += '<td><textarea rows="7" cols="50" name="explanation[]" class="form-control" id="explanation"></textarea></td>';
@@ -12,7 +15,8 @@ $(document).ready(function(){
 		newinput += '<label>Ajouter une URL vidéo:</label><br><input type="text" name="video[]"></td>';
 		
 		$('#new-input').append('<tr>'+newinput+'</tr>'); 
-	});	
+	});
+
 	$('#addQuestionCateg').click(function() {
 		var newinputAddCateg = '<td><input class="form-control input-md" type="text" name="question[]"></td>';
 		newinputAddCateg += '<td><textarea rows="7" cols="50" name="explanation[]" class="form-control" id="explanation"></textarea></td>';
@@ -20,8 +24,8 @@ $(document).ready(function(){
 		newinputAddCateg += '<label>Ajouter une URL vidéo:</label><br><input type="text" name="video[]"></td>';
 
 		$('#group-input-add-c').append('<tr>'+newinputAddCateg+'</tr>');
-
 	});  
+	
 	
 
 });

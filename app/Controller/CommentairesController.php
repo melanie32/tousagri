@@ -43,7 +43,7 @@ class CommentairesController extends Controller
 			if(count($errors) === 0) {
 
 				$insertComments = new CommentsModel();
-
+ 
 				$dataInsertCo = [
 					'id_category' => $post['id-category'],
 					'content' => $post['content'],

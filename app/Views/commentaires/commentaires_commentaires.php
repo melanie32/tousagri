@@ -3,7 +3,7 @@
 <?php $this->start('css') ?>
 
 <style>
-.full {
+.full { 
     background: url("<?=$this->assetUrl('img/balo.jpg')?>") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -72,14 +72,18 @@
 <div>
 		<p class="text-center">Liste des commentaires pour la catégorie&nbsp;:&nbsp;<?=$selectOneC['title']?></p>
 
-		<?php foreach ($selectOneComment as $selectOneCom) : ?>
+		<?php if(empty($selectOneCommment)) :?>
 
-			<p><?=$selectOneCom['username']?>&nbsp;:&nbsp;a écrit : </p>	
-		
-			<p><?=$selectOneCom['content']?></p>
-		
-		<?php endforeach;?>
+			<p>Aucun commentaire pour cette catégorie</p>
+		<?php else : ?>
+			<?php foreach ($selectOneComment as $selectOneCom) : ?>
 
+				<p><?=$selectOneCom['username']?>&nbsp;:&nbsp;a écrit : </p>	
+			
+				<p><?=$selectOneCom['content']?></p>
+			
+			<?php endforeach;?>
+		<?php endif;?>
 	
 </div>
 
