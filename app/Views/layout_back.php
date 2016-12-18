@@ -1,5 +1,5 @@
 <!DOCTYPE html> 
-<html lang="fr"> 
+<html lang="fr">  
 <head> 
 	<meta charset="UTF-8">
 	<title><?= $this->e($title) ?></title>
@@ -8,6 +8,18 @@
 	
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style_back.css') ?>">
+
+	<style>
+		body{
+		    background: url('<?=$this->assetUrl('img/background.jpg')?>');
+		    background-position: cover;
+		    		    
+		}
+
+	</style>
+
+
+
 </head>
 <body>
 	
@@ -38,8 +50,7 @@
 
 	<div id="wrapper" class="container">
 
-		<p class="text-left text-hello">Bonjour, nom utilisateur en dynamique</p>
-
+		
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>

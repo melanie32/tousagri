@@ -17,6 +17,7 @@ li {
 	max-width: 100%;
 	margin: 0 auto;
 	padding-top: 2.125em;
+	background-color: #ABD8D0;
 }
 
 /***************STYLE de la SIDEBAR du BACK***********************/
@@ -31,6 +32,7 @@ li {
     background-color: #404054;
     overflow-x: hidden;
     display: none;
+    
 }
 
 .sidenav-ul {
@@ -138,6 +140,11 @@ li {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+}
+
+
+.doubleButton {
+	display: none;
 }
 
 /***********STYLE DES PAGES ADD AND EDIT CATEGORY****************/

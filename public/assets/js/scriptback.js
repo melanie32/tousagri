@@ -21,7 +21,9 @@ $(document).ready(function(){
 
 		$('#group-input-add-c').append('<tr>'+newinputAddCateg+'</tr>');
 
-	});    
+	});  
+	
+
 });
 
  

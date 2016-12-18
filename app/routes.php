@@ -18,5 +18,6 @@
 		['GET|POST', '/admin/', 'Users#login', 'admin_login'],
 		['GET|POST', '/admin/logout', 'Users#logOut', 'admin_logout'],
 		['GET|POST', '/admin/addUsers', 'Users#addUsers', 'admin_users_add'],
+		['GET|POST', '/admin/deleteCategorie/[i:id]', 'Admin#deleteCategorie', 'admin_delete_categorie'],
 
 	);

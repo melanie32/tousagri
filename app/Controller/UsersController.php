@@ -1,6 +1,6 @@
 <?php 
  
-namespace Controller;
+namespace Controller; 
 
 use \W\Controller\Controller;
 use \Model\UsersModel;

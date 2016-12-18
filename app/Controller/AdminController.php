@@ -6,6 +6,7 @@ use \W\Controller\Controller;
 use \Model\CategoriesModel;
 use \Model\QuestionsModel;
 use \Model\CommentsModel;
+use \Model\UsersModel;
 
 use \Respect\Validation\Validator as v; 
 
@@ -26,7 +27,17 @@ class AdminController extends Controller
 	 */
 	public function accueil()
 	{
-		$this->show('admin/admin_accueil');
+
+		// sélection de la table Users
+		$selectUsers = new UsersModel();
+
+		$selectU = $selectUsers->findAll();
+
+		$dataUser = [ 'selectU' => $selectU];
+
+
+
+		$this->show('admin/admin_accueil', $dataUser);
 	}
 
 	/**
@@ -36,14 +47,56 @@ class AdminController extends Controller
 
 	public function categories()
 	{
-
+		// sélection de toutes les catégories
 		$selectCategories = new CategoriesModel();
 
 		$selectC = $selectCategories->findAll();
 
 		$dataC = ['selectC' => $selectC];
 
+
+		
+
+
 		$this->show('admin/admin_categories', $dataC);
+	}
+
+	//fonction pour supprimer la catégorie
+
+	public function deleteCategorie($id)
+	{
+		
+		// sélection de la catégorie à supprimer
+		$categoriesModel = new CategoriesModel();
+
+		$selectC = $categoriesModel->find($id);
+
+		// vérifications des input du formulaire
+
+		if(!empty($_POST)) {
+
+			if(isset($_POST['disconnect']) && $_POST['disconnect'] === 'yes') 
+			{
+			
+			$categoriesModel->delete($id);
+
+			$this->redirectToRoute('admin_categories');
+
+			}
+
+			elseif(isset($_POST['disconnect']) && $_POST['disconnect'] === 'no')
+			{
+
+				$this->redirectToRoute('admin_categories');
+			}
+
+		}
+
+		$dataC = ['selectC' => $selectC];
+
+		$this->show('admin/admin_delete_categorie', $dataC);
+
+
 	}
 
 	/**
@@ -663,17 +716,24 @@ class AdminController extends Controller
 	 * 
 	 */
 
-	public function editComments()
+	public function editComments($id)
 	{
+		// selection des catégories
+		$selectCategory = new CategoriesModel();
+
+		$selectOneC = $selectCategory->find($id);
+
+
 		//sélection des commentaires enregistrés dans la bdd pour affichage
+		
 		$selectComment = new CommentsModel();
 
-		$selectComments = $selectComment->findAll();
-
-
+		$selectOneComment = $selectComment->findComments($id,'non');
+	
 
 		$dataComments = [
-			'selectComments' => $selectComments,
+			'selectOneComment' => $selectOneComment,
+			'selectOneC' => $selectOneC,
 		];
 
 		$this->show('admin/admin_edit_comments', $dataComments);

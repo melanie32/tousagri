@@ -7,6 +7,9 @@
 	</div>
 	<br>
 
+	
+	
+
 	<a class="text-connect text-center" id="add-category" href="<?= $this->url('admin_add_categories')?>">
 	Ajouter une catégorie
 	</a>
@@ -16,7 +19,8 @@
 	<div class="container">
 
 		<?php foreach ($selectC as $select) : ?>
-		<div class="row contain-cub-category">
+		<div class="row contain-cub-category">		
+
 			
 
 			<div class="cub-category col-md-4">
@@ -24,7 +28,7 @@
 				<img class="picto_category center-block" src="<?= $this->assetUrl('img/pictos/'.$select['pictogram'])?>">
 				<div id="link-category">
 					<a class="text-center" href="<?=$this->url('admin_edit_categories', ['id' => $select['id']]);?>">Modifier</a>
-					<a class="text-center" href="#">Supprimer</a>
+					<a class="text-center delete-category" href="<?=$this->url('admin_delete_categorie', ['id' => $select['id']]);?>">Supprimer</a>
 				</div>
 			</div>
 			

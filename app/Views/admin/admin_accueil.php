@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 
-	
+	<p class="text-left text-hello">Bonjour, <?=$selectU[0]['username']?></p>	
 
 	<div class="container-edit-admin">
 
