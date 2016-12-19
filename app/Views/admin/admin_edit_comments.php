@@ -43,8 +43,8 @@
 				<form method="post">
 					<td> 
 						<div class="click-action text-success">
-							<input class="input-id-hidden" type="hidden" name="id-comment" value="<?=$selectComment['id']?>">				
-							<button class="btn btn-success" type="submit" class="valid">
+											
+							<button class="btn btn-success" type="submit" id="valid" data-id="<?=$selectComment['id'];?>">
 							<i class="fa fa-check" aria-hidden="true"></i>
 							Valider</button>
 						</div>
@@ -116,10 +116,12 @@
 <script>
 $(document).ready(function(){
 
-	$('.valid').click(function(e){
-		var ajaxCom = $(this).parent('.click-action').children('.input-id-hidden').val();
+	$('#valid').click(function(e){
+		 
+		var ajaxCom = $(this).data('id');
+
 		var tr = $(this).parent().parent().parent();
-		var content = $(tr).children('.contentACollect').innerHTML;
+		
 		
 		e.preventDefault();
 		$.ajax({
