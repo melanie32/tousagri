@@ -114,12 +114,16 @@
 
 
 		
-		<!-- pour ajouter une question et réponse -->
-		<div class="form-group">
-			<label class="col-md-4 control-label" for="add-question">Ajouter</label>
-			<div class="col-md-4">                 
-				<i id="addinput" class="fa fa-2x fa-plus" aria-hidden="true"></i>
-			</div>
+		
+		<!-- pour ajouter ou supprimer les input une question et réponse -->
+		<div class="center-block">			
+			<button type="button" class="btn btn-default" aria-label="Left Align" id="addinput">
+  				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			</button>
+			
+			<button type="button" class="btn btn-default" aria-label="Left Align" id="removeinput">
+  				<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+			</button>
 		</div>
 
 		

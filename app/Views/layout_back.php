@@ -23,6 +23,7 @@
 </head>
 <body>
 	
+<?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])) : ?>
 	<header>			
 		<nav class="sidenav">
 			<ul class="sidenav-ul">
@@ -47,6 +48,7 @@
 			</ul>
 		</nav>
 	</header>
+<?php endif; ?>
 
 	<div id="wrapper" class="container">
 
