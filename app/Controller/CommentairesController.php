@@ -48,6 +48,7 @@ class CommentairesController extends Controller
 					'id_category' => $post['id-category'],
 					'content' => $post['content'],
 					'username' => $post['username'],
+					'validate' => 'non',
 
 				];
 
@@ -68,7 +69,7 @@ class CommentairesController extends Controller
 		//sélection des commentaires enregistrés dans la bdd pour affichage
 		$selectComment = new CommentsModel();
 
-		$selectOneComment = $selectComment->findComments($id);
+		$selectOneComment = $selectComment->findCategoryForComments('oui');
 
 
 		$dataInsertComments = [
