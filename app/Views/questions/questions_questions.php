@@ -3,6 +3,13 @@
 <?php $this->start('main_content') ?>
 
 <div id="wrapper_Questions">
+
+		<div class="col-md-1 back retour">
+			 <a href="<?= $this->url('categories_category') ?>">
+			 <input id="toto" type="button" class="btn style-reset start" value="Retour"> 
+			 </a>
+		</div>      
+
 	<div class="conteneur_L">
 		<h1>- <?=$selectOneC['title']?> -</h1>
 	</div>
@@ -68,6 +75,7 @@
 <?php $this->stop('css') ?>
 
 		
+
 
 
 
