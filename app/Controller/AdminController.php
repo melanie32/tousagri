@@ -718,6 +718,9 @@ class AdminController extends Controller
 
 	public function editComments()
 	{
+		// sélection de toutes les catégories pour pouvoir sélectionner les comm en fonction
+		$selectCategory = new CategoriesModel();
+		$selectOneC = $selectCategory->findAll();
 		
 		//sélection des commentaires enregistrés dans la bdd pour affichage seulement ceux qui sont à valider		
 		$selectComment = new CommentsModel();
@@ -731,6 +734,7 @@ class AdminController extends Controller
 		$dataComments = [
 			'selectCommentV' => $selectCommentV,
 			'selectCommentOk' => $selectCommentOk,	
+			'selectOneC' => $selectOneC,
 				
 		];
 
@@ -752,7 +756,7 @@ class AdminController extends Controller
 		$selectCommentOk = $commentsModel->findCategoryForComments('oui');
 
 
-		if($selectCommentV->update(['validate' => 'oui'], $post['id']))
+		if($commentsModel->update(['validate' => 'oui'], $post['id']))
 			{
 				$this->showJson(
 					[
@@ -788,6 +792,35 @@ class AdminController extends Controller
 		else {
 			$this->showJson(['code'=>'error', 'msg'=>'Erreur lors de la suppression du commentaire']);
 		}
+	}
+
+	public function selectComments() 
+	{
+		$html = null;
+
+
+		if (!empty($_POST)) {
+			$post['id'] = trim(strip_tags($_POST['id']));
+		}
+
+
+		$commentsModel = new CommentsModel();
+
+		if($selectCombyCateg = $commentsModel->selectCommentsByCategory('oui',$post['id'])){	
+
+			foreach ($selectCombyCateg as $selectCom) {
+				$html.= '<tr class="text-center">';		
+				$html.= '<td>'.ucfirst(strtolower($selectCom['title'])).'</td>';
+				$html.= '<td>'.$selectCom['username'].'</td>';
+				$html.= '<td>'.$selectCom['content'].'</td>';
+				$html.= '</tr>';
+			}
+
+			$this->showJson([
+				'html'=> $html,				
+			]);
+		}		
+		
 	}
 
 	
