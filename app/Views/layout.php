@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="full" lang="fr">
+<html lang="fr">
 <head>
 	<meta charset="UTF-8">
 	<title><?= $this->e($title) ?></title>
@@ -30,7 +30,6 @@
 					<ul class="navList">
 						<a href="#">A propos</a>
 						<a href="#">Partenaires</a>
-						<a href="#">Partager</a>
 						<a href="#">Crédits</a>
 						<a href="<?=$this->url('mentions_mentions')?>">Mentions Légales</a>
 					</ul>

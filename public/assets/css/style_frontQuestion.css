@@ -204,25 +204,58 @@ p {
 
 
 
+
 /*******  PAGE COMMENTAIRE  ********/
 
-.commentaire {
-	height: 100%;
-	width: 100%;
-	
+.wrapper_commentaires {
+	max-width: 100%;
 }
 
-.contenu_commentaire {
-	background-color: unset;
-	width: 60%;
+.contenu_commentaire{
 	margin: 0 auto;
-	height: auto;
-	overflow: auto;
-
-
+	width: 80%;
+    height: 97%;
 }
 
+.bloc_ok_commentaire{
+	display: block;
+	height: auto;
+}
+
+.list_commentaires {
+	display: block;
+}
+	.name_categorie {
+		padding-bottom: 1.5em;
+		padding-top: 1em;
+		text-align: center;
+	    font-size: 3em;
+	    font-weight: bold;
+	    color: #ffffff;
+	    text-shadow: 2px 2px 4px #000000;
+	}
+
+	.erreur_commentaire {
+		font-size: 2em;
+		color: white;
+		padding-bottom: 3.5em;
+		padding-top: 2em;
+		text-shadow: 2px 2px 4px #000000;
+	}
+
+.ajouter_commentaire {
+	display: block;
+
+}
+	#label_commentaire {
+		color: white;
+	}
 /*******  FIN PAGE COMMENTAIRE  ********/
+
+
+
+
+
 
 /*******  BOUTON RETOUR  ********/
 #toto {
