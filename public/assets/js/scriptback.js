@@ -26,8 +26,8 @@ $(document).ready(function(){
 	$('#addQuestionCateg').click(function() {
 		var newinputAddCateg = '<td><input class="form-control input-md" type="text" name="question[]" required></td>';
 		newinputAddCateg += '<td><textarea rows="7" cols="50" name="explanation[]" class="form-control" id="explanation" required></textarea></td>';
-		newinputAddCateg += '<td><label>Ajouter une image:</label><br><input type="file" name="picture[]" required><br>';
-		newinputAddCateg += '<label>Ajouter une URL vidéo:</label><br><input type="text" name="video[]" required></td>';
+		newinputAddCateg += '<td><label>Ajouter une image:</label><br><input type="file" name="picture[]"><br>';
+		newinputAddCateg += '<label>Ajouter une URL vidéo:</label><br><input type="text" name="video[]"></td>';
 
 		$('#group-input-add-c').append('<tr id="newinputQ">'+newinputAddCateg+'</tr>');
 	});  
