@@ -28,9 +28,7 @@
 			<div>
 				<div class="col-md-12 col-md-offset-6 fNav">
 					<ul class="navList">
-						<a href="#">A propos</a>
-						<a href="#">Partenaires</a>
-						<a href="#">Crédits</a>
+						<a href="<?=$this->url('propos_propos')?>">A Propos</a>
 						<a href="<?=$this->url('mentions_mentions')?>">Mentions Légales</a>
 					</ul>
 				</div>

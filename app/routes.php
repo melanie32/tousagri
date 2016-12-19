@@ -5,6 +5,7 @@
 		['GET|POST', '/questions/[i:id]', 'Questions#questions', 'questions_questions'],
 		['GET|POST', '/commentaires/[i:id]', 'Commentaires#commentaires', 'commentaires_commentaires'],
 		['GET', '/mentions', 'Mentions#home', 'mentions_mentions'],
+		['GET', '/propos', 'Propos#home', 'propos_propos'],
 		['GET', '/categories', 'Categories#category', 'categories_category'],
 
 
