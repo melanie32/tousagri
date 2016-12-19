@@ -3,6 +3,8 @@
 namespace Controller; 
 
 use \W\Controller\Controller;
+use \W\Security\AuthorizationModel;
+use \W\Security\AuthentificationModel;
 use \Model\CategoriesModel;
 use \Model\QuestionsModel;
 use \Model\CommentsModel;
@@ -28,6 +30,15 @@ class AdminController extends Controller
 	public function accueil()
 	{
 
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
+
 		// sélection de la table Users
 		$selectUsers = new UsersModel();
 
@@ -47,6 +58,15 @@ class AdminController extends Controller
 
 	public function categories()
 	{
+
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
 		// sélection de toutes les catégories
 		$selectCategories = new CategoriesModel();
 
@@ -66,6 +86,14 @@ class AdminController extends Controller
 	public function deleteCategorie($id)
 	{
 		
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
 		// sélection de la catégorie à supprimer
 		$categoriesModel = new CategoriesModel();
 
@@ -106,6 +134,14 @@ class AdminController extends Controller
 
 	public function addCategories()
 	{
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
 		$post = [];
 		$errors = [];
 		$success = false;
@@ -394,6 +430,15 @@ class AdminController extends Controller
 
 	public function editCategories($id)
 	{
+
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
 		// appel des fonctions natives pour lire une seule categorie dans la page modifier les categories
 		$selectCategory = new CategoriesModel();
 
@@ -718,6 +763,15 @@ class AdminController extends Controller
 
 	public function editComments()
 	{
+
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
 		// sélection de toutes les catégories pour pouvoir sélectionner les comm en fonction
 		$selectCategory = new CategoriesModel();
 		$selectOneC = $selectCategory->findAll();
@@ -743,6 +797,15 @@ class AdminController extends Controller
 
 	public function editNewComments() 
 	{
+
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
 		if (!empty($_POST)) {
 			$post['id'] = trim(strip_tags($_POST['id']));
 		}
@@ -776,6 +839,15 @@ class AdminController extends Controller
 
 	public function deleteComments() 
 	{
+		
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
 		if (!empty($_POST)) {
 			$post['id'] = trim(strip_tags($_POST['id']));
 		}
@@ -796,6 +868,15 @@ class AdminController extends Controller
 
 	public function selectComments() 
 	{
+
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
 		$html = null;
 
 
