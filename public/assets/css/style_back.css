@@ -15,7 +15,7 @@ li {
 #wrapper {
 	width: 75em;
 	max-width: 100%;
-	margin: 0 auto;
+	margin: 3em auto;
 	padding-top: 2.125em;
 	background-color: #ABD8D0;
 }
@@ -31,7 +31,7 @@ li {
     left: 0;
     background-color: #404054;
     overflow-x: hidden;
-    display: none;
+   
     
 }
 

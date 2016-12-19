@@ -17,7 +17,7 @@
 				<th class="text-center">Pseudo</th>
 				<th class="text-center">Catégorie</th>
 				<th class="text-center">Commentaires</th>
-				<th class="text-center" colspan="3">Action</th>
+				<th class="text-center" colspan="2">Action</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -44,29 +44,16 @@
 					<td> 
 						<div class="click-action text-success">
 							<input class="input-id-hidden" type="hidden" name="id-comment" value="<?=$selectComment['id']?>">				
-							<button class="btn btn-success" type="submit" id="valid">
+							<button class="btn btn-success" type="submit" class="valid">
 							<i class="fa fa-check" aria-hidden="true"></i>
 							Valider</button>
 						</div>
 					</td>
-
-					<td>
-						<div class="center-block click-action text-primary" id="reply">
-							<a class="btn btn-primary">
-							<i class="fa fa-reply" aria-hidden="true"></i>
-							Répondre</a>
-						</div>
-						<div id="input-reply">
-							<textarea class="form-control input-margin" type="text" name="reply"></textarea>
-							<input class="input-id-hidden" type="hidden" name="id-comment" value="<?=$selectComment['id']?>">
-							<button class="btn btn-primary btn-sm input-margin center-block" type="submit" id="send">Envoyer</button>
-						</div>
-					</td>
-
+					
 					<td>
 						<div class="center-block click-action text-danger">
 							<input class="input-id-hidden" type="hidden" name="id-comment" value="<?=$selectComment['id']?>">
-							<button class="btn btn-danger" type="submit" id="delete">
+							<button class="btn btn-danger" type="submit" class="delete">
 							<i class="fa fa-trash-o" aria-hidden="true"></i>
 							Supprimer</button>
 						</div>
@@ -129,7 +116,7 @@
 <script>
 $(document).ready(function(){
 
-	$('#valid').click(function(e){
+	$('.valid').click(function(e){
 		var ajaxCom = $(this).parent('.click-action').children('.input-id-hidden').val();
 		var tr = $(this).parent().parent().parent();
 		var content = $(tr).children('.contentACollect').innerHTML;
@@ -160,7 +147,7 @@ $(document).ready(function(){
 
 	});// fermeture buttton clic
 
-	$('#delete').click(function(e){
+	$('.delete').click(function(e){
 		var ajaxCom = $(this).parent('.click-action').children('.input-id-hidden').val();
 		var tr = $(this).parent().parent().parent();
 		
@@ -189,39 +176,7 @@ $(document).ready(function(){
 
 		});//fermeture $.ajax
 
-	});// fermeture buttton clic
-
-
-	$('#send').click(function(e){
-		var ajaxCom = $(this).parent('.click-action').children('.input-id-hidden').val();
-		var tr = $(this).parent().parent().parent();
-		
-		
-		e.preventDefault();
-		$.ajax({
-			url: '<?=$this->url('admin_edit_rep_comments');?>',
-			// ici on utilise la methode $this pour donner l'url et on y met la route (4ème paramètre de la route du fichier)
-			type:'post',
-			cache:false,
-			data: {id:ajaxCom},
-			dataType: 'json',
-			success: function(result){
-				if(result.code == 'ok'){
-					//ici result correpond à mon tableau json de la ma page AjaxController
-					//showjson(['code=>'ok', 'msg'=>'blabla']);
-					$('#resultAjax').html('<div class="alert alert-success">' + result.msg +'</div>')
-					
-					
-				}
-				else if(result.code =='error'){
-					$('#resultAjax').html('<div class="alert alert-danger">' + result.msg +'</div>');
-				}
-
-			}//fermeture succees
-
-		});//fermeture $.ajax
-
-	});// fermeture buttton clic
+	});// fermeture buttton clic	
 
 });
 
