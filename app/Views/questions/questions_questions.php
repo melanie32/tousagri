@@ -2,10 +2,12 @@
 
 <?php $this->start('main_content') ?>
 
+
 <div id="wrapper_Questions">
 	<div class="conteneur_L">
 		<h1>- <?=$selectOneC['title']?> -</h1>
 	</div>
+
 		<div class="bloc_nav_opacity"></div> 
 </div>
 
