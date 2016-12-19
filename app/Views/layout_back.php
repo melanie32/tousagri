@@ -10,10 +10,12 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style_back.css') ?>">
 
 	<style>
-		body{
-		    background: url('<?=$this->assetUrl('img/background.jpg')?>');
-		    background-position: cover;
-		    		    
+		.background{
+		    background: url('<?=$this->assetUrl('img/bkg1.jpg')?>');
+		    /*background-position: cover;*/
+		    background-position: center;
+    		background-size: 100% 100%;
+    		background-repeat: no-repeat;	    
 		}
 
 	</style>
@@ -22,7 +24,7 @@
 
 </head>
 <body>
-	
+	<div class="background">
 <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])) : ?>
 	<header>			
 		<nav class="sidenav">
@@ -61,6 +63,7 @@
 		</footer>
 	</div>	
 
+</div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="<?= $this->assetUrl('js/scriptback.js') ?>">
 	
