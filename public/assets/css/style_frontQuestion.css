@@ -108,6 +108,27 @@ p {
 	font-weight: bold;
 }
 
+#bloc_mentions_apropos{
+	overflow-y: scroll;
+	position: absolute;
+	margin-left: 40%;
+	width: 60%;
+	height: 97%;
+	background-color: black;
+	opacity: 0.8;
+	color: white;
+	font-size: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+#bloc_mentions_apropos h2{
+	font-size: 1.5em;
+	padding-bottom: 2em;
+	padding-top: 3em;
+	font-weight: bold;
+}
+
 .bloc_Question {
 	border-top: 0.5em solid #737373;
 	display: block;
@@ -279,8 +300,21 @@ p {
 }
 
 /*******  FIN BOUTON RETOUR  ********/
+.img-responsive {
+    margin: 0 auto;
+}
 
+#bloc_mentions_apropos h2 {
+    padding-bottom: 0;
+}
 
+#padding_center {
+    padding-top: 1em;
+}
+
+#img_perso {
+    padding-left: 20%;
+}
 /************************* Media Queries **********************/
 /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px */
 @media all and (min-width: 1350px) and (max-width: 1700px){

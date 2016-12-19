@@ -11,7 +11,7 @@
 		</div>
 
 		<div class="title_conteneur_L">
-			<h1>- Mention Légale -</h1>
+			<h1>- Mentions Légales -</h1>
 		</div>
 
 	<div class="bloc_nav_opacity"></div> 

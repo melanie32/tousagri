@@ -47,7 +47,7 @@
 				<!-- affichage en dynamique de la réponse -->
 				<p><?= $selectOneQ['explanation'][$i];?></p>
 				<!-- affichage en dynamique de l'image illustrant la réponse -->
-				<img src="<?= $this->assetUrl('img/imgreply/'.$selectOneQ['picture'][$i])?>">
+				<img id="img_perso" src="<?= $this->assetUrl('img/imgreply/'.$selectOneQ['picture'][$i])?>">
 				<!-- affichage en dynamique de la vidéo illustrant la réponse -->
 				<div class="bloc_lien-reponse">
 					<div class="lien-reponse">
