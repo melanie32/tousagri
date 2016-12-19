@@ -99,7 +99,11 @@
 									<br>
 									<input type="file" name="picture[]">
 									<br>
-									<a href="<?= $selectOneQ['video'][$i]?>" target="_blank">Cliquez ici pour voir la vidéo actuelle</a>	
+									<?php if(empty($selectOneQ['video'][$i])):?>
+										<p>Il n'y a pas de vidéo pour cette question.</p>
+									<?php else: ?>
+										<a href="<?= $selectOneQ['video'][$i]?>" target="_blank">Cliquez ici pour voir la vidéo actuelle</a>
+									<?php endif;?>	
 									<br>
 									<label>Ajouter une nouvelle URL vidéo:</label>
 									<br>
