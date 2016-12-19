@@ -59,6 +59,10 @@ p {
 }
 
 .title_conteneur_L h1 {
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -274,9 +278,11 @@ p {
 /*******  FIN PAGE COMMENTAIRE  ********/
 
 
+/*******  PAGE PROPOS  ********/
 
 
 
+/*******  FIN PAGE PROPOS  ********/
 
 /*******  BOUTON RETOUR  ********/
 #toto {
@@ -284,7 +290,7 @@ p {
    background-color: transparent;
    border:1px solid white;
    margin: 20px;
-   width: 100px;
+   width: 120px;
    height: 50px;
    font-size: 25px;
 }
@@ -298,8 +304,11 @@ p {
    z-index: 789456;
     
 }
-
 /*******  FIN BOUTON RETOUR  ********/
+
+
+
+
 .img-responsive {
     margin: 0 auto;
 }
@@ -315,8 +324,20 @@ p {
 #img_perso {
     padding-left: 20%;
 }
+
+.persoB {
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	font-size: 1.5em;
+}
+
+
+
+
 /************************* Media Queries **********************/
-/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px */
+
 @media all and (min-width: 1350px) and (max-width: 1700px){
 	.title_conteneur_L h1 {font-size: 3em;}
 }
@@ -330,20 +351,30 @@ p {
 
 @media all and (min-width: 861px) and (max-width: 1200px){
 	.conteneur_L h1 {font-size: 3em;}
-	.title_conteneur_L h1 {font-size: 2.5em;}
+	.title_conteneur_L h1 {font-size: 2.5em;-webkit-margin-before: 0;-webkit-margin-after: 0;-webkit-margin-start: 0px;-webkit-margin-end: 0px;}
 	.questions p {font-size: 1.5em;}
 	.reponses p {font-size: 1em;}
 	.lien-reponse a {font-size: 0.9em;}
+	.bloc_mentions_aproposP {font-size: 0.8em;}
 	#bloc_mentions {font-size: 0.8em;}
+	.name_categorie {font-size: 2.5em; padding-bottom: 0.3em; padding-top: 0.3em;}
+	.erreur_commentaire {font-size: 1.5em; padding-top:0.5em; padding-bottom: 1em;}
+	.form-horizontal .control-label {padding-top: 0;}
+	.btn {padding-top: 0.2em;padding-bottom: 0.2em;padding-left: 1.2em;padding-right: 1.2em;font-size: 1.1em;}
 }
 
 @media all and (min-width: 450px) and (max-width: 860px){
 	.conteneur_L h1 {font-size: 2em;}
-	.title_conteneur_L h1 {font-size: 2em;}
+	.title_conteneur_L h1 {font-size: 2em; -webkit-margin-before: 0;-webkit-margin-after: 0;-webkit-margin-start: 0px;-webkit-margin-end: 0px;}
 	.questions p {font-size: 1.2em;}
 	.reponses p {font-size: 1em;}
 	.lien-reponse a {font-size: 0.8em;}
+	.bloc_mentions_aproposP {font-size: 0.8em;}
 	#bloc_mentions {font-size: 0.6em;}
+	.name_categorie {font-size: 1.2em; padding-bottom: 0.3em; padding-top: 0.2em;}
+	.erreur_commentaire {font-size: 0.8em; padding-top:0; padding-bottom: 0.1em;}
+	.form-horizontal .control-label {padding-top: 0;}
+	.btn {padding-top: 0.2em;padding-bottom: 0.2em;padding-left: 1em;padding-right: 1em;font-size: 1.1em;}
 }
 
 @media all and (max-width: 450px){
@@ -351,11 +382,13 @@ p {
 	.questions p {font-size: 0.6em;}
 	.reponses p {font-size: 0.5em;}
 	.lien-reponse a {font-size: 0.5em; padding-right: 1em;}
-	.title_conteneur_L h1 {font-size: 0.8em;}
+	.title_conteneur_L h1 {font-size: 0.8em;-webkit-margin-before: 0;-webkit-margin-after: 0;-webkit-margin-start: 0px;-webkit-margin-end: 0px;}
 	#bloc_mentions {font-size: 0.3em;}
+	.name_categorie {font-size: 1em; padding-bottom: 0.1em; padding-top: 0.1em;}
+	.erreur_commentaire {font-size: 0.8em; padding-top:0; padding-bottom: 0s;}
+	.form-horizontal .control-label {padding-top: 0;}
 }
 
 /************************* FIN Media Queries **********************/
 
 /*******  FIN PAGE COMMENTAIRE  ********/
-

@@ -71,6 +71,7 @@
 <style>
 	.conteneur_L{
 		background-image: url("<?=$this->assetUrl('img/illustrations/'.$selectOneC['illustration'])?>");
+		
 	}
 
 </style>

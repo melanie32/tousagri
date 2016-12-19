@@ -18,7 +18,7 @@
 </div>
 <div id="bloc_mentions_apropos">
 <h2>Tout commence au 66 Rue de l'abbée de l'épée...</h2>
-	<p>Peregrini remanerent id adseclae saltatricum disciplinarum milia quidem alimentorum veri cum dudum pellerentur sine est haut totidemque id peregrini ut magistris quidem milia paucis peregrini paucis extrusis tempus totidemque ita ad tria disciplinarum id liberalium praecipites interpellata saltatricum formidatam choris milia ob magistris urbe sectatoribus ventum quidem extrusis ut milia id indignitatis quidem urbe tria liberalium milia tenerentur disciplinarum tempus ad cum quidem cum totidemque saltatricum liberalium praecipites urbe simularunt respiratione cum haut paucis sectatoribus tenerentur quique ut cum choris minimarum id liberalium id ne ob adseclae cum tria minimarum inpendio haut praecipites alimentorum dudum pellerentur choris ab milia sectatoribus.<br>
+	<p class="bloc_mentions_aproposP">Peregrini remanerent id adseclae saltatricum disciplinarum milia quidem alimentorum veri cum dudum pellerentur sine est haut totidemque id peregrini ut magistris quidem milia paucis peregrini paucis extrusis tempus totidemque ita ad tria disciplinarum id liberalium praecipites interpellata saltatricum formidatam choris milia ob magistris urbe sectatoribus ventum quidem extrusis ut milia id indignitatis quidem urbe tria liberalium milia tenerentur disciplinarum tempus ad cum quidem cum totidemque saltatricum liberalium praecipites urbe simularunt respiratione cum haut paucis sectatoribus tenerentur quique ut cum choris minimarum id liberalium id ne ob adseclae cum tria minimarum inpendio haut praecipites alimentorum dudum pellerentur choris ab milia sectatoribus.<br>
 	Peregrini remanerent id adseclae saltatricum disciplinarum milia quidem alimentorum veri cum dudum pellerentur sine est haut totidemque id peregrini ut magistris quidem milia paucis peregrini paucis extrusis tempus totidemque ita ad tria disciplinarum id liberalium praecipites interpellata saltatricum formidatam choris milia ob magistris urbe sectatoribus ventum quidem extrusis ut milia id indignitatis quidem urbe tria liberalium milia tenerentur disciplinarum tempus ad cum quidem cum totidemque saltatricum liberalium praecipites urbe simularunt respiratione cum haut paucis sectatoribus tenerentur quique ut cum choris minimarum id liberalium id ne ob adseclae cum tria minimarum inpendio haut praecipites alimentorum dudum pellerentur choris ab milia sectatoribus.</p>
 
 	 <!-- Team Members Row -->
@@ -27,21 +27,21 @@
                 <h2 class="page-header">La Team Site Adulte</h2>
             </div>
             <div class="col-lg-4 col-sm-6 text-center" id="padding_center">
-                <img id="img_perso" class="img-circle img-responsive img-center" src="<?= $this->assetUrl('img/createur/omar-sy.jpg')?>" alt="">
+                <img class="img-circle img-responsive img-center" src="<?= $this->assetUrl('img/createur/omar-sy.jpg')?>" alt="">
                 <h3>Anthony DOUX
                     <small>Job Title</small>
                 </h3>
                 <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center" id="padding_center">
-                <img id="img_perso" class="img-circle img-responsive img-center" src="<?= $this->assetUrl('img/createur/omar-sy.jpg')?>" alt="">
+                <img class="img-circle img-responsive img-center" src="<?= $this->assetUrl('img/createur/omar-sy.jpg')?>" alt="">
                 <h3>Mélanie DUPUY
                     <small>Job Title</small>
                 </h3>
                 <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center" id="padding_center">
-                <img id="img_perso" class="img-circle img-responsive img-center" src="<?= $this->assetUrl('img/createur/omar-sy.jpg')?>" alt="">
+                <img class="img-circle img-responsive img-center" src="<?= $this->assetUrl('img/createur/omar-sy.jpg')?>" alt="">
                 <h3>Yann MORA
                     <small>Job Title</small>
                 </h3>
@@ -51,21 +51,21 @@
                 <h2 class="page-header">La Team Site Enfant</h2>
             </div>
             <div class="col-lg-4 col-sm-6 text-center" id="padding_center">
-                <img id="img_perso" class="img-circle img-responsive img-center" src="<?= $this->assetUrl('img/createur/omar-sy.jpg')?>" alt="">
+                <img class="img-circle img-responsive img-center" src="<?= $this->assetUrl('img/createur/omar-sy.jpg')?>" alt="">
                 <h3>Anthony BAS
                     <small>Job Title</small>
                 </h3>
                 <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center" id="padding_center">
-                <img id="img_perso" class="img-circle img-responsive img-center" src="<?= $this->assetUrl('img/createur/omar-sy.jpg')?>" alt="">
+                <img class="img-circle img-responsive img-center" src="<?= $this->assetUrl('img/createur/omar-sy.jpg')?>" alt="">
                 <h3>Carinne GRANET
                     <small>Job Title</small>
                 </h3>
                 <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center" id="padding_center">
-                <img id="img_perso" class="img-circle img-responsive img-center" src="<?= $this->assetUrl('img/createur/omar-sy.jpg')?>" alt="">
+                <img class="img-circle img-responsive img-center" src="<?= $this->assetUrl('img/createur/omar-sy.jpg')?>" alt="">
                 <h3>Renaud ROUSSELLE
                     <small>Job Title</small>
                 </h3>
@@ -73,7 +73,7 @@
             </div>
             <div class="col-lg-12 center">
                	<div class="col-lg-4 col-sm-6 col-lg-offset-4 text-center" id="padding_center">
-               		<img id="img_perso" class="img-circle img-responsive img-center" src="<?= $this->assetUrl('img/createur/omar-sy.jpg')?>" alt="">
+               		<img class="img-circle img-responsive img-center" src="<?= $this->assetUrl('img/createur/omar-sy.jpg')?>" alt="">
                 	<h3>Mamour
                     	<small>Job Title</small>
                 	</h3>

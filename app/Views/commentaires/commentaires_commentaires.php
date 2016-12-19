@@ -18,11 +18,13 @@
 </style>
 
 <div class="wrapper_commentaires">
-<div class="col-md-1 back retour">
+
+		<div class="col-md-1 back retour">
 			 <a href="<?= $this->url('categories_category') ?>">
 			 <input id="toto" type="button" class="btn style-reset start" value="Retour"> 
 			 </a>
 		</div>
+
 <div class="contenu_commentaire">
 	<div class="bloc_ok_commentaire">
 		<?php $this->stop('css') ?>
@@ -82,8 +84,8 @@
 
 			<div class="form-group">
 			  <label class="col-md-4 control-label" for="submit"></label>
-			  <div class="col-md-4">
-			    <button id="submit" name="submit" class="btn btn-primary">Envoyer</button>
+			  <div class="col-md-4 text-center">
+			    <button id="submit" name="submit" class="btn btn-primary persoB">Envoyer</button>
 			  </div>
 			</div>
 		</form>
