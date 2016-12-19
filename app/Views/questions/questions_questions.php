@@ -34,7 +34,7 @@
 				</div>
 			</div>
 
-			<div class="reponses">
+			<div class="reponses" style="display:none;">
 				<!-- affichage en dynamique de la réponse -->
 				<p><?= $selectOneQ['explanation'][$i];?></p>
 				<!-- affichage en dynamique de l'image illustrant la réponse -->
