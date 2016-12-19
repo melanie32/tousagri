@@ -3,7 +3,7 @@
 <?php $this->start('css') ?><!-- abcd -->
 <style>
 body{
-    background: url("<?=$this->assetUrl('img/illus/fdCate3.jpg')?>");
+    background: url("<?=$this->assetUrl('img/illustrations/fdCate3.jpg')?>");
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
