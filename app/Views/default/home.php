@@ -5,7 +5,7 @@
 <?php $this->start('css') ?>
 <style>
 body{
-    background: url("<?=$this->assetUrl('img/illus/fdHome.jpg')?>");
+    background: url("<?=$this->assetUrl('img/illustrations/fdHome.jpg')?>");
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
