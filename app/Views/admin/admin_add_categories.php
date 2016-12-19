@@ -85,16 +85,20 @@
 					
 					
 			</tbody>
-		</table>
-		
+		</table>		
 
-		<!-- pour ajouter une question et réponse -->
-		<div class="form-group">
-			<label class="col-md-4 control-label" for="add-question">Ajouter une question</label>
-			<div class="col-md-4 add-question" id="addQuestionCateg">      
-				<i class="fa fa-2x fa-plus" aria-hidden="true"></i>
-			</div>
+
+		<!-- pour ajouter ou supprimer les input une question et réponse -->
+		<div class="center-block">			
+			<button type="button" class="btn btn-default" aria-label="Left Align" id="addQuestionCateg">
+  				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			</button>
+			
+			<button type="button" class="btn btn-default" aria-label="Left Align" id="removeinputC">
+  				<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+			</button>
 		</div>
+
 
 		<!-- Button -->
 		<div class="form-group">

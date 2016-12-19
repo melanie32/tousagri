@@ -2,11 +2,18 @@
 body {
 	font-size: 16px; 
 	color: black;
+	
+
 }
 
 a, a:hover {
 	text-decoration: none;
+	color: #444444;
 } 
+
+p {
+	color: #444444;
+}
 
 li {
 	list-style: none;
@@ -17,7 +24,7 @@ li {
 	max-width: 100%;
 	margin: 3em auto;
 	padding-top: 2.125em;
-	background-color: #ABD8D0;
+	background-color: transparent;
 }
 
 /***************STYLE de la SIDEBAR du BACK***********************/
@@ -29,7 +36,7 @@ li {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #404054;
+    background-color: #444444;
     overflow-x: hidden;
    
     
@@ -57,15 +64,15 @@ li {
 }
 
 .active {
-	background-color: chartreuse;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .sidenav a {
-	color: white;
+	color: #faf5ea;
 }
 
 .sidenav a:hover {
-	color: aqua;
+	color: #948870;
 }
 
 .sidenav a:focus {
@@ -122,6 +129,7 @@ li {
 	flex-direction: column;
 	align-items: stretch;
 	justify-content: space-between;
+	opacity: 0.7;
 }
 
 #cub-add-category {

@@ -99,7 +99,11 @@
 									<br>
 									<input type="file" name="picture[]">
 									<br>
-									<a href="<?= $selectOneQ['video'][$i]?>" target="_blank">Cliquez ici pour voir la vidéo actuelle</a>	
+									<?php if(empty($selectOneQ['video'][$i])):?>
+										<p>Il n'y a pas de vidéo pour cette question.</p>
+									<?php else: ?>
+										<a href="<?= $selectOneQ['video'][$i]?>" target="_blank">Cliquez ici pour voir la vidéo actuelle</a>
+									<?php endif;?>	
 									<br>
 									<label>Ajouter une nouvelle URL vidéo:</label>
 									<br>
@@ -114,12 +118,16 @@
 
 
 		
-		<!-- pour ajouter une question et réponse -->
-		<div class="form-group">
-			<label class="col-md-4 control-label" for="add-question">Ajouter</label>
-			<div class="col-md-4">                 
-				<i id="addinput" class="fa fa-2x fa-plus" aria-hidden="true"></i>
-			</div>
+		
+		<!-- pour ajouter ou supprimer les input une question et réponse -->
+		<div class="center-block">			
+			<button type="button" class="btn btn-default" aria-label="Left Align" id="addinput">
+  				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			</button>
+			
+			<button type="button" class="btn btn-default" aria-label="Left Align" id="removeinput">
+  				<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+			</button>
 		</div>
 
 		

@@ -43,8 +43,8 @@
 				<form method="post">
 					<td> 
 						<div class="click-action text-success">
-							<input class="input-id-hidden" type="hidden" name="id-comment" value="<?=$selectComment['id']?>">				
-							<button class="btn btn-success" type="submit" class="valid">
+											
+							<button class="btn btn-success" type="submit" id="valid" data-id="<?=$selectComment['id'];?>">
 							<i class="fa fa-check" aria-hidden="true"></i>
 							Valider</button>
 						</div>
@@ -52,8 +52,7 @@
 					
 					<td>
 						<div class="center-block click-action text-danger">
-							<input class="input-id-hidden" type="hidden" name="id-comment" value="<?=$selectComment['id']?>">
-							<button class="btn btn-danger" type="submit" class="delete">
+							<button class="btn btn-danger" type="submit" id="delete" data-id="<?=$selectComment['id'];?>">
 							<i class="fa fa-trash-o" aria-hidden="true"></i>
 							Supprimer</button>
 						</div>
@@ -116,10 +115,12 @@
 <script>
 $(document).ready(function(){
 
-	$('.valid').click(function(e){
-		var ajaxCom = $(this).parent('.click-action').children('.input-id-hidden').val();
+	$('#valid').click(function(e){
+		 
+		var ajaxCom = $(this).data('id');
+
 		var tr = $(this).parent().parent().parent();
-		var content = $(tr).children('.contentACollect').innerHTML;
+		
 		
 		e.preventDefault();
 		$.ajax({
@@ -147,8 +148,9 @@ $(document).ready(function(){
 
 	});// fermeture buttton clic
 
-	$('.delete').click(function(e){
-		var ajaxCom = $(this).parent('.click-action').children('.input-id-hidden').val();
+	$('#delete').click(function(e){
+		var ajaxCom = $(this).data('id');
+		
 		var tr = $(this).parent().parent().parent();
 		
 		
