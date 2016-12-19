@@ -47,12 +47,15 @@
 				<!-- affichage en dynamique de la réponse -->
 				<p><?= $selectOneQ['explanation'][$i];?></p>
 				<!-- affichage en dynamique de l'image illustrant la réponse -->
+			<?php if(!empty($selectOneQ['picture'][$i])) :?>
 				<img src="<?= $this->assetUrl('img/imgreply/'.$selectOneQ['picture'][$i])?>">
 				<!-- affichage en dynamique de la vidéo illustrant la réponse -->
+			<?php endif; ?>
 				<div class="bloc_lien-reponse">
 					<div class="lien-reponse">
+					<?php if(!empty($selectOneQ['video'][$i])) :?>
 						<a href="<?= $selectOneQ['video'][$i]?>" target="_blank">Voir la réponse en vidéo</a>
-
+					<?php endif; ?>
 						<div class="lien-reponse">
 							<a class="affiche_Comments" href="<?=$this->url('commentaires_commentaires', ['id' => $selectOneC['id']]);?>">Voir commentaires</a>
 						</div>

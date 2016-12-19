@@ -10,12 +10,12 @@
 
 	<?php if(isset($success) && $success == true):?>
 		<div class="alert alert-success">
-			Votre catégorie a bien été modifiée !
+			Votre catégorie a bien été mise à jour !
 		</div>
 	<?php endif; ?>
 
 	<div class="text-center">
-		<p class="text-connect">Modifier une catégorie</p>
+		<p class="text-connect">Mise à jour d'une catégorie</p>
 	</div>
 	<br>
 
@@ -136,7 +136,7 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label" for=""></label>
 			<div class="col-md-4">
-				<button id="" name="" class="btn btn-info center-block">Modifier la catégorie</button>
+				<button id="" name="" class="btn btn-info center-block">Mise à jour</button>
 			</div>
 		</div>
 
