@@ -23,6 +23,11 @@ p {
 	padding: 0;
 }
 
+#wrapper_Mentions {
+	max-width: 100%;
+	padding: 0;
+}
+
 .conteneur_L{
 	height: 100%;
 	width: 100%;
@@ -37,6 +42,28 @@ p {
 
 .conteneur_L h1 {
 	width: 73%;
+	font-size: 5em;
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.title_conteneur_L {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+.title_conteneur_L h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	height: 100%;
 	font-size: 5em;
 	font-weight: bold;
 	color: #ffffff;
@@ -60,6 +87,25 @@ p {
 	margin-left: 40%;
 	width: 60%;
 	height: 97%;
+}
+
+#bloc_mentions {
+	overflow-y: scroll;
+	position: absolute;
+	margin-left: 40%;
+	width: 60%;
+	height: 97%;
+	background-color: black;
+	opacity: 0.8;
+	color: white;
+	font-size: 0.5em;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+#bloc_mentions h2{
+	font-size: 1.5em;
+	font-weight: bold;
 }
 
 .bloc_Question {
@@ -102,8 +148,15 @@ p {
 	color: black;
 }
 
+.img_reponses {
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
 .bloc_lien-reponse{
 	display: block;
+	padding-top: 2em;
 	padding-bottom: 2em;
 }
 
