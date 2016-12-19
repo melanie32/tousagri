@@ -4,7 +4,7 @@
 
 <style>
 .wrapper_commentaires { 
-    background: url("<?=$this->assetUrl('img/balo.jpg')?>") no-repeat center center fixed;
+    background: url("<?=$this->assetUrl('img/picture_5857a2f0ca0e6.jpg')?>") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -18,6 +18,11 @@
 </style>
 
 <div class="wrapper_commentaires">
+<div class="col-md-1 back retour">
+			 <a href="<?= $this->url('categories_category') ?>">
+			 <input id="toto" type="button" class="btn style-reset start" value="Retour"> 
+			 </a>
+		</div>
 <div class="contenu_commentaire">
 	<div class="bloc_ok_commentaire">
 		<?php $this->stop('css') ?>

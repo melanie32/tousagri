@@ -4,6 +4,12 @@
 
 <div id="wrapper_Mentions">
 
+		<div class="col-md-1 back retour">
+			 <a href="<?= $this->url('categories_category') ?>">
+			 <input id="toto" type="button" class="btn style-reset start" value="Retour"> 
+			 </a>
+		</div>
+
 		<div class="title_conteneur_L">
 			<h1>- Mention Légale -</h1>
 		</div>
