@@ -52,8 +52,7 @@
 					
 					<td>
 						<div class="center-block click-action text-danger">
-							<input class="input-id-hidden" type="hidden" name="id-comment" value="<?=$selectComment['id']?>">
-							<button class="btn btn-danger" type="submit" class="delete">
+							<button class="btn btn-danger" type="submit" id="delete" data-id="<?=$selectComment['id'];?>">
 							<i class="fa fa-trash-o" aria-hidden="true"></i>
 							Supprimer</button>
 						</div>
@@ -149,8 +148,9 @@ $(document).ready(function(){
 
 	});// fermeture buttton clic
 
-	$('.delete').click(function(e){
-		var ajaxCom = $(this).parent('.click-action').children('.input-id-hidden').val();
+	$('#delete').click(function(e){
+		var ajaxCom = $(this).data('id');
+		
 		var tr = $(this).parent().parent().parent();
 		
 		

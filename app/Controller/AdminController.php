@@ -1,6 +1,6 @@
 <?php 
  
-namespace Controller;
+namespace Controller; 
 
 use \W\Controller\Controller;
 use \Model\CategoriesModel;
@@ -743,16 +743,16 @@ class AdminController extends Controller
 			$post['id'] = trim(strip_tags($_POST['id']));
 		}
 
-		$updateComments = new CommentsModel();
+		$commentsModel = new CommentsModel();
 
-		$selectCommentV = $updateComments->findCategoryForComments('non');	
+		$selectCommentV = $commentsModel->findCategoryForComments('non');	
 
 
 		// sélection des commentaires qui sont déjà validés
-		$selectCommentOk = $updateComments->findCategoryForComments('oui');
+		$selectCommentOk = $commentsModel->findCategoryForComments('oui');
 
 
-		if($updateComments->update(['validate' => 'oui'], $post['id']))
+		if($selectCommentV->update(['validate' => 'oui'], $post['id']))
 			{
 				$this->showJson(
 					[
@@ -790,40 +790,6 @@ class AdminController extends Controller
 		}
 	}
 
-	public function replyComments() 
-	{
-		$errors = [];
-		$post = [];
-
-		if(!empty($_POST)) {
-
-			$post['id'] = trim(strip_tags($_POST['id']));
-			$post['reply'] = trim(strip_tags($_POST['reply']));
-
-			if(!v::notEmpty()->length(2, 500)->validate($post['reply'])) {
-				$errors[] = 'La réponse doit comporter entre 2 et 500 caractères';
-			}
-		}
-
-		if(count($errors) === 0) {
-
-			$replyComments = new CommentsModel();
-
-			$datareply = [
-				'reply' => $post['reply'],
-			];
-
-			if($replyComments->update($datareply, $post['id'])){
-
-				$this->showJson([
-					'code'=>'ok',
-					'msg'=>'Commentaire supprimé'
-				]);
-			}
-		}
-		else {
-			$this->showJson(['code'=>'error', 'msg'=>implode('<br>', $errors)]);
-		}
-	}
+	
 
 }
