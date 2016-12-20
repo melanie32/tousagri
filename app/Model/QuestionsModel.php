@@ -9,9 +9,9 @@ use \W\Model\ConnectionModel;
 */
 class QuestionsModel extends \W\Model\Model
 {
-	 public function findQuestions($id) 
+	 public function findQuestions($id_category) 
     {
-        if (!is_numeric($id)){
+        if (!is_numeric($id_category)){
             return false;
         }
       
@@ -19,7 +19,7 @@ class QuestionsModel extends \W\Model\Model
        
 
         $sth = $this->dbh->prepare($sql);
-        $sth->bindValue(':id', $id);
+        $sth->bindValue(':id', $id_category);
 
         if($sth->execute()) {
 

@@ -3,14 +3,12 @@
 <?php $this->start('main_content') ?>  
 
 	<div class="text-center">
-		<p class="text-connect">Liste des catégories</p>
+		<p class="text-connect">LISTE DES CATEGORIES</p>
 	</div>
 	<br>
-
-	
 	
 
-	<a class="text-connect text-center" id="add-category" href="<?= $this->url('admin_add_categories')?>">
+	<a class="text-add-categ text-center" id="add-category" href="<?= $this->url('admin_add_categories')?>">
 	Ajouter une catégorie
 	</a>
 	<br>

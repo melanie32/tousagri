@@ -159,7 +159,7 @@ class AdminController extends Controller
 		$selectQuestion = new QuestionsModel();
 
 		$selectOneQ = $selectQuestion->findQuestions($post['id']);
-		$i = $_POST['i'];
+		$i = (int) $_POST['i'];
 
 		$temq = unserialize($selectOneQ['question']);		
 		$temq[$i] = '';
@@ -184,18 +184,20 @@ class AdminController extends Controller
 			'picture'=> serialize($picture),
 			'video'=> serialize($video)
 		];
-		var_dump($dataquestion);
-		
-		if($selectQuestion->update($dataquestion , $post['id'])){
+		//var_dump( $post['id']);
+		// On update pour l'id de la question
+		if($selectQuestion->update($dataquestion , $selectOneQ['id'])){
 
-			$this->showJson([
+			$json = [
 				'code'=>'ok',
 				'msg'=>'Question supprimée'
-			]);
+			];
 		}
 		else {
-			$this->showJson(['code'=>'error', 'msg'=>'Erreur lors de la suppression de la question']);
+			$json = ['code'=>'error', 'msg'=>'Erreur lors de la suppression de la question'];
 		}
+
+		$this->showJson($json);
 
 	}
 

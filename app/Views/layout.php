@@ -12,6 +12,9 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style_front.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style_frontQuestion.css') ?>">
 
+	<!-- appel des polices -->
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Quicksand" rel="stylesheet"> 
+
 	<!-- permet de faire appel à une fonctionnalité CSS notamment pour les background img (utile pour instertion via le back après) -->
 	<?=$this->section('css');?>	
 

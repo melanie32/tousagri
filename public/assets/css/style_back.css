@@ -2,8 +2,7 @@
 body {
 	font-size: 16px; 
 	color: black;
-	
-
+    font-family: 'Quicksand', sans-serif;
 }
 
 a, a:hover {
@@ -22,22 +21,23 @@ li {
 #wrapper {
 	width: 75em;
 	max-width: 100%;
-	margin: 3em auto;
+	margin: 5em auto 5em 18em;
 	padding-top: 2.125em;
-	background-color: transparent;
+	background-color: #E8E8E8;
+	border-radius: 8em;
 }
 
 /***************STYLE de la SIDEBAR du BACK***********************/
 
 .sidenav {
     height: 100%;
-    width: 15.625em;
+    width: 14.625em;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     background-color: #444444;
     overflow-x: hidden;
+    z-index:999;
    
     
 }
@@ -85,11 +85,12 @@ li {
 
 /******************style page connexion back******************/
 .text-hello {
-	font-size: 0.875em;
+	font-size: 1em;
 }
 
 .text-connect {
 	font-size: 2em;	
+	font-family: 'Abril Fatface', cursive;
 }
 
 /******************style page accueil back******************/
@@ -102,16 +103,35 @@ li {
 	height: 30em;
 }
 
+.container-edit-admin a {
+	padding: 0 0 5em 0;
+}
+
 .edit-admin {
 	margin: 1em 0;
 	width: 15.125em;
 	height: 15.125em;
 	line-height: 15.125em;
 	border-radius: 8em;
-	border: black solid 0.06125em;
+	font-size: 1.1em;
+	background-color: #444444;
+	color: white;
 }
 
+.edit-admin:hover {
+	background-color: #64978E;	
+	color: black;
+	border: black solid 0.06125em;
+}
 /******************style page list categories back******************/
+
+.text-add-categ {
+	font-size: 1.5em;
+}
+
+.text-add-categ:hover {
+	color: #64978E;
+}
 
 .contain-cub-category {
 	display: flex;

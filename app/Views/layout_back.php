@@ -7,15 +7,16 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- appel des polices -->
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Quicksand" rel="stylesheet">
+
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style_back.css') ?>">
 
 	<style>
 		.background{
-		    background: url('<?=$this->assetUrl('img/bkg1.jpg')?>');
-		    /*background-position: cover;*/
-		    background-position: center;
-    		background-size: 100% 100%;
-    		background-repeat: no-repeat;	    
+		    background: url('<?=$this->assetUrl('img/backgroundAdulte.jpg')?>'); 
+    		
+    		    
 		}
 
 	</style>
@@ -23,8 +24,8 @@
 
 
 </head>
-<body>
-	<div class="background">
+<body class="background">
+	
 <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])) : ?>
 	<header>			
 		<nav class="sidenav">
@@ -63,7 +64,7 @@
 		</footer>
 	</div>	
 
-</div>
+
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="<?= $this->assetUrl('js/scriptback.js') ?>">
 	

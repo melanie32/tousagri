@@ -2,7 +2,15 @@
 
 <?php $this->start('main_content') ?>
 
-	<p class="text-left text-hello">Bonjour, <?=$selectU[0]['username']?></p>	
+
+	<div class="text-center">
+		<p class="text-connect">
+			<i class="fa fa-2x fa-home" aria-hidden="true"></i>
+			&nbsp;ACCUEIL
+		</p>
+	</div>
+
+	<p class="text-left text-hello">Bonjour, <b><?=$selectU[0]['username']?></b></p>	
 
 	<div class="container-edit-admin">
 

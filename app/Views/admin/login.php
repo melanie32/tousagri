@@ -7,8 +7,10 @@
 	<?php endif; ?>
 
 	<div class="text-center">
-		<i class="fa fa-2x fa-sign-in" aria-hidden="true"></i>&nbsp;
-		<p class="text-connect">Connexion</p>
+		<p class="text-connect">
+			<i class="fa fa-2x fa-sign-in" aria-hidden="true"></i>
+			&nbsp;CONNEXION
+		</p>
 	</div>
 	<br>
 
@@ -37,7 +39,7 @@
 		  	<label class="col-md-4 control-label" for=""></label>
 			<div class="col-md-4">
 				<a href="<?= $this->url('admin_accueil')?>">
-					<button id="" name="" class="btn btn-info center-block">Connexion</button>
+					<button id="" name="" class="btn btn-info center-block">CONNEXION</button>
 				</a>
 			</div>
 		</div>
