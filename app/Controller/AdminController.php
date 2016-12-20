@@ -853,11 +853,12 @@ class AdminController extends Controller
 		
 		//sélection des commentaires enregistrés dans la bdd pour affichage seulement ceux qui sont à valider		
 		$selectComment = new CommentsModel();
-		$selectCommentV = $selectComment->findCategoryIfValidate('non');
+
+		$selectCommentV = $selectComment->selectCommentsAndCategoryByVal('non');
 	
 
 		// sélection des commentaires qui sont déjà validés
-		$selectCommentOk = $selectComment->findCategoryIfValidate('oui');
+		$selectCommentOk = $selectComment->selectCommentsAndCategoryByVal('oui');
 
 		$dataComments = [
 			'selectCommentV' => $selectCommentV,
@@ -886,11 +887,11 @@ class AdminController extends Controller
 
 		$commentsModel = new CommentsModel();
 
-		$selectCommentV = $commentsModel->findCategoryForComments('non');	
+		$selectCommentV = $commentsModel->selectCommentsAndCategoryByVal('non');	
 
 
 		// sélection des commentaires qui sont déjà validés
-		$selectCommentOk = $commentsModel->findCategoryForComments('oui');
+		$selectCommentOk = $commentsModel->selectCommentsAndCategoryByVal('oui');
 
 
 		if($commentsModel->update(['validate' => 'oui'], $post['id']))

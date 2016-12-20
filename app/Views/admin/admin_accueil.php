@@ -10,8 +10,8 @@
 		</p>
 	</div>
 
-	<p class="text-left text-hello">Bonjour, <b><?=$selectU[0]['username']?></b></p>	
-
+		<p class="text-left text-hello">Bonjour, <b><?=$w_user['username']?></b></p>	
+	
 	<div class="container-edit-admin">
 
 		<a href="<?= $this->url('admin_categories')?>">

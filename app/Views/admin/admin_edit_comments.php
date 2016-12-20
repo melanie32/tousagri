@@ -32,6 +32,7 @@
 					
 				<?php else: ?>
 				<?php foreach ($selectCommentV as $selectComment) :?>
+
 					<tr>
 						<td>
 								<p class="td-fusion click-action"><?=ucfirst(strtolower($selectComment['title']));?></p>
@@ -105,6 +106,7 @@
 					<p>Vous n'avez pas encore de commentaires</p>
 				</td>
 			<?php else:  ?>
+				
 			<?php foreach ($selectCommentOk as $selectComment) :?>
 				<tr class="text-center">
 					<td class="col-md-3"><?=ucfirst(strtolower($selectComment['title']));?></td>

@@ -37,9 +37,7 @@ li {
     left: 0;
     background-color: #444444;
     overflow-x: hidden;
-    z-index:999;
-    display: none;
-   
+    z-index:999;  
     
 }
 
