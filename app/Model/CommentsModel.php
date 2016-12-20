@@ -101,6 +101,21 @@ class CommentsModel extends \W\Model\Model
 
     }
 
+    public function deleteCommentsIfDelCategory($id)
+    {
+        if (!is_numeric($id)){
+            return false;
+        }
+        
+        $sql = 'DELETE FROM comments WHERE id_category = :id';
+
+        $sth = $this->dbh->prepare($sql);
+
+        $sth->bindValue(':id', $id);
+
+        return $sth->execute();
+
+    }
 
 }
 

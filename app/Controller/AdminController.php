@@ -81,7 +81,7 @@ class AdminController extends Controller
 		$this->show('admin/admin_categories', $dataC);
 	}
 
-	//fonction pour supprimer la catégorie
+	//fonction pour supprimer la catégorie et questions et commentaires qui s'y réfèrent
 
 	public function deleteCategorie($id)
 	{
@@ -106,6 +106,15 @@ class AdminController extends Controller
 			if(isset($_POST['disconnect']) && $_POST['disconnect'] === 'yes') 
 			{
 			
+				//supression des commentaires, des questions et de la catégorie lié à l'ID de la catégorie
+			$commentsModel = new CommentsModel();
+			$questionsModel = new QuestionsModel();
+
+			$commentsModel->deleteCommentsIfDelCategory($id);
+
+			$questionsModel->deleteQuestionsIfDelCategory($id);
+
+
 			$categoriesModel->delete($id);
 
 			$this->redirectToRoute('admin_categories');
@@ -126,6 +135,70 @@ class AdminController extends Controller
 
 
 	}
+
+	/**
+	 * Suppression des questions en ajax dans admin edit categories
+	 * 
+	 */
+
+	public function deleteQuestions()
+	{
+
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
+		if (!empty($_POST)) {
+			$post['id'] = trim(strip_tags($_POST['id']));
+		}
+		
+		$selectQuestion = new QuestionsModel();
+
+		$selectOneQ = $selectQuestion->findQuestions($post['id']);
+		$i = $_POST['i'];
+
+		$temq = unserialize($selectOneQ['question']);		
+		$temq[$i] = '';
+		$question = array_filter($temq);
+
+		$temq = unserialize($selectOneQ['explanation']);		
+		$temq[$i] = '';
+		$explanation = array_filter($temq);
+
+		$temq = unserialize($selectOneQ['picture']);		
+		$temq[$i] = '';
+		$picture = array_filter($temq);
+
+		$temq = unserialize($selectOneQ['video']);		
+		$temq[$i] = '';
+		$video = array_filter($temq);
+
+
+		$dataquestion = [
+			'question'=> serialize($question),
+			'explanation'=> serialize($explanation),
+			'picture'=> serialize($picture),
+			'video'=> serialize($video)
+		];
+		var_dump($dataquestion);
+		
+		if($selectQuestion->update($dataquestion , $post['id'])){
+
+			$this->showJson([
+				'code'=>'ok',
+				'msg'=>'Question supprimée'
+			]);
+		}
+		else {
+			$this->showJson(['code'=>'error', 'msg'=>'Erreur lors de la suppression de la question']);
+		}
+
+	}
+
 
 	/**
 	 * Page d'ajout catégories du back office

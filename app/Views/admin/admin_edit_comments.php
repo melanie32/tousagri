@@ -14,8 +14,8 @@
 	<table class="table table-hover">
 		<thead>
 			<tr>
-				<th class="text-center">Pseudo</th>
 				<th class="text-center">Catégorie</th>
+				<th class="text-center">Pseudo</th>
 				<th class="text-center">Commentaires</th>
 				<th class="text-center" colspan="2">Action</th>
 			</tr>
@@ -30,12 +30,11 @@
 			<?php else: ?>
 			<?php foreach ($selectCommentV as $selectComment) :?>
 				<tr>
-
-					<td>
-						<p class="td-fusion click-action"><?=$selectComment['username']?></p>
-					</td>
 					<td>
 							<p class="td-fusion click-action"><?=ucfirst(strtolower($selectComment['title']));?></p>
+					</td>
+					<td>
+						<p class="td-fusion click-action"><?=$selectComment['username']?></p>
 					</td>
 					<td class="contentACollect">
 							<p class="td-fusion click-action"><?=$selectComment['content']?></p>
