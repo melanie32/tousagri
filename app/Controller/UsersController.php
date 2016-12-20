@@ -5,6 +5,8 @@ namespace Controller;
 use \W\Controller\Controller;
 use \Model\UsersModel;
 use \W\Security\AuthentificationModel;
+use \W\Security\AuthorizationModel;
+
 
 use \Respect\Validation\Validator as v;
 
@@ -17,6 +19,14 @@ class UsersController extends Controller
 	 */
 	public function addUsers()
 	{
+
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
 
 		$post = [];
 		$errors = [];
@@ -106,20 +116,28 @@ class UsersController extends Controller
 		}
 
 
-		 $this->show('admin/admin_login', $param);
+		 $this->show('admin/login', $param);
 	}
 
 	public function logOut() {
 
-		$authModel = new AuthentificationModel();
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
 
-		if(!empty($this->getUser()) && isset($_POST['disconnect']) && $_POST['disconnect'] === 'yes'){
-			$authModel->logUserOut();
-			$this->redirectToRoute('admin_login');
-		}
+        if (!$authentificationModel->getLoggedUser()) {
 
-		if(!empty ($this->getUser()) && isset($_POST['disconnect']) && $_POST['disconnect'] === 'no'){
+            $this->redirectToRoute('login');
+        }
+
+        if(isset($_POST['disconnect']) && $_POST['disconnect'] == 'no') { // si l'utilisateur appuie sur le bouton non, on redirige vers la liste des articles
 			$this->redirectToRoute('admin_accueil');
+		}
+		elseif (isset($_POST['disconnect']) && $_POST['disconnect'] == 'yes') {
+			// si l'utilisateur appuie sur oui il faut unset sa session et rediriger. 
+			$logout = new AuthentificationModel();
+			$logoutid = $logout->logUserOut();			
+
+			$this->redirectToRoute('login');
 		}
 
 		$this->show('admin/admin_logout');

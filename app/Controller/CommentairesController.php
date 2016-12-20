@@ -85,4 +85,6 @@ class CommentairesController extends Controller
 	
 	} // end of function commentaires
 
+	
+
 }

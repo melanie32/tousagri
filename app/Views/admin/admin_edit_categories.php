@@ -10,12 +10,14 @@
 
 	<?php if(isset($success) && $success == true):?>
 		<div class="alert alert-success">
-			Votre catégorie a bien été modifiée !
+			Votre catégorie a bien été mise à jour !
 		</div>
 	<?php endif; ?>
 
+	<div id="resultAjax"></div>
+
 	<div class="text-center">
-		<p class="text-connect">Modifier une catégorie</p>
+		<p class="text-connect">Mise à jour d'une catégorie</p>
 	</div>
 	<br>
 
@@ -85,7 +87,13 @@
 						<tr>							
 							<td id="input-question">
 								<input type="hidden" name="id-question" value="<?=$selectOneQ['id']?>">
-								<input id="question" name="question[]" class="form-control input-md" type="text" value="<?=$selectOneQ['question'][$i]?>">		
+								<input id="question" name="question[]" class="form-control input-md" type="text" value="<?=$selectOneQ['question'][$i]?>">	
+								<br>
+								
+								<button type="button" class="btn btn-warning delete-questions" aria-label="Left Align" data-id="<?=$i?>">
+  									<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>&nbsp;Supprimer cette question
+								</button>
+									
 							</td>
 							<td>
 								<textarea rows="7" cols="50" class="form-control" id="explanation" name="explanation[]"><?=$selectOneQ['explanation'][$i]?></textarea>
@@ -136,7 +144,7 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label" for=""></label>
 			<div class="col-md-4">
-				<button id="" name="" class="btn btn-info center-block">Modifier la catégorie</button>
+				<button id="" name="" class="btn btn-info center-block">Mise à jour</button>
 			</div>
 		</div>
 
@@ -146,3 +154,43 @@
 
 	
 <?php $this->stop('main_content') ?>
+
+<?php $this->start('script') ?>
+
+<script>
+$(document).ready(function(){
+	$('.delete-questions').click(function(e){
+
+		var ajaxCom = $(this).attr('data-id');
+		
+		var tr = $(this).parent().parent();
+	
+		
+		e.preventDefault();
+		$.ajax({
+			url: '<?=$this->url('admin_del_questions');?>',
+			// ici on utilise la methode $this pour donner l'url et on y met la route (4ème paramètre de la route du fichier)
+			type:'post',
+			cache:false,
+			data: {id:<?=$selectOneC['id']?>,i:ajaxCom},
+			dataType: 'json',
+			success: function(result){
+				if(result.code == 'ok'){
+					
+					$('#resultAjax').html('<div class="alert alert-success">' + result.msg +'</div>')
+					$(tr).remove();
+					
+				}
+				else if(result.code =='error'){
+					$('#resultAjax').html('<div class="alert alert-danger">' + result.msg +'</div>');
+				}
+
+			}//fermeture succees
+
+		});//fermeture $.ajax
+
+	});// fermeture buttton clic
+});
+</script>
+
+<?php $this->stop('script') ?>

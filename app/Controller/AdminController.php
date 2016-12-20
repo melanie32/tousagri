@@ -3,6 +3,8 @@
 namespace Controller; 
 
 use \W\Controller\Controller;
+use \W\Security\AuthorizationModel;
+use \W\Security\AuthentificationModel;
 use \Model\CategoriesModel;
 use \Model\QuestionsModel;
 use \Model\CommentsModel;
@@ -28,6 +30,15 @@ class AdminController extends Controller
 	public function accueil()
 	{
 
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
+
 		// sélection de la table Users
 		$selectUsers = new UsersModel();
 
@@ -47,6 +58,15 @@ class AdminController extends Controller
 
 	public function categories()
 	{
+
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
 		// sélection de toutes les catégories
 		$selectCategories = new CategoriesModel();
 
@@ -61,11 +81,19 @@ class AdminController extends Controller
 		$this->show('admin/admin_categories', $dataC);
 	}
 
-	//fonction pour supprimer la catégorie
+	//fonction pour supprimer la catégorie et questions et commentaires qui s'y réfèrent
 
 	public function deleteCategorie($id)
 	{
 		
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
 		// sélection de la catégorie à supprimer
 		$categoriesModel = new CategoriesModel();
 
@@ -78,6 +106,15 @@ class AdminController extends Controller
 			if(isset($_POST['disconnect']) && $_POST['disconnect'] === 'yes') 
 			{
 			
+				//supression des commentaires, des questions et de la catégorie lié à l'ID de la catégorie
+			$commentsModel = new CommentsModel();
+			$questionsModel = new QuestionsModel();
+
+			$commentsModel->deleteCommentsIfDelCategory($id);
+
+			$questionsModel->deleteQuestionsIfDelCategory($id);
+
+
 			$categoriesModel->delete($id);
 
 			$this->redirectToRoute('admin_categories');
@@ -100,12 +137,84 @@ class AdminController extends Controller
 	}
 
 	/**
+	 * Suppression des questions en ajax dans admin edit categories
+	 * 
+	 */
+
+	public function deleteQuestions()
+	{
+
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
+		if (!empty($_POST)) {
+			$post['id'] = trim(strip_tags($_POST['id']));
+		}
+		
+		$selectQuestion = new QuestionsModel();
+
+		$selectOneQ = $selectQuestion->findQuestions($post['id']);
+		$i = $_POST['i'];
+
+		$temq = unserialize($selectOneQ['question']);		
+		$temq[$i] = '';
+		$question = array_filter($temq);
+
+		$temq = unserialize($selectOneQ['explanation']);		
+		$temq[$i] = '';
+		$explanation = array_filter($temq);
+
+		$temq = unserialize($selectOneQ['picture']);		
+		$temq[$i] = '';
+		$picture = array_filter($temq);
+
+		$temq = unserialize($selectOneQ['video']);		
+		$temq[$i] = '';
+		$video = array_filter($temq);
+
+
+		$dataquestion = [
+			'question'=> serialize($question),
+			'explanation'=> serialize($explanation),
+			'picture'=> serialize($picture),
+			'video'=> serialize($video)
+		];
+		var_dump($dataquestion);
+		
+		if($selectQuestion->update($dataquestion , $post['id'])){
+
+			$this->showJson([
+				'code'=>'ok',
+				'msg'=>'Question supprimée'
+			]);
+		}
+		else {
+			$this->showJson(['code'=>'error', 'msg'=>'Erreur lors de la suppression de la question']);
+		}
+
+	}
+
+
+	/**
 	 * Page d'ajout catégories du back office
 	 * 
 	 */
 
 	public function addCategories()
 	{
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
 		$post = [];
 		$errors = [];
 		$success = false;
@@ -394,6 +503,15 @@ class AdminController extends Controller
 
 	public function editCategories($id)
 	{
+
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
 		// appel des fonctions natives pour lire une seule categorie dans la page modifier les categories
 		$selectCategory = new CategoriesModel();
 
@@ -718,6 +836,18 @@ class AdminController extends Controller
 
 	public function editComments()
 	{
+
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
+		// sélection de toutes les catégories pour pouvoir sélectionner les comm en fonction
+		$selectCategory = new CategoriesModel();
+		$selectOneC = $selectCategory->findAll();
 		
 		//sélection des commentaires enregistrés dans la bdd pour affichage seulement ceux qui sont à valider		
 		$selectComment = new CommentsModel();
@@ -731,6 +861,7 @@ class AdminController extends Controller
 		$dataComments = [
 			'selectCommentV' => $selectCommentV,
 			'selectCommentOk' => $selectCommentOk,	
+			'selectOneC' => $selectOneC,
 				
 		];
 
@@ -739,6 +870,15 @@ class AdminController extends Controller
 
 	public function editNewComments() 
 	{
+
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
 		if (!empty($_POST)) {
 			$post['id'] = trim(strip_tags($_POST['id']));
 		}
@@ -752,7 +892,7 @@ class AdminController extends Controller
 		$selectCommentOk = $commentsModel->findCategoryForComments('oui');
 
 
-		if($selectCommentV->update(['validate' => 'oui'], $post['id']))
+		if($commentsModel->update(['validate' => 'oui'], $post['id']))
 			{
 				$this->showJson(
 					[
@@ -772,6 +912,15 @@ class AdminController extends Controller
 
 	public function deleteComments() 
 	{
+		
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
 		if (!empty($_POST)) {
 			$post['id'] = trim(strip_tags($_POST['id']));
 		}
@@ -788,6 +937,44 @@ class AdminController extends Controller
 		else {
 			$this->showJson(['code'=>'error', 'msg'=>'Erreur lors de la suppression du commentaire']);
 		}
+	}
+
+	public function selectComments() 
+	{
+
+		$authorizationModel = new AuthorizationModel();
+		$authentificationModel = new AuthentificationModel();
+
+        if (!$authentificationModel->getLoggedUser()) {
+
+            $this->redirectToRoute('login');
+        }
+
+		$html = null;
+
+
+		if (!empty($_POST)) {
+			$post['id'] = trim(strip_tags($_POST['id']));
+		}
+
+
+		$commentsModel = new CommentsModel();
+
+		if($selectCombyCateg = $commentsModel->selectCommentsByCategory('oui',$post['id'])){	
+
+			foreach ($selectCombyCateg as $selectCom) {
+				$html.= '<tr class="text-center">';		
+				$html.= '<td>'.ucfirst(strtolower($selectCom['title'])).'</td>';
+				$html.= '<td>'.$selectCom['username'].'</td>';
+				$html.= '<td>'.$selectCom['content'].'</td>';
+				$html.= '</tr>';
+			}
+
+			$this->showJson([
+				'html'=> $html,				
+			]);
+		}		
+		
 	}
 
 	
