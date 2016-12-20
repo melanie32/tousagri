@@ -77,7 +77,7 @@
 	<div class="text-center">
 		<p class="text-connect">
 			<i class="fa fa-list" aria-hidden="true"></i>
-			&nbsp;LISTE DES COMMENTAIRES VALIDES
+			&nbsp;LISTE DES COMMENTAIRES
 		</p>
 	</div>
 	<br>
@@ -197,7 +197,7 @@ $('.delete').click(function(e){
 
 	$('.htmlajax').on('change', function(e){
 		var ajaxCom = $(this).find('option').filter(':selected').val();
-		console.log(ajaxCom);
+	
 		e.preventDefault();
 
 		$.ajax({
@@ -207,7 +207,7 @@ $('.delete').click(function(e){
 			data: {id:ajaxCom},
 			dataType: 'json',
 			success: function(result) {
-				console.log(result);
+				
 				$('.commValidOk').html(result.html);
 			}
 		});

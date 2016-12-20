@@ -16,13 +16,13 @@
 
 		<a href="<?= $this->url('admin_categories')?>">
 			<div class="edit-admin text-center">
-				Editer les catégories
+				CATEGORIES
 			</div>
 		</a>
 
 		<a href="<?= $this->url('admin_edit_comments')?>">
 			<div class="edit-admin text-center">
-				Editer les commentaires
+				COMMENTAIRES
 			</div>
 		</a>
 

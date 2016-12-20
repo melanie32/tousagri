@@ -15,9 +15,14 @@
 	<?php endif; ?>
  
 	<div class="text-center">
-		<p class="text-connect text-center">Ajouter une catégorie</p>
+		<p class="text-connect">
+			<i class="fa fa-plus" aria-hidden="true"></i>
+			&nbsp;AJOUTER UNE CATEGORIE			
+		</p>
 	</div>
 	<br>
+	
+
 
 	<form class="form-horizontal" method="post" enctype="multipart/form-data">
 
@@ -25,7 +30,7 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="title">Nom de la catégorie</label>  
 			<div class="col-md-4">
-				<input id="title" name="title" placeholder="" class="form-control input-md" type="text" required>    
+				<input id="title" name="title" placeholder="" class="form-control input-md input-styl-border" type="text" required>    
 			</div>
 		</div>
 
@@ -49,8 +54,8 @@
 		
 		<br>
 
-
-		<table class="table">
+		<div class="table-responsive">
+		<table class="table table-hover">
 			<thead>
 				<tr>
 					
@@ -63,48 +68,47 @@
 			<tbody id="group-input-add-c">			
 				
 				<tr>							
-					<td id="input-question">
+					<td class="input-questionadd">
 						
-						<input id="question" name="question[]" class="form-control input-md" type="text">		
+						<textarea rows="7" cols="25" id="question" name="question[]" class="form-control input-md input-styl-border"></textarea>	
 					</td>
 					<td>
-						<textarea rows="7" cols="50" class="form-control" id="explanation" name="explanation[]"></textarea>
+						<textarea rows="7" cols="50" class="form-control input-styl-border" id="explanation" name="explanation[]"></textarea>
 					</td>
-					<td>
-						<div>			
-							<label>Ajouter une illustration:</label>
-							<br>
-							<input type="file" name="picture[]">
-							<br>
-							<label>Ajouter une URL vidéo (youtube):</label>
-							<br>
-							<input type="text" name="video[]">			
-						</div> 
+					<td class="input-questionadd">							
+						<label>Ajouter une illustration:</label>
+						
+						<input type="file" name="picture[]" class="input-file">
+						
+						<label>Ajouter une URL vidéo (youtube):</label>
+						
+						<input type="text" name="video[]" class="input-styl-border">			
+						
 					</td>							
 				</tr>
 					
 					
 			</tbody>
 		</table>		
-
+		</div>
 
 		<!-- pour ajouter ou supprimer les input une question et réponse -->
-		<div class="center-block">			
-			<button type="button" class="btn btn-default" aria-label="Left Align" id="addQuestionCateg">
+		<div class="text-center">			
+			<button type="button" class="btn btn-info" aria-label="Left Align" id="addQuestionCateg">
   				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 			</button>
 			
-			<button type="button" class="btn btn-default" aria-label="Left Align" id="removeinputC">
+			<button type="button" class="btn btn-danger" aria-label="Left Align" id="removeinputC">
   				<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
 			</button>
 		</div>
-
+		<br>
 
 		<!-- Button -->
 		<div class="form-group">
 			<label class="col-md-4 control-label" for=""></label>
 			<div class="col-md-4">
-			<button id="" name="" class="btn btn-info center-block">Ajouter la catégorie</button>
+			<button id="" name="" class="btn btn-lg btn-info center-block">AJOUTER</button>
 			</div>
 		</div>
 

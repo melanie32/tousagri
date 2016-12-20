@@ -21,23 +21,24 @@ li {
 #wrapper {
 	width: 75em;
 	max-width: 100%;
-	margin: 5em auto 5em 18em;
+	margin: 5em 27em;
 	padding-top: 2.125em;
 	background-color: #E8E8E8;
-	border-radius: 4em;
+	border-radius: 3em;
 }
 
 /***************STYLE de la SIDEBAR du BACK***********************/
 
 .sidenav {
     height: 100%;
-    width: 14.625em;
+    width: 16.625em;
     position: fixed;
     top: 0;
     left: 0;
     background-color: #444444;
     overflow-x: hidden;
-    z-index:999;  
+    z-index:999; 
+    overflow: hidden; 
     
 }
 
@@ -113,14 +114,14 @@ li {
 	line-height: 15.125em;
 	border-radius: 8em;
 	font-size: 1.1em;
-	background-color: #444444;
-	color: white;
+	background-color: #64978E;	
+	color: black;
 }
 
 .edit-admin:hover {
-	background-color: #64978E;	
-	color: black;
 	border: black solid 0.06125em;
+	background-color: #444444;
+	color: white;
 }
 
 
@@ -143,8 +144,8 @@ li {
 }
 
 .cub-category {
-	height: 12em;
-	width: 12em;
+	height: 14em;
+	width: 14em;
 	border: 1px solid white;
 	border-radius: 1.5em;
 	margin: 1em 0;
@@ -189,8 +190,53 @@ li {
 
 /***********STYLE DES PAGES ADD AND EDIT CATEGORY****************/
 
+.title-update {
+	color: #64978E;
+}
+
+.input-styl-border {
+	border: 1px solid #64978E;
+}
+
 #addinput {
 	cursor:pointer;
+}
+
+.input-file:hover {
+	background-color: #64978E;
+}
+
+.input-question {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;	
+	height: 20em;
+}
+
+.input-question span {
+	color: #872B27;
+}
+
+.input-questionadd {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;	
+	height: 11.5em;
+}
+
+.input-questionadd span {
+	color: #872B27;
+}
+
+#add-category {
+	background-color: #444444;
+	color: white;
+	border-radius: 1em;
+}
+
+#add-category:hover {
+	color: black;
+	background-color: #64978E;
 }
 
 
@@ -258,3 +304,12 @@ li {
 
 
 /***********FIN STYLE PAGE AJOUTER  CATEGORIE****************/
+
+/***********STYLE PAGE SE DECONNECTER****************/
+
+
+.btn-logout {
+	margin: 1em;
+}
+
+/*********** FIN STYLE PAGE SE DECONNECTER****************/

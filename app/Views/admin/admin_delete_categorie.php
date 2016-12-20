@@ -2,19 +2,22 @@
 
 <?php $this->start('main_content') ?>
 
-<p class="col-md-4 control-label">Vous allez supprimer la catégorie <?=$selectC['title']?></p>
-
-<form method="post" class="form-horizontal">
-	<div class="form-group">
-
-		<div class="col-md-4">
-			<button type="submit" name="disconnect" value="no" class="btn btn-primary">Annuler</button>
-		</div>
-		<div class="col-md-4">
-			<button type="submit" name="disconnect" value="yes" class="btn btn-danger">Oui, supprimer cette catégorie</button>
-		</div>
-		
+	<div class="text-center">
+		<p>
+			<i class="fa fa-sign-out" aria-hidden="true"></i>
+			&nbsp; VOUS ALLEZ SUPPRIMER LA CATEGORIE&nbsp;:&nbsp;
+			<br>
+			<br>
+			<span class="title-update"><?=$selectC['title']?></span>
+		</p>
 	</div>
-</form>
+
+	<br>
+	<form method="post" class="form-horizontal">
+		<div class="form-group text-center">
+			<button type="submit" name="disconnect" value="no" class="btn btn-primary btn-lg">ANNULER</button>
+			<button type="submit" name="disconnect" value="yes" class="btn btn-danger btn-lg">OUI, SUPPRIMER</button>		
+		</div>
+	</form>
 
 <?php $this->stop('main_content') ?>

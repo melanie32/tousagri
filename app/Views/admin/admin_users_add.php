@@ -10,13 +10,16 @@
 
 <?php if(isset($success) && $success == true):?>
 	<div class="alert alert-success">
-		Votre ajout d'utilisateur a bien été enregistré !
+		L'administrateur a bien été enregistré !
 	</div>
 <?php endif; ?>
 
+
 	<div class="text-center">
-		<i class="fa fa-2x fa-user-plus" aria-hidden="true"></i>&nbsp;
-		<p class="text-connect">Ajout d'un utilisateur</p>
+		<p class="text-connect">
+			<i class="fa fa-2x fa-user-plus" aria-hidden="true"></i>
+			&nbsp;AJOUT D'UN ADMINISTRATEUR
+		</p>
 	</div>
 	<br>
 
@@ -53,7 +56,7 @@
 		  	<label class="col-md-4 control-label" for=""></label>
 			<div class="col-md-4">
 				<a href="<?= $this->url('admin_accueil')?>">
-					<button id="" name="" class="btn btn-info center-block">Ajout de l'utilisateur</button>
+					<button id="" name="" class="btn btn-lg btn-info center-block">AJOUT</button>
 				</a>
 			</div>
 		</div>

@@ -20,7 +20,7 @@
 <div class="wrapper_commentaires">
 
 		<div class="col-md-1 back retour">
-			 <a href="<?= $this->url('categories_category') ?>">
+			 <a href="<?= $this->url('questions_questions', ['id' => $selectOneC['id']])?>">
 			 <input id="toto" type="button" class="btn style-reset start" value="Retour"> 
 			 </a>
 		</div>
@@ -46,7 +46,7 @@
 
 	
 	
-			<p class="text-center name_categorie">Liste des commentaires pour la catégorie&nbsp;:&nbsp;<?=$selectOneC['title']?></p>
+			<p class="text-center name_categorie">Liste des commentaires pour la catégorie&nbsp;:&nbsp;<?=ucfirst(strtolower($selectOneC['title']))?></p>
 
 <div class="scroll_comment">	
 			<?php if(empty($selectOneComment)) :?>

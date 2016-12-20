@@ -36,17 +36,17 @@
 					</a>
 				</li>
 				<li class="sidenav-li <?= ($w_current_route == 'admin_categories')? 'active' :''; ?>">
-					<a href="<?= $this->url('admin_categories')?>">Listes des catégories</a>
+					<a href="<?= $this->url('admin_categories')?>">EDITER LES CATEGORIES</a>
 				</li>
 				<li class="sidenav-li <?= ($w_current_route == 'admin_edit_comments')? 'active' :''; ?>">
-					<a href="<?= $this->url('admin_edit_comments')?>">Listes des commentaires</a>
+					<a href="<?= $this->url('admin_edit_comments')?>">EDITER LES COMMENTAIRES</a>
 				</li>
-				<li class="sidenav-li <?= ($w_current_route == 'users_add')? 'active' :''; ?>">
-					<a href="<?= $this->url('admin_users_add')?>">Ajouter un administrateur</a>
+				<li class="sidenav-li <?= ($w_current_route == 'admin_users_add')? 'active' :''; ?>">
+					<a href="<?= $this->url('admin_users_add')?>">AJOUTER UN ADMINISTRATEUR</a>
 				</li>
-				<li class="sidenav-li">
+				<li class="sidenav-li <?= ($w_current_route == 'admin_logout')? 'active' :''; ?>">
 					<a href="<?= $this->url('admin_logout')?>">
-					Deconnexion</a>
+					DECONNEXION</a>
 				</li>
 			</ul>
 		</nav>

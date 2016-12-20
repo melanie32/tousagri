@@ -11,8 +11,13 @@
 	<br>
 	
 
-	<a class="text-add-categ text-center" id="add-category" href="<?= $this->url('admin_add_categories')?>">
-	Ajouter une catégorie
+	<!-- <a class="text-add-categ text-center" id="add-category" href="<= $this->url('admin_add_categories')?>">
+		<button class="btn-lg">Ajouter une catégorie</button>	
+	</a>
+ -->
+
+	<a href="<?= $this->url('admin_add_categories')?>" class="text-add-categ text-center btn btn-default input-styl-border" id="add-category">
+		<span class="glyphicon glyphicon-new-window"></span> Ajouter une catégorie
 	</a>
 	<br>
 	
@@ -28,8 +33,8 @@
 				<p class="text-center name-category"><?=$select['title']?></p>
 				<img class="picto_category center-block" src="<?= $this->assetUrl('img/pictos/'.$select['pictogram'])?>">
 				<div class="contain-link-category">
-					<a class="text-center link-category" href="<?=$this->url('admin_edit_categories', ['id' => $select['id']]);?>">Modifier</a>
-					<a class="text-center link-category" href="<?=$this->url('admin_delete_categorie', ['id' => $select['id']]);?>">Supprimer</a>
+					<a class="text-center link-category" href="<?=$this->url('admin_edit_categories', ['id' => $select['id']]);?>">MODIFIER</a>
+					<a class="text-center link-category" href="<?=$this->url('admin_delete_categorie', ['id' => $select['id']]);?>">SUPPRIMER</a>
 				</div>
 			</div>
 			
