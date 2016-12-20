@@ -17,28 +17,25 @@ body{
 
 <div class="container contai">
 
-    <div class="siteNam">
-      <h1  class="text-center namSite">Vous les agriculteurs, vous êtes tous les mêmes!</h1>
+  <div class="siteNam">
+    <h1  class="text-center namSite">Vous les agriculteurs, vous êtes tous les mêmes!</h1>
+  </div>
+
+    <div class="wrappy">
+      <div class="row dad">
+
+      <?php foreach ($selectC as $select) : ?>
+        <div class="col-xs-6 col-md-4 imBox">
+          <a href="<?= $this->url('questions_questions', ['id' => $select['id']]); ?>">
+           <p class="text-center secNam"><?=$select['title']?></p>
+           <img id="secPic" src="<?= $this->assetUrl('img/pictos/'.$select['pictogram'])?>" >
+         </a>
+       </div>
+     <?php endforeach; ?>
+
     </div>
-
-  <div class="wrappy">
-    <div class="row dad">
-
-    <?php foreach ($selectC as $select) : ?>
-      <div class="col-xs-6 col-md-4 imBox">
-        <a href="<?= $this->url('questions_questions', ['id' => $select['id']]); ?>">
-         <p class="text-center secNam"><?=$select['title']?></p>
-          <img id="secPic" src="<?= $this->assetUrl('img/pictos/'.$select['pictogram'])?>" >
-        </a>
-      </div>
-      <?php endforeach; ?>
-
-      </div>
   </div>
-
-
-
-  </div>
+</div>
 
 
 
