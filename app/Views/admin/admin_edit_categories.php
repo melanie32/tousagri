@@ -1,4 +1,4 @@
-<?php $this->layout('layout_back', ['title' => 'Modifier une catégorie']) ?>
+<?php $this->layout('layout_back', ['title' => 'Modifier une catégorie']) ?> 
 
 <?php $this->start('main_content') ?>
  

@@ -299,7 +299,7 @@ class AdminController extends Controller
 			// le plus simple, une boucle qui permet d'incrémenter les numéro à côté des name html
 			for ($i=0; $i < count($post['question']); $i++) { 
 				
-				if(!v::notEmpty()->length(5, 500)->validate($post['question'][$i])) {
+				if(!v::notEmpty()->length(5, 150)->validate($post['question'][$i])) {
 						$errors[] = 'La question doit comporter entre 5 et 150 caractères';
 				}
 
@@ -621,7 +621,7 @@ class AdminController extends Controller
 			// le plus simple, une boucle qui permet d'incrémenter les numéro à côté des name html
 			for ($i=0; $i < count($post['question']); $i++) { 
 				
-				if(!v::notEmpty()->length(5, 500)->validate($post['question'][$i])) {
+				if(!v::notEmpty()->length(5, 150)->validate($post['question'][$i])) {
 						$errors[] = 'La question doit comporter entre 5 et 150 caractères';
 				}
 

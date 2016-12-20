@@ -44,18 +44,17 @@
 			<?php endif; ?>
 	</div>
 
-	<!-- <div class="voir_commentaires">
-		<h2 class="title_commentaires">Voir les commentaires de la catégorie $i</h2>
-	</div> -->
+	
 	<div class="list_commentaires">
 			<p class="text-center name_categorie">Liste des commentaires pour la catégorie&nbsp;:&nbsp;<?=$selectOneC['title']?></p>
-
+<pre>
+<?php var_dump($selectOneComment);?>
+</pre>
 			<?php if(empty($selectOneCommment)) :?>
 
 				<p class="text-center erreur_commentaire">Désolé mais il n'y a aucun commentaire pour cette catégorie. <br> Soyez le permier !</p>
 			<?php else : ?>
 				<?php foreach ($selectOneComment as $selectOneCom) : ?>
-
 					<p><?=$selectOneCom['username']?>&nbsp;:&nbsp;a écrit : </p>	
 				
 					<p><?=$selectOneCom['content']?></p>
