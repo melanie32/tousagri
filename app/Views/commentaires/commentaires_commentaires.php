@@ -45,22 +45,37 @@
 	</div>
 
 	
-	<div class="list_commentaires">
+	
 			<p class="text-center name_categorie">Liste des commentaires pour la catégorie&nbsp;:&nbsp;<?=$selectOneC['title']?></p>
 
+<div class="scroll_comment">	
 			<?php if(empty($selectOneComment)) :?>
-
-				<p class="text-center erreur_commentaire">Désolé mais il n'y a aucun commentaire pour cette catégorie. <br> Soyez le permier !</p>
+		
+				<p class="text-center erreur_commentaire">Désolé mais il n'y a aucun commentaire pour cette catégorie. <br> Soyez le permier !</p>	
+		
 			<?php else : ?>
 				<?php foreach ($selectOneComment as $selectOneCom) : ?>
-					<p><?=$selectOneCom['username']?>&nbsp;:&nbsp;a écrit : </p>	
-				
-					<p><?=$selectOneCom['content']?></p>
-				
+<div class="row">
+	<div class="col-lg-12 bloc_comment_user">
+		<div class="testiminial-block">
+			<div class="row centered">
+				<div class="col-lg-12 text-center testimonial-content">
+						<div class="testimonial-author">
+						<span><?=$selectOneCom['username']?> a écrit :</span>
+						</div>
+						<br>
+						<p><?=$selectOneCom['content']?></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 				<?php endforeach;?>
 			<?php endif;?>
-		
-	</div>
+</div>
+
+
+
 	<div class="ajouter_commentaire">
 		<form class="form-horizontal" method="post">
 			<input type="hidden" name="id-category" value="<?=$selectOneC['id']?>">

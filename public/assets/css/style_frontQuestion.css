@@ -251,8 +251,8 @@ p {
 	display: block;
 }
 	.name_categorie {
-		padding-bottom: 1.5em;
-		padding-top: 1em;
+		padding-bottom: 0.8em;
+		padding-top: 0.8em;
 		text-align: center;
 	    font-size: 3em;
 	    font-weight: bold;
@@ -270,6 +270,7 @@ p {
 
 .ajouter_commentaire {
 	display: block;
+	padding-top: 4em;
 
 }
 	#label_commentaire {
@@ -308,7 +309,7 @@ p {
 
 
 
-
+/*******  REPRISE BOOTSTRAP  ********/
 .img-responsive {
     margin: 0 auto;
 }
@@ -332,9 +333,23 @@ p {
 	padding-right: 1.5em;
 	font-size: 1.5em;
 }
+/******* FIN REPRISE BOOTSTRAP  ********/
 
+.testiminial-block{padding: 10px 0 30px; border-bottom: 1px solid #ccc; dispaly:block; margin:0 0 20px;}
+.testimonial-content p{color:#fff; margin: 0 auto;}
+.testimonial-author{font-size:1.5em; font-style:italic; color:#fff;}
+.bloc_comment_user{background-color: rgba(0, 0, 0, 0.5); margin-bottom: 1em;}
 
+.scroll_comment{
+	width: auto;
+	max-height: 580px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
 
+::-webkit-scrollbar {
+display: none;
+}
 
 /************************* Media Queries **********************/
 
