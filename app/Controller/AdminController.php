@@ -70,7 +70,7 @@ class AdminController extends Controller
 		// sélection de toutes les catégories
 		$selectCategories = new CategoriesModel();
 
-		$selectC = $selectCategories->findAll();
+		$selectC = $selectCategories->findAll('title', 'ASC');
 
 		$dataC = ['selectC' => $selectC];
 
@@ -849,16 +849,15 @@ class AdminController extends Controller
 
 		// sélection de toutes les catégories pour pouvoir sélectionner les comm en fonction
 		$selectCategory = new CategoriesModel();
-		$selectOneC = $selectCategory->findAll();
+		$selectOneC = $selectCategory->findAll('title', 'ASC');
 		
 		//sélection des commentaires enregistrés dans la bdd pour affichage seulement ceux qui sont à valider		
 		$selectComment = new CommentsModel();
-		$selectCommentV = $selectComment->findCategoryForComments('non');
+		$selectCommentV = $selectComment->findCategoryIfValidate('non');
 	
 
 		// sélection des commentaires qui sont déjà validés
-		$selectCommentOk = $selectComment->findCategoryForComments('oui');
-
+		$selectCommentOk = $selectComment->findCategoryIfValidate('oui');
 
 		$dataComments = [
 			'selectCommentV' => $selectCommentV,
@@ -962,20 +961,26 @@ class AdminController extends Controller
 
 		$commentsModel = new CommentsModel();
 
-		if($selectCombyCateg = $commentsModel->selectCommentsByCategory('oui',$post['id'])){	
-
+		$selectCombyCateg = $commentsModel->selectCommentsByCategory('oui', $post['id']);
+		if($selectCombyCateg){
 			foreach ($selectCombyCateg as $selectCom) {
 				$html.= '<tr class="text-center">';		
 				$html.= '<td>'.ucfirst(strtolower($selectCom['title'])).'</td>';
 				$html.= '<td>'.$selectCom['username'].'</td>';
-				$html.= '<td>'.$selectCom['content'].'</td>';
+				$html.= '<td>'.utf8_encode($selectCom['content']).'</td>';
 				$html.= '</tr>';
 			}
 
-			$this->showJson([
-				'html'=> $html,				
-			]);
-		}		
+		}
+		else {
+				$html.= '<tr class="text-center" rowspan="15">';		
+				$html.= '<td>Aucun commentaire</td>';
+				$html.= '</tr>';
+
+		}
+		$this->showJson([
+			'html'=> $html,
+		]);
 		
 	}
 

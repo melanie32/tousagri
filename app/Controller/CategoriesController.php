@@ -17,7 +17,7 @@ class CategoriesController extends Controller
 	{
 		$selectCategories = new CategoriesModel();
 
-		$selectC = $selectCategories->findAll();
+		$selectC = $selectCategories->findAll('title', 'ASC');
 
 		$dataC = ['selectC' => $selectC];
 

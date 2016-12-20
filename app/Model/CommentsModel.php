@@ -36,15 +36,17 @@ class CommentsModel extends \W\Model\Model
     }
 
     
-    //sélection des commentaires en fonction de leur validation oui ou non
-    public function findCategoryForComments($validate = '') 
+    //sélection des commentaires en fonction de leur validation oui ou non et de l'id de la catégorie
+    public function findCategoryForComments($validate = '', $id) 
     {
               
-        $sql = 'SELECT comments.*, categories.title FROM comments LEFT JOIN categories ON comments.id_category = categories.id';
+        $sql = 'SELECT * FROM comments WHERE id_category = :id';
 
         if(!empty($validate)) {
-            $sql .= ' WHERE validate = :validate';
+            $sql.= ' AND validate = :validate';
         }
+
+        $sql.= ' ORDER BY date DESC';
              
         $sth = $this->dbh->prepare($sql);
       
@@ -52,7 +54,42 @@ class CommentsModel extends \W\Model\Model
              $sth->bindValue(':validate', $validate);
         }
 
+        $sth->bindValue(':id', $id);
 
+        if($sth->execute()) {
+
+            $selectComments = $sth->fetchAll();
+
+            if(!empty($selectComments)){
+               
+                return $selectComments;
+            }
+
+        }
+
+        return false;
+
+    }
+
+        //sélection des commentaires en fonction de leur validation oui ou non
+    public function findCategoryIfValidate($validate = '') 
+    {
+              
+        $sql = 'SELECT * FROM comments';
+
+        if(!empty($validate)) {
+            $sql.= ' WHERE validate = :validate';
+        }
+
+        $sql.= ' ORDER BY date DESC';
+             
+        $sth = $this->dbh->prepare($sql);
+      
+        if(!empty($validate)) {
+             $sth->bindValue(':validate', $validate);
+        }
+
+        
         if($sth->execute()) {
 
             $selectComments = $sth->fetchAll();

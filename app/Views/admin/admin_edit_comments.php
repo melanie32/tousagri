@@ -3,111 +3,119 @@
 <?php $this->start('main_content') ?>
 
 	<div class="text-center">
-		<p class="text-connect">Commentaires à modérer</p>
+		<p class="text-connect">
+			<i class="fa fa-commenting-o" aria-hidden="true"></i>
+			&nbsp;COMMENTAIRES A MODERER
+		</p>
 	</div>
 	<br>
  
 	<div id="resultAjax"></div>
 
 	
-
-	<table class="table table-hover">
-		<thead>
-			<tr>
-				<th class="text-center">Catégorie</th>
-				<th class="text-center">Pseudo</th>
-				<th class="text-center">Commentaires</th>
-				<th class="text-center" colspan="2">Action</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php if(empty($selectCommentV)) :?>
-				
-					<td colspan="4" class="text-center">
-						<p>Vous n'avez pas de commentaires à modérer</p>
-					</td>
-				
-			<?php else: ?>
-			<?php foreach ($selectCommentV as $selectComment) :?>
+	<div class="table-responsive">
+		<table class="table table-hover table-striped">
+			<thead>
 				<tr>
-					<td>
-							<p class="td-fusion click-action"><?=ucfirst(strtolower($selectComment['title']));?></p>
-					</td>
-					<td>
-						<p class="td-fusion click-action"><?=$selectComment['username']?></p>
-					</td>
-					<td class="contentACollect">
-							<p class="td-fusion click-action"><?=$selectComment['content']?></p>
-					</td>
+					<th class="text-center">Catégorie</th>
+					<th class="text-center">Pseudo</th>
+					<th class="text-center">Commentaires</th>
+					<th class="text-center" colspan="2">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php if(empty($selectCommentV)) :?>
+					
+						<td colspan="4" class="text-center">
+							<p>Vous n'avez pas de commentaires à modérer</p>
+						</td>
+					
+				<?php else: ?>
+				<?php foreach ($selectCommentV as $selectComment) :?>
+					<tr>
+						<td>
+								<p class="td-fusion click-action"><?=ucfirst(strtolower($selectComment['title']));?></p>
+						</td>
+						<td>
+							<p class="td-fusion click-action"><?=$selectComment['username']?></p>
+						</td>
+						<td class="contentACollect">
+								<p class="td-fusion click-action"><?=$selectComment['content']?></p>
+						</td>
 
-					
-					<td> 
-						<div class="click-action text-success">
-											
-							<button class="btn btn-success valid" type="submit" data-id="<?=$selectComment['id'];?>">
-							<i class="fa fa-check" aria-hidden="true"></i>
-							Valider</button>
-						</div>
-					</td>
-					
-					<td>
-						<div class="center-block click-action text-danger">
-							<button class="btn btn-danger delete" type="submit" data-id="<?=$selectComment['id'];?>">
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
-							Supprimer</button>
-						</div>
-					</td>
+						
+						<td> 
+							<div class="click-action text-success">
+												
+								<button class="btn btn-success valid" type="submit" data-id="<?=$selectComment['id'];?>">
+								<i class="fa fa-check" aria-hidden="true"></i>
+								Valider</button>
+							</div>
+						</td>
+						
+						<td>
+							<div class="center-block click-action text-danger">
+								<button class="btn btn-danger delete" type="submit" data-id="<?=$selectComment['id'];?>">
+								<i class="fa fa-trash-o" aria-hidden="true"></i>
+								Supprimer</button>
+							</div>
+						</td>
 
-					
-				</tr>			
-			<?php endforeach; ?>	
-			<?php endif; ?>		
-		</tbody>
-	</table>
+						
+					</tr>			
+				<?php endforeach; ?>	
+				<?php endif; ?>		
+			</tbody>
+		</table>
+	</div>
 
 	
 	<hr>
 	<br>
 
 	<div class="text-center">
-		<p class="text-connect">Liste des commentaires</p>
+		<p class="text-connect">
+			<i class="fa fa-list" aria-hidden="true"></i>
+			&nbsp;LISTE DES COMMENTAIRES VALIDES
+		</p>
 	</div>
 	<br>
 
-	<table class="table table-hover">
-		<thead>
-			<tr>
-				<th class="text-center">
-					
-					<select class="form-control">
-						<option value="0" readonly selected>Catégories</option>
-					<?php foreach ($selectOneC as $selectCat) :?>
-						<option class="htmlajax" value="<?=$selectCat['id']?>"><?=ucfirst(strtolower($selectCat['title']));?></option>
-					<?php endforeach; ?>
-					</select>										
-					
-				</th>
-				<th class="text-center">Pseudo</th>
-				<th class="text-center">Commentaires</th>
-			</tr>
-		</thead>
-		<tbody class="commValidOk">
-		<?php if(empty($selectCommentOk)) :?>
-			<td colspan="4" class="text-center">
-				<p>Vous n'avez pas encore de commentaires</p>
-			</td>
-		<?php else:  ?>
-		<?php foreach ($selectCommentOk as $selectComment) :?>
-			<tr class="text-center">
-				<td><?=ucfirst(strtolower($selectComment['title']));?></td>
-				<td><?=$selectComment['username']?></td>
-				<td><?=$selectComment['content']?></td>
-			</tr>
-		<?php endforeach; ?>
-		<?php endif; ?>
-		</tbody>
-	</table>
-
+	<div class="table-responsive">
+		<table class="table table-hover table-striped">
+			<thead>
+				<tr>
+					<th class="text-center">
+						
+						<select class="form-control htmlajax" style="width:auto;">
+							<option value="0" readonly>Catégories</option>
+						<?php foreach ($selectOneC as $selectCat) :?>
+							<option value="<?=$selectCat['id']?>"><?=ucfirst(strtolower($selectCat['title']));?></option>
+						<?php endforeach; ?>
+						</select>										
+						
+					</th>
+					<th class="text-center">Pseudo</th>
+					<th class="text-center">Commentaires</th>
+				</tr>
+			</thead>
+			<tbody class="commValidOk">
+			<?php if(empty($selectCommentOk)) :?>			
+				<td colspan="4" class="text-center">
+					<p>Vous n'avez pas encore de commentaires</p>
+				</td>
+			<?php else:  ?>
+			<?php foreach ($selectCommentOk as $selectComment) :?>
+				<tr class="text-center">
+					<td class="col-md-3"><?=ucfirst(strtolower($selectComment['title']));?></td>
+					<td class="col-md-3"><?=$selectComment['username']?></td>
+					<td class="col-md-6"><?=$selectComment['content']?></td>
+				</tr>
+			<?php endforeach; ?>
+			<?php endif; ?>
+			</tbody>
+		</table>
+	</div>
 
 
 	
@@ -185,10 +193,9 @@ $('.delete').click(function(e){
 
 	});// fermeture buttton clic	
 
-$('.htmlajax').click(function(e){
-
-	var ajaxCom = $(this).val();
-
+	$('.htmlajax').on('change', function(e){
+		var ajaxCom = $(this).find('option').filter(':selected').val();
+		console.log(ajaxCom);
 		e.preventDefault();
 
 		$.ajax({
@@ -198,8 +205,9 @@ $('.htmlajax').click(function(e){
 			data: {id:ajaxCom},
 			dataType: 'json',
 			success: function(result) {
+				console.log(result);
 				$('.commValidOk').html(result.html);
-				}
+			}
 		});
 	});
 

@@ -3,7 +3,10 @@
 <?php $this->start('main_content') ?>  
 
 	<div class="text-center">
-		<p class="text-connect">LISTE DES CATEGORIES</p>
+		<p class="text-connect">
+			<i class="fa fa-list" aria-hidden="true"></i>
+			&nbsp;LISTE DES CATEGORIES
+		</p>
 	</div>
 	<br>
 	
@@ -17,16 +20,16 @@
 	<div class="container">
 
 		<?php foreach ($selectC as $select) : ?>
-		<div class="row contain-cub-category">		
+		<div class="row contain-cub-category col-md-4">		
 
 			
 
-			<div class="cub-category col-md-4">
-				<p class="text-center" id="name-category"><?=$select['title']?></p>
+			<div class="cub-category">
+				<p class="text-center name-category"><?=$select['title']?></p>
 				<img class="picto_category center-block" src="<?= $this->assetUrl('img/pictos/'.$select['pictogram'])?>">
-				<div id="link-category">
-					<a class="text-center" href="<?=$this->url('admin_edit_categories', ['id' => $select['id']]);?>">Modifier</a>
-					<a class="text-center delete-category" href="<?=$this->url('admin_delete_categorie', ['id' => $select['id']]);?>">Supprimer</a>
+				<div class="contain-link-category">
+					<a class="text-center link-category" href="<?=$this->url('admin_edit_categories', ['id' => $select['id']]);?>">Modifier</a>
+					<a class="text-center link-category" href="<?=$this->url('admin_delete_categorie', ['id' => $select['id']]);?>">Supprimer</a>
 				</div>
 			</div>
 			

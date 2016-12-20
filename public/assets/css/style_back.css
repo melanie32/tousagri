@@ -38,6 +38,7 @@ li {
     background-color: #444444;
     overflow-x: hidden;
     z-index:999;
+    display: none;
    
     
 }
@@ -72,7 +73,7 @@ li {
 }
 
 .sidenav a:hover {
-	color: #948870;
+	color: #64978E;
 }
 
 .sidenav a:focus {
@@ -123,14 +124,17 @@ li {
 	color: black;
 	border: black solid 0.06125em;
 }
+
+
 /******************style page list categories back******************/
 
 .text-add-categ {
 	font-size: 1.5em;
+	color: #64978E;
 }
 
 .text-add-categ:hover {
-	color: #64978E;
+	color: black;
 }
 
 .contain-cub-category {
@@ -143,13 +147,13 @@ li {
 .cub-category {
 	height: 12em;
 	width: 12em;
-	border: 1px solid black;
+	border: 1px solid white;
+	border-radius: 1.5em;
 	margin: 1em 0;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
-	justify-content: space-between;
-	opacity: 0.7;
+	justify-content: space-around;	
 }
 
 #cub-add-category {
@@ -164,7 +168,7 @@ li {
 	width: 7em;
 }
 
-#link-category {
+.contain-link-category {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -173,6 +177,16 @@ li {
 
 .doubleButton {
 	display: none;
+}
+
+.name-category{
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.link-category {
+	color: #64978E;
+	font-weight: bold;
 }
 
 /***********STYLE DES PAGES ADD AND EDIT CATEGORY****************/
