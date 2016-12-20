@@ -47,10 +47,8 @@
 	
 	<div class="list_commentaires">
 			<p class="text-center name_categorie">Liste des commentaires pour la catégorie&nbsp;:&nbsp;<?=$selectOneC['title']?></p>
-<pre>
-<?php var_dump($selectOneComment);?>
-</pre>
-			<?php if(empty($selectOneCommment)) :?>
+
+			<?php if(empty($selectOneComment)) :?>
 
 				<p class="text-center erreur_commentaire">Désolé mais il n'y a aucun commentaire pour cette catégorie. <br> Soyez le permier !</p>
 			<?php else : ?>
