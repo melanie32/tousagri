@@ -22,8 +22,7 @@
 	<br>
 	
 
-	<div class="container">
-
+	<div class="container containerCat">
 		<?php foreach ($selectC as $select) : ?>
 		<div class="row contain-cub-category col-md-4">		
 
@@ -40,7 +39,6 @@
 			
 		</div>
 		<?php endforeach; ?>	
-		
 	</div>
 		
 

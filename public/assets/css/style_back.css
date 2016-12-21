@@ -316,27 +316,28 @@ li {
 
 
 
-@media all and (min-width: 1350px) and (max-width: 1700px){
 
-}
-
-@media all and (min-width: 1200px) and (max-width: 1350px){
-
-}
-
+/*********** GESTION MEDIA QUERIES ****************/
 @media all and (min-width: 861px) and (max-width: 1200px){
 	#wrapper {margin: 100px auto;width: 50em;}
 	.sidenav {width: 13em;}
+	#wrapper {margin: 40px 250px;;;width: 45em; padding-top: 0}
+	.container-edit-admin {height: 25em;}
+	.sidenav a {font-size: 12px;}
+	.containerCat {width: auto;}
+	.contain-cub-category {margin-left: 0; margin-right: 0;}
+
 
 }
 
 @media all and (min-width: 451px) and (max-width: 860px){
 	#wrapper {margin: 50px auto;width: 30em;}
 	.sidenav {width: 13em;}
+	#wrapper {margin: 40px 250px; width: 40em; padding-top: 0}
+	.container-edit-admin {height: 25em;}
+	.sidenav a {font-size: 10px;}
+	.containerCat {width: auto;}
+	.contain-cub-category {margin-left: 0; margin-right: 0;}
+
 
 }
-
-@media all and (max-width: 450px){
-
-}
-
