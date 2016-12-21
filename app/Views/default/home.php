@@ -1,24 +1,24 @@
 
-<?php $this->layout('layout', ['title' => '']) ?>
+<?php $this->layout('layout', ['title' => 'Tous Agri']) ?>
 
 
 <?php $this->start('css') ?>
 <style>
-body{
+.background{
     background: url("<?=$this->assetUrl('img/illustrations/fdHome.jpg')?>");
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-
 </style>
 <?php $this->stop('css') ?>
+
 <?php $this->start('main_content') ?>
 <div id="reset" class="home">
 <!-- Titre -->
-	<div class="col-md-12 headLine">
+	<div class="headLine">
 		<h1 id="text"  class="hLine"><b>Vous les agriculteurs, vous êtes tous les mêmes!</b></h1>
-	</div>
+	<!-- </div> -->
 
 <!-- Boutton -->
 			<div class="container">
@@ -30,6 +30,7 @@ body{
 					</div>
 				</div>
 			</div>
+	</div>
 </div>
 
 <?php $this->stop('main_content') ?>

@@ -1,11 +1,7 @@
-
-
-html {
-    min-height: 100%;
-}
-
 body {
     font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100%;
 }
 
 /*TITRE*/
@@ -13,16 +9,22 @@ body {
 
 .headLine {
 	display: flex;
-	justify-content: center;
+    flex-direction: column;
+    justify-content: center;
 	align-items: center;
-	height: 400px;
+	max-height: 100%;
+    height: 59em;
+    position: relative;
 
 }
 
 .hLine {
 	font-size: 4em;
     text-indent: 0.135em;
-    text-shadow: 2px 2px 4px #000000 ;
+    text-shadow: 2px 2px 4px #000000;
+    position: absolute;
+    top: 2.3em;
+    left: 2em;
 }
 
 /*BOUTTON*/
@@ -31,6 +33,9 @@ body {
 	display: flex; 
 	justify-content: center;
 	align-items: center;
+    position: absolute;
+    top: 25em;
+    right: 0.3em;
 }
 
 .style-reset {
@@ -58,24 +63,30 @@ body {
 .bottNav {
     bottom: 0;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    height: 27px;
-    font-family: "Replica-Regular", Arial, Helvetica, sans-serif;
-    position: fixed;
-    width: 100%;
-    
-    z-index: 10
+    flex-direction: row;
+    justify-content: flex-end;
+   
+}
+
+.bottNav a {
+    padding: 0 2em;
+    color: white;
+    font-size: 1em;
+}
+
+.bottNav a:hover {
+   text-decoration: none;   
 }
 
 
 
-.navList a {
-    color: #ffffff;
-    padding: 15px;
-}
 
 /*Catégories*/
+
+#wrapper-accueil {
+    max-width: 100%
+    max-height: 100%;
+}
 
 .contai {
     margin: 0 auto;
@@ -84,21 +95,11 @@ body {
     min-height: 100%;
 }
 
-#secPic {
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    border: 2px solid white;
-    border-radius: 3%;
-    width: 12.80em;
-    height: 12.80em;
-}
-
 .siteNam {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20.5em;
+    padding: 5em 0 2em 0;
 }
 
 .namSite {
@@ -112,21 +113,36 @@ body {
 .dad {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
 }
 
 .imBox {
-    display: block;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
     width: 13em;
     height: 13em;
     border: 3px solid #ffffff;
     border-radius: 3%;
     margin: 1.25em;
-    
+    position: relative;   
+}
+
+.dad a:hover {
+    text-decoration: none;
+}
+
+#secPic {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    border-radius: 3%;
+    width: 12.80em;
+    height: 12.80em;
+    position: absolute;
+    left: 1.5em;
 }
 
 .secNam {
@@ -137,8 +153,3 @@ body {
 }
 /*Scroll Bar*/
 
-/*.wrappy {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-}*/

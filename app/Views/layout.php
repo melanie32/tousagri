@@ -19,7 +19,7 @@
 	<?=$this->section('css');?>	
 
 </head>
-<body>
+<body class="background-c">
 
 		<section>
 			<?= $this->section('main_content') ?>
@@ -27,19 +27,10 @@
 
 
 		<!-- Footer -->
-		<footer class="bottNav">
-			<div>
-				<div class="col-md-12 col-md-offset-6 fNav">
-					<ul class="navList">
-						<a href="<?=$this->url('propos_propos')?>">A Propos</a>
-						<a href="<?=$this->url('mentions_mentions')?>">Mentions Légales</a>
-					</ul>
-				</div>
-			</div>
+		<footer class="bottNav col-md-12">			
+			<a href="<?=$this->url('propos_propos')?>">A Propos</a>
+			<a href="<?=$this->url('mentions_mentions')?>">Mentions Légales</a>			
 		</footer>
-
-
-
 
 
 
@@ -56,6 +47,6 @@
 
 <script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
 
-
+<?= $this->section('script') ?>
 </body>
 </html>
