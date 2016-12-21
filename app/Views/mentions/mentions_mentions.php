@@ -14,8 +14,6 @@
 			<h1>- Mentions Légales -</h1>
 		</div>
 
-	<div class="bloc_nav_opacity"></div> 
-
 
 <div id="bloc_mentions">
 

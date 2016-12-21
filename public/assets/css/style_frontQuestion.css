@@ -74,23 +74,12 @@ p {
 	text-shadow: 2px 2px 4px #000000;
 }
 
-.bloc_nav_opacity {
-	margin-left: 40%;
-	width: 60%;
-	height: 31px;
-	background-color: black;
-	position:absolute;
-    bottom:0;
-    right:0;
-    opacity: 0.8;
-}
-
 #bloc_Questions {
 	overflow-y: scroll;
 	position: absolute;
 	margin-left: 40%;
 	width: 60%;
-	height: 97%;
+	height: 100%;
 }
 
 #bloc_mentions {
@@ -145,7 +134,7 @@ p {
 
 .bloc_Question:hover {
 	background-color: black;
-	opacity: 0.9;
+	opacity: 0.95;
 }
 
 
@@ -275,7 +264,7 @@ p {
 
 .ajouter_commentaire {
 	display: block;
-	padding-top: 4em;
+	padding-top: 2.5em;
 
 }
 	#label_commentaire {
@@ -294,7 +283,7 @@ p {
 #toto {
     
    background-color: transparent;
-   border:1px solid white;
+   border:1px solid #cccccc;
    margin: 20px;
    width: 120px;
    height: 50px;
@@ -303,7 +292,7 @@ p {
 
 #toto:hover {
    background-color: rgba(0, 0, 0, 0.5);
-   color: grey;
+   color: white;
 }
 
 .retour {
@@ -340,14 +329,14 @@ p {
 }
 /******* FIN REPRISE BOOTSTRAP  ********/
 
-.testiminial-block{padding: 10px 0 30px; border-bottom: 1px solid #ccc; dispaly:block; margin:0 0 20px;}
+.testiminial-block{padding: 10px 0 10px; border-bottom: 1px solid #ccc; dispaly:block; margin:0 0 20px;}
 .testimonial-content p{color:#fff; margin: 0 auto;}
 .testimonial-author{font-size:1.5em; font-style:italic; color:#fff;}
 .bloc_comment_user{background-color: rgba(0, 0, 0, 0.5); margin-bottom: 1em;}
 
 .scroll_comment{
 	width: auto;
-	max-height: 580px;
+	max-height: 620px;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -381,6 +370,7 @@ display: none;
 	.erreur_commentaire {font-size: 1.5em; padding-top:0.5em; padding-bottom: 1em;}
 	.form-horizontal .control-label {padding-top: 0;}
 	.persoB {padding-top: 0.2em;padding-bottom: 0.2em;padding-left: 1.2em;padding-right: 1.2em;font-size: 1.1em;}
+	.scroll_comment{max-height: 240px;}
 }
 
 @media all and (min-width: 450px) and (max-width: 860px){
@@ -395,6 +385,7 @@ display: none;
 	.erreur_commentaire {font-size: 0.8em; padding-top:0; padding-bottom: 0.1em;}
 	.form-horizontal .control-label {padding-top: 0;}
 	.persoB {padding-top: 0.2em;padding-bottom: 0.2em;padding-left: 1em;padding-right: 1em;font-size: 1.1em;}
+	.scroll_comment{max-height: 150px;}
 }
 
 @media all and (max-width: 450px){
@@ -412,3 +403,6 @@ display: none;
 /************************* FIN Media Queries **********************/
 
 /*******  FIN PAGE COMMENTAIRE  ********/
+
+
+/*.scroll_comment{max-height: 300px;}*/

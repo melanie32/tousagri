@@ -76,7 +76,6 @@
 		<?php endfor; ?>
 	</div>
 
-	<div class="bloc_nav_opacity"></div> 
 
 </div>
 <?php $this->stop('main_content') ?>

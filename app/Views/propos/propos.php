@@ -14,7 +14,6 @@
 			<h1>- A Propos -</h1>
 		</div>
 
-	<div class="bloc_nav_opacity"></div> 
 </div>
 <div id="bloc_mentions_apropos">
 <h2>Tout commence au 66 Rue de l'abbée de l'épée...</h2>
