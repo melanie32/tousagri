@@ -142,3 +142,28 @@ body {
     flex-direction: row;
     overflow-x: auto;
 }*/
+
+
+@media all and (min-width: 1350px) and (max-width: 1700px){
+
+}
+
+@media all and (min-width: 1200px) and (max-width: 1350px){
+
+}
+
+@media all and (min-width: 861px) and (max-width: 1200px){
+    .headLine {height: 300px;}
+}
+
+@media all and (min-width: 451px) and (max-width: 860px){
+    .headLine {height: 300px;}
+    .style-reset {font-size: 2em; height: 70px; width: 370px;}
+}
+
+@media all and (max-width: 450px){
+    .headLine {height: 300px;}
+    .style-reset {font-size: 2em; height: 50px; width: 200px;}
+    .hLine {font-size: 2em;}
+    #tata {padding: 0;}
+}

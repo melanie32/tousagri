@@ -143,8 +143,13 @@ p {
 	opacity: 0.8;
 }
 
+.bloc_Question:hover {
+	background-color: black;
+	opacity: 0.9;
+}
+
+
 .questions {
-	
 	height: 100%;
 	width: 100%;
 }
@@ -375,7 +380,7 @@ display: none;
 	.name_categorie {font-size: 2.5em; padding-bottom: 0.3em; padding-top: 0.3em;}
 	.erreur_commentaire {font-size: 1.5em; padding-top:0.5em; padding-bottom: 1em;}
 	.form-horizontal .control-label {padding-top: 0;}
-	.btn {padding-top: 0.2em;padding-bottom: 0.2em;padding-left: 1.2em;padding-right: 1.2em;font-size: 1.1em;}
+	.persoB {padding-top: 0.2em;padding-bottom: 0.2em;padding-left: 1.2em;padding-right: 1.2em;font-size: 1.1em;}
 }
 
 @media all and (min-width: 450px) and (max-width: 860px){
@@ -389,7 +394,7 @@ display: none;
 	.name_categorie {font-size: 1.2em; padding-bottom: 0.3em; padding-top: 0.2em;}
 	.erreur_commentaire {font-size: 0.8em; padding-top:0; padding-bottom: 0.1em;}
 	.form-horizontal .control-label {padding-top: 0;}
-	.btn {padding-top: 0.2em;padding-bottom: 0.2em;padding-left: 1em;padding-right: 1em;font-size: 1.1em;}
+	.persoB {padding-top: 0.2em;padding-bottom: 0.2em;padding-left: 1em;padding-right: 1em;font-size: 1.1em;}
 }
 
 @media all and (max-width: 450px){
