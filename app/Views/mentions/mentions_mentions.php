@@ -15,7 +15,7 @@
 		</div>
 
 	<div class="bloc_nav_opacity"></div> 
-</div>
+
 
 <div id="bloc_mentions">
 
@@ -99,7 +99,7 @@ Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique.<
 Utilisateur : Internaute se connectant, utilisant le site susnommé.
 Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p></div>
 
-
+</div>
 
 <?php $this->stop('main_content') ?>
 
