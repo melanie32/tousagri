@@ -313,3 +313,30 @@ li {
 }
 
 /*********** FIN STYLE PAGE SE DECONNECTER****************/
+
+
+
+@media all and (min-width: 1350px) and (max-width: 1700px){
+
+}
+
+@media all and (min-width: 1200px) and (max-width: 1350px){
+
+}
+
+@media all and (min-width: 861px) and (max-width: 1200px){
+	#wrapper {margin: 100px auto;width: 50em;}
+	.sidenav {width: 13em;}
+
+}
+
+@media all and (min-width: 451px) and (max-width: 860px){
+	#wrapper {margin: 50px auto;width: 30em;}
+	.sidenav {width: 13em;}
+
+}
+
+@media all and (max-width: 450px){
+
+}
+
