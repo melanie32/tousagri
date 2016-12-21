@@ -91,18 +91,16 @@ body {
     max-height: 100%;
 }
 
-.contai {
-    margin: 0 auto;
-    width: 75em;
-    max-width: 100%;
-    min-height: 100%;
+.containerTab {
+    padding-bottom: 2em;
+
 }
 
 .siteNam {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5em 0 2em 0;
+    padding: 6em 0;
 }
 
 .namSite {

@@ -105,22 +105,34 @@ class CommentsModel extends \W\Model\Model
 
     }
 
-    public function selectCommentsByCategory($validate = '',$id) 
+    public function selectCommentsByCategory($id_category = 0, $validate = '') 
     {
               
-        $sql = 'SELECT comments.*, categories.title FROM comments LEFT JOIN categories ON comments.id_category = categories.id WHERE comments.id_category = :id';
+        $sql = 'SELECT comments.*, categories.title FROM comments LEFT JOIN categories ON comments.id_category = categories.id';
 
-        if(!empty($validate)) {
-            $sql .= ' AND validate = :validate';
+        if(!empty($id_category) && is_numeric($id_category) || !empty($validate)){
+            $sql.= ' WHERE ';
+            if(!empty($id_category) && is_numeric($id_category)){
+                $sql.= ' comments.id_category = :id';
+                if(!empty($validate)) {
+                    $sql .= ' AND validate = :validate';
+                }
+            }
+            elseif(!empty($validate)){ // Sans $id_category
+                $sql .= ' validate = :validate';
+            }
         }
+
           
         $sth = $this->dbh->prepare($sql);
 
+        
+        if(!empty($id_category) && is_numeric($id_category)){
+            $sth->bindValue(':id', $id_category);
+        }
         if(!empty($validate)) {
              $sth->bindValue(':validate', $validate);
         }
-      
-        $sth->bindValue(':id', $id);
 
 
         if($sth->execute()) {
