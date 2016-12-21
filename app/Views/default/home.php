@@ -4,7 +4,7 @@
 
 <?php $this->start('css') ?>
 <style>
-.background{
+.background-c{
     background: url("<?=$this->assetUrl('img/illustrations/fdHome.jpg')?>");
     background-position: center;
     background-size: 100% 100%;

@@ -953,43 +953,33 @@ class AdminController extends Controller
         }
 
 		$html = null;
-
+		$selectCombyCateg = null;
 
 		if (!empty($_POST)) {
-			$post['id'] = trim(strip_tags($_POST['id']));
+			$idCategory = trim(strip_tags($_POST['id']));
+		
+			$commentsModel = new CommentsModel();
+			$selectCombyCateg = $commentsModel->selectCommentsByCategory($idCategory, 'oui');
 		}
 
 
-		$commentsModel = new CommentsModel();
+		if($selectCombyCateg){
 
-		$selectCombyCateg = $commentsModel->selectCommentsByCategory('oui', $post['id']);
-
-		
-		if($selectCombyCateg){	
-
-			/*if($selectCombyCateg['id'] === 0) {
+			foreach($selectCombyCateg as $selectCom) {
 				$html.= '<tr class="text-center">';		
-				$html.= '<td class="col-md-3">'.ucfirst(strtolower($selectCombyCateg['title'])).'</td>';
-				$html.= '<td class="col-md-3">'.$selectCombyCateg['username'].'</td>';
-				$html.= '<td class="col-md-6">'.utf8_encode($selectCombyCateg['content']).'</td>';
+				$html.= '<td class="col-md-3">'.ucfirst(strtolower($selectCom['title'])).'</td>';
+				$html.= '<td class="col-md-3">'.$selectCom['username'].'</td>';
+				$html.= '<td class="col-md-6">'.utf8_encode($selectCom['content']).'</td>';
 				$html.= '</tr>';
-			}	
-			else {*/
-				foreach ($selectCombyCateg as $selectCom) {
-					$html.= '<tr class="text-center">';		
-					$html.= '<td class="col-md-3">'.ucfirst(strtolower($selectCom['title'])).'</td>';
-					$html.= '<td class="col-md-3">'.$selectCom['username'].'</td>';
-					$html.= '<td class="col-md-6">'.utf8_encode($selectCom['content']).'</td>';
-					$html.= '</tr>';
-				}
-			/*}*/
+			}
 		}
 		else {
-				$html.= '<tr class="text-center" rowspan="15">';		
-				$html.= '<td colspan="3">Aucun commentaire</td>';
-				$html.= '</tr>';
-
+			$html.= '<tr class="text-center" rowspan="15">';		
+			$html.= '<td colspan="3">Aucun commentaire</td>';
+			$html.= '</tr>';
 		}
+			
+		
 		$this->showJson([
 			'html'=> $html,
 		]);
