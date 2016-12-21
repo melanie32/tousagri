@@ -112,7 +112,7 @@
 								<?php if(empty($selectOneQ['video'][$i])):?>
 									<span>Il n'y a pas de vidéo pour cette question.</span>
 								<?php else: ?>
-									<a href="<?= $selectOneQ['video'][$i]?>" target="_blank">Cliquez ici pour voir la vidéo actuelle</a>
+									<a href="<?= $selectOneQ['video'][$i]?>" target="_blank" class="clic-video">Cliquez ici pour voir la vidéo actuelle</a>
 								<?php endif;?>	
 								
 								<label>Ajouter une nouvelle URL vidéo:</label>
