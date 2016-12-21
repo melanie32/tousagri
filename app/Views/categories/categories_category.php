@@ -19,7 +19,7 @@
     <h1  class="text-center namSite">Vous les agriculteurs, vous êtes tous les mêmes!</h1>
   </div>
 
-  <div class="container">
+  <div class="container container-categ">
 
     <?php foreach ($selectC as $select) : ?>
       <div class="row dad col-md-4 col-xs-6">
