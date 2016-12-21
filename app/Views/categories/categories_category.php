@@ -19,15 +19,15 @@
     <h1  class="text-center namSite">Vous les agriculteurs, vous êtes tous les mêmes!</h1>
   </div>
 
-  <div class="container">
+  <div class="container containerTab">
 
     <?php foreach ($selectC as $select) : ?>
-      <div class="row dad col-md-4 col-xs-6">
+      <div class="row dad col-lg-4 col-md-3 col-xs-6">
 
           <a class="imBox" href="<?= $this->url('questions_questions', ['id' => $select['id']]); ?>">
             <div>
               <p class="text-center secNam"><?=$select['title']?></p>
-              <img id="secPic" src="<?= $this->assetUrl('img/pictos/'.$select['pictogram'])?>" >
+              <img class="img-responsive" id="secPic" src="<?= $this->assetUrl('img/pictos/'.$select['pictogram'])?>" >
             </div>
           </a>
 

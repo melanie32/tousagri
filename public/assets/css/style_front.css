@@ -143,7 +143,6 @@ body {
     border: 2px solid white;
     border-radius: 3%;
     width: 12.80em;
-    height: 12.80em;
     position: absolute;
     left: 1.5em;
 }
@@ -167,11 +166,23 @@ body {
 
 @media all and (min-width: 861px) and (max-width: 1200px){
     .headLine {height: 300px;}
+    .namSite {font-size: 2.5em;}
+    .siteNam {padding: 1.5em 0 1em;}
+    .imBox {height: 10em;}
+    .secNam {font-size: 1em; font-weight: bold;}
+    .containerTab {margin-right: 0;}
+    .bottNav a {font-size: 0.7em;}
 }
 
 @media all and (min-width: 451px) and (max-width: 860px){
     .headLine {height: 300px;}
     .style-reset {font-size: 2em; height: 70px; width: 370px;}
+    .namSite {font-size: 2em;}
+    .siteNam {padding: 1.5em 0 1em;}
+    .imBox {height: 9em;}
+    .secNam {font-size: 1em; font-weight: bold;}
+    .containerTab {margin-right: 0;}
+    .bottNav a {font-size: 0.7em;}
 }
 
 @media all and (max-width: 450px){
@@ -179,4 +190,14 @@ body {
     .style-reset {font-size: 2em; height: 50px; width: 200px;}
     .hLine {font-size: 2em;}
     #tata {padding: 0;}
+    .namSite {font-size: 1.2em;}
+    .siteNam {padding: 0.7em 0 0.2em;}
+    .secNam {font-size: 0.8em; font-weight: bold;}
+    .bottNav a {font-size: 0.5em;}
 }
+
+
+
+
+
+
