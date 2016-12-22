@@ -297,6 +297,7 @@ p {
 
 .retour {
    z-index: 789456;
+   position: absolute;
     
 }
 /*******  FIN BOUTON RETOUR  ********/
@@ -358,7 +359,13 @@ display: none;
 	.lien-reponse a {font-size: 1.2em;}
 	.scroll_comment{max-height: 310px;}
 	.name_categorie {font-size: 2.5em; padding-bottom: 0.3em; padding-top: 0.3em;}
+	.siteNam {padding: 0;}
+	.name_categorie {margin-left: 2em;}
+	.contenu_commentaire {width: 85%;}
 }
+
+
+
 
 @media all and (min-width: 861px) and (max-width: 1200px){
 	.conteneur_L h1 {font-size: 3em;}
@@ -392,14 +399,20 @@ display: none;
 
 @media all and (max-width: 450px){
 	.conteneur_L h1 {font-size: 0.8em;}
-	.questions p {font-size: 0.6em;}
-	.reponses p {font-size: 0.5em;}
+	.questions p {font-size: 0.7em;}
+	.reponses p {font-size: 0.6em;}
 	.lien-reponse a {font-size: 0.5em; padding-right: 1em;}
 	.title_conteneur_L h1 {font-size: 0.8em;-webkit-margin-before: 0;-webkit-margin-after: 0;-webkit-margin-start: 0px;-webkit-margin-end: 0px;}
 	#bloc_mentions {font-size: 0.3em;}
 	.name_categorie {font-size: 1em; padding-bottom: 0.1em; padding-top: 0.1em;}
 	.erreur_commentaire {font-size: 0.8em; padding-top:0; padding-bottom: 0s;}
 	.form-horizontal .control-label {padding-top: 0;}
+	#toto {border:1px solid #cccccc;margin: 20px;width: 70px;height: 35px;font-size: 16px;}
+	#img_perso {padding-left: 0;}
+	.name_categorie {padding-top: 4em;}
+	.wrapper_commentaires {height: auto !important;}
+	#bloc_mentions_apropos h2 {font-size: 1em;}
+	.bloc_mentions_aproposP {font-size: 0.8em;text-align: center;}
 }
 
 /************************* FIN Media Queries **********************/
@@ -407,4 +420,3 @@ display: none;
 /*******  FIN PAGE COMMENTAIRE  ********/
 
 
-/*.scroll_comment{max-height: 300px;}*/

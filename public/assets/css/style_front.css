@@ -192,6 +192,8 @@ body {
     .siteNam {padding: 0.7em 0 0.2em;}
     .secNam {font-size: 0.8em; font-weight: bold;}
     .bottNav a {font-size: 0.5em;}
+    .imBox {height: 5em;}
+    .container {padding-right: 0;}
 }
 
 

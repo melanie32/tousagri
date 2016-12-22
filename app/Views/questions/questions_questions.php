@@ -57,7 +57,7 @@
 				<!-- affichage en dynamique de l'image illustrant la réponse -->
 
 				<?php if(!empty($selectOneQ['picture'][$i])) :?>
-				<img id="img_perso" src="<?= $this->assetUrl('img/imgreply/'.$selectOneQ['picture'][$i])?>">
+				<img id="img_perso" class="img-responsive" src="<?= $this->assetUrl('img/imgreply/'.$selectOneQ['picture'][$i])?>">
 				<!-- affichage en dynamique de la vidéo illustrant la réponse -->
 				<?php endif; ?>
 				
